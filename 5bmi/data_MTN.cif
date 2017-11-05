@@ -1,0 +1,208 @@
+# electronic Ligand Builder and Optimisation Workbench (eLBOW)
+#   - a module of PHENIX version dev-svn-
+#   - file written: Wed Nov  1 15:59:59 2017
+#
+#   Quantum optimisation: True
+#   Method: AM1
+#   Random seed: 3628800
+#   SMILES string: ON1C(C=C(CSS(=O)(=O)C)C1(C)C)(C)C
+#   Template file: mtn.old.pdb
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MTN        MTN 'Unknown                  ' ligand 35 16 .
+#
+data_comp_MTN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.charge
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+MTN         O1     O   OH1    0  -0.240   -0.0732   -0.0172   -0.0036
+MTN         N1     N   NR5    0  -0.232    1.2734    0.0263    0.0232
+MTN         C1     C   CR5    0   0.100    1.6843    0.0171    1.4891
+MTN         C2     C   CR15   0  -0.066    2.0683    1.4470    1.7460
+MTN         C3     C   CR5    0  -0.172    2.2298    2.1684    0.6021
+MTN         C4     C   CH2    0   0.186    2.9163    3.4569    0.4177
+MTN         S1     S   S2     0  -0.917    2.6059    4.7367    1.8043
+MTN         S2     S   S      0   2.939    3.5382    6.7001    1.5558
+MTN         O2     O   OS     0  -0.952    4.9162    6.4601    1.3197
+MTN         O3     O   OS     0  -0.945    2.9070    7.3192    0.4470
+MTN         C12    C   CH3    0  -1.064    3.2588    7.5487    3.0362
+MTN         C5     C   CR5    0   0.138    1.7120    1.3673   -0.5883
+MTN         C6     C   CH3    0  -0.167    0.5394    2.0589   -1.3108
+MTN         C7     C   CH3    0  -0.166    2.8109    1.0032   -1.6001
+MTN         C8     C   CH3    0  -0.162    2.9838   -0.8020    1.5542
+MTN         C9     C   CH3    0  -0.152    0.6041   -0.5961    2.4058
+MTN        H11     H   HOH1   0   0.213   -0.1857   -0.7720   -0.5735
+MTN         H2     H   HCR5   0   0.127    2.2109    1.7288    2.7666
+MTN         H41    H   HCH2   0   0.070    2.6235    3.9846   -0.5045
+MTN         H42    H   HCH2   0   0.074    4.0180    3.3913    0.3822
+MTN         H4     H   HCH3   0   0.207    3.7560    7.2250    3.9803
+MTN         H1     H   HCH3   0   0.210    2.2303    7.6832    3.4459
+MTN         H3     H   HCH3   0   0.201    3.5777    8.6198    3.0387
+MTN         H61    H   HCH3   0   0.056    0.8650    2.9426   -1.8689
+MTN         H62    H   HCH3   0   0.065    0.0191    1.4276   -2.0538
+MTN         H63    H   HCH3   0   0.078   -0.2630    2.3961   -0.6378
+MTN         H71    H   HCH3   0   0.057    2.9189    1.7579   -2.3874
+MTN         H72    H   HCH3   0   0.074    2.6353    0.0539   -2.1382
+MTN         H73    H   HCH3   0   0.059    3.7936    0.8796   -1.1277
+MTN         H81    H   HCH3   0   0.072    2.9785   -1.6652    0.8727
+MTN         H82    H   HCH3   0   0.060    3.1899   -1.1913    2.5534
+MTN         H83    H   HCH3   0   0.059    3.8539   -0.1991    1.2518
+MTN         H91    H   HCH3   0   0.055    0.9368   -0.6899    3.4501
+MTN         H92    H   HCH3   0   0.062    0.3022   -1.6178    2.1134
+MTN         H93    H   HCH3   0   0.074   -0.3444   -0.0393    2.4568
+#
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+_chem_comp_bond.value_dist_neutron
+MTN   N1      O1    single        1.348 0.018     1.348
+MTN   C1      N1    single        1.522 0.036     1.522
+MTN   C3      C2    double        1.362 0.041     1.362
+MTN   S1      C4    single        1.912 0.039     1.912
+MTN   S2      S1    single        2.188 0.040     2.188
+MTN   O2      S2    double        1.418 0.020     1.418
+MTN   O3      S2    double        1.418 0.020     1.418
+MTN   C12     S2    single        1.729 0.028     1.729
+MTN   C4      C3    single        1.472 0.040     1.472
+MTN   C5      C3    single        1.525 0.033     1.525
+MTN   C6      C5    single        1.541 0.034     1.541
+MTN   C7      C5    single        1.537 0.034     1.537
+MTN   C2      C1    single        1.503 0.034     1.503
+MTN   C8      C1    single        1.538 0.034     1.538
+MTN   C9      C1    single        1.544 0.034     1.544
+MTN   N1      C5    single        1.538 0.037     1.538
+MTN  H11      O1    single        0.850 0.033     0.952
+MTN   H2      C2    single        0.930 0.038     1.068
+MTN   H41     C4    single        0.970 0.036     1.102
+MTN   H42     C4    single        0.970 0.037     1.104
+MTN   H4      C12   single        0.970 0.037     1.115
+MTN   H1      C12   single        0.970 0.037     1.115
+MTN   H3      C12   single        0.970 0.035     1.118
+MTN   H61     C6    single        0.970 0.034     1.095
+MTN   H62     C6    single        0.970 0.036     1.105
+MTN   H63     C6    single        0.970 0.035     1.100
+MTN   H71     C7    single        0.970 0.035     1.096
+MTN   H72     C7    single        0.970 0.036     1.105
+MTN   H73     C7    single        0.970 0.034     1.097
+MTN   H81     C8    single        0.970 0.036     1.100
+MTN   H82     C8    single        0.970 0.035     1.092
+MTN   H83     C8    single        0.970 0.035     1.101
+MTN   H91     C9    single        0.970 0.035     1.100
+MTN   H92     C9    single        0.970 0.036     1.105
+MTN   H93     C9    single        0.970 0.035     1.101
+#
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+MTN  H11      O1      N1           98.95 1.276
+MTN   C5      N1      C1          108.13 1.000
+MTN   C5      N1      O1          107.77 1.228
+MTN   C1      N1      O1          106.78 1.154
+MTN   C9      C1      C8          110.77 1.274
+MTN   C9      C1      C2          117.09 1.209
+MTN   C8      C1      C2          106.48 1.175
+MTN   C9      C1      N1          112.66 1.106
+MTN   C8      C1      N1          105.79 1.164
+MTN   C2      C1      N1          103.17 1.140
+MTN   H2      C2      C3          130.30 1.211
+MTN   H2      C2      C1          116.64 1.267
+MTN   C3      C2      C1          113.00 1.007
+MTN   C5      C3      C4          121.35 1.203
+MTN   C5      C3      C2          109.70 1.155
+MTN   C4      C3      C2          128.64 1.198
+MTN   H42     C4      H41         105.46 1.426
+MTN   H42     C4      S1          103.01 1.230
+MTN   H41     C4      S1          104.08 1.128
+MTN   H42     C4      C3          114.67 1.132
+MTN   H41     C4      C3          113.59 1.145
+MTN   S1      C4      C3          114.80 1.182
+MTN   S2      S1      C4          116.69 1.280
+MTN   C12     S2      O3          112.53 1.272
+MTN   C12     S2      O2          112.49 1.285
+MTN   O3      S2      O2          112.09 1.282
+MTN   C12     S2      S1          105.92 1.269
+MTN   O3      S2      S1          106.91 1.189
+MTN   O2      S2      S1          106.32 1.203
+MTN   H3      C12     H1           98.44 1.412
+MTN   H3      C12     H4           98.57 1.411
+MTN   H1      C12     H4           97.77 1.416
+MTN   H3      C12     S2          115.22 1.000
+MTN   H1      C12     S2          121.52 1.000
+MTN   H4      C12     S2          120.69 1.397
+MTN   C7      C5      C6          109.98 1.274
+MTN   C7      C5      C3          113.28 1.266
+MTN   C6      C5      C3          112.86 3.000
+MTN   C7      C5      N1          105.01 1.000
+MTN   C6      C5      N1          111.15 1.062
+MTN   C3      C5      N1          104.15 1.174
+MTN   H63     C6      H62         104.06 1.408
+MTN   H63     C6      H61         106.35 1.399
+MTN   H62     C6      H61         104.98 1.404
+MTN   H63     C6      C5          113.93 1.148
+MTN   H62     C6      C5          114.65 1.150
+MTN   H61     C6      C5          112.02 1.000
+MTN   H73     C7      H72         104.78 1.405
+MTN   H73     C7      H71         107.37 1.391
+MTN   H72     C7      H71         104.91 1.407
+MTN   H73     C7      C5          112.55 1.263
+MTN   H72     C7      C5          114.22 1.256
+MTN   H71     C7      C5          112.34 1.520
+MTN   H83     C8      H82         107.30 1.402
+MTN   H83     C8      H81         105.27 1.409
+MTN   H82     C8      H81         106.74 1.402
+MTN   H83     C8      C1          111.38 1.285
+MTN   H82     C8      C1          112.84 1.278
+MTN   H81     C8      C1          112.82 1.273
+MTN   H93     C9      H92         104.15 1.409
+MTN   H93     C9      H91         105.05 1.399
+MTN   H92     C9      H91         104.77 1.405
+MTN   H93     C9      C1          115.43 1.282
+MTN   H92     C9      C1          113.67 1.164
+MTN   H91     C9      C1          112.71 1.283
+#
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+MTN Var_01         C3      C2      C1      N1          -14.20  30.0 1
+MTN Var_02         C2      C3      C5      N1           -2.45  30.0 1
+MTN Var_03         C3      C5      N1      C1           -6.31  30.0 1
+MTN Var_04         C5      C3      C2      C1           10.71  30.0 1
+MTN Var_05         C5      N1      C1      C2           11.85  30.0 1
+MTN Var_06         S1      C4      C3      C2          -40.94  30.0 1
+MTN Var_07         H81     C8      C1      N1          -38.02  30.0 3
+MTN Var_08         H91     C9      C1      N1          174.61  30.0 3
+MTN Var_09         H61     C6      C5      N1         -172.03  30.0 3
+MTN Var_10         H71     C7      C5      N1          155.96  30.0 3
+MTN Var_11         O2      S2      S1      C4          -52.85  30.0 1
+MTN Var_12         H4      C12     S2      S1           68.23  30.0 3
