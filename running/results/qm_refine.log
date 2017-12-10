@@ -2802,4 +2802,10 @@ Optimal weight search:
      3 Rw: 0.2337 Rf: 0.2732 Rf-Rw: 0.0395 rmsd(b):  0.0764 rws: 32.0 n_fev: 293
      4 Rw: 0.2347 Rf: 0.2739 Rf-Rw: 0.0391 rmsd(b):  0.0760 rws: 64.0 n_fev: 391
      5 Rw: 0.2383 Rf: 0.3014 Rf-Rw: 0.0630 rmsd(b):  0.0590 rws: 128.0 n_fev: 488
+     6 Rw: 0.2377 Rf: 0.3010 Rf-Rw: 0.0633 rmsd(b):  0.0592 rws: 256.0 n_fev: 586
+At end of weight search:
+     6 Rw: 0.2377 Rf: 0.3010 Rf-Rw: 0.0633 rmsd(b):  0.0592 rws: 256.0 n_fev: 586
+At start of further refinement:
+     7 Rw: 0.2377 Rf: 0.3010 Rf-Rw: 0.0633 rmsd(b):  0.0592 rws: 256.0 n_fev: 586
+Start further refinement:
 
