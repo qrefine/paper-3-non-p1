@@ -1,0 +1,108 @@
+Error output from ['/home/pdb/pdb/gr/pdb1gr5.ent.gz', '1gr5']
+'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "/home/yanting/phenix-1.13/phenix-1.13rc1-2961/modules/cctbx_project/libtbx/scheduling/job_scheduler.py", line 64, in job_cycle
+    value = target( *args, **kwargs )
+  File "../QR/paper-3-non-p1/run_symmetry_stats.py", line 18, in run
+    space_group_symbol = cs.space_group().type().lookup_symbol())
+
+________________________________________________________________________________
+Error output from ['/home/pdb/pdb/xk/pdb2xkm.ent.gz', '2xkm']
+'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "/home/yanting/phenix-1.13/phenix-1.13rc1-2961/modules/cctbx_project/libtbx/scheduling/job_scheduler.py", line 64, in job_cycle
+    value = target( *args, **kwargs )
+  File "../QR/paper-3-non-p1/run_symmetry_stats.py", line 18, in run
+    space_group_symbol = cs.space_group().type().lookup_symbol())
+
+________________________________________________________________________________
+Error output from ['/home/pdb/pdb/if/pdb1ifp.ent.gz', '1ifp']
+'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "/home/yanting/phenix-1.13/phenix-1.13rc1-2961/modules/cctbx_project/libtbx/scheduling/job_scheduler.py", line 64, in job_cycle
+    value = target( *args, **kwargs )
+  File "../QR/paper-3-non-p1/run_symmetry_stats.py", line 18, in run
+    space_group_symbol = cs.space_group().type().lookup_symbol())
+
+________________________________________________________________________________
+Error output from ['/home/pdb/pdb/if/pdb4ifm.ent.gz', '4ifm']
+'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "/home/yanting/phenix-1.13/phenix-1.13rc1-2961/modules/cctbx_project/libtbx/scheduling/job_scheduler.py", line 64, in job_cycle
+    value = target( *args, **kwargs )
+  File "../QR/paper-3-non-p1/run_symmetry_stats.py", line 18, in run
+    space_group_symbol = cs.space_group().type().lookup_symbol())
+
+________________________________________________________________________________
+Error output from ['/home/pdb/pdb/pd/pdb3pdm.ent.gz', '3pdm']
+'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "/home/yanting/phenix-1.13/phenix-1.13rc1-2961/modules/cctbx_project/libtbx/scheduling/job_scheduler.py", line 64, in job_cycle
+    value = target( *args, **kwargs )
+  File "../QR/paper-3-non-p1/run_symmetry_stats.py", line 18, in run
+    space_group_symbol = cs.space_group().type().lookup_symbol())
+
+________________________________________________________________________________
+Error output from ['/home/pdb/pdb/hg/pdb1hgv.ent.gz', '1hgv']
+'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "/home/yanting/phenix-1.13/phenix-1.13rc1-2961/modules/cctbx_project/libtbx/scheduling/job_scheduler.py", line 64, in job_cycle
+    value = target( *args, **kwargs )
+  File "../QR/paper-3-non-p1/run_symmetry_stats.py", line 18, in run
+    space_group_symbol = cs.space_group().type().lookup_symbol())
+
+________________________________________________________________________________
+Error output from ['/home/pdb/pdb/c0/pdb2c0w.ent.gz', '2c0w']
+'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "/home/yanting/phenix-1.13/phenix-1.13rc1-2961/modules/cctbx_project/libtbx/scheduling/job_scheduler.py", line 64, in job_cycle
+    value = target( *args, **kwargs )
+  File "../QR/paper-3-non-p1/run_symmetry_stats.py", line 18, in run
+    space_group_symbol = cs.space_group().type().lookup_symbol())
+
+________________________________________________________________________________
+Error output from ['/home/pdb/pdb/ql/pdb1ql1.ent.gz', '1ql1']
+'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "/home/yanting/phenix-1.13/phenix-1.13rc1-2961/modules/cctbx_project/libtbx/scheduling/job_scheduler.py", line 64, in job_cycle
+    value = target( *args, **kwargs )
+  File "../QR/paper-3-non-p1/run_symmetry_stats.py", line 18, in run
+    space_group_symbol = cs.space_group().type().lookup_symbol())
+
+________________________________________________________________________________
+Error output from ['/home/pdb/pdb/ep/pdb3epf.ent.gz', '3epf']
+'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "/home/yanting/phenix-1.13/phenix-1.13rc1-2961/modules/cctbx_project/libtbx/scheduling/job_scheduler.py", line 64, in job_cycle
+    value = target( *args, **kwargs )
+  File "../QR/paper-3-non-p1/run_symmetry_stats.py", line 18, in run
+    space_group_symbol = cs.space_group().type().lookup_symbol())
+
+________________________________________________________________________________
+Error output from ['/home/pdb/pdb/ep/pdb3epc.ent.gz', '3epc']
+'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "/home/yanting/phenix-1.13/phenix-1.13rc1-2961/modules/cctbx_project/libtbx/scheduling/job_scheduler.py", line 64, in job_cycle
+    value = target( *args, **kwargs )
+  File "../QR/paper-3-non-p1/run_symmetry_stats.py", line 18, in run
+    space_group_symbol = cs.space_group().type().lookup_symbol())
+
+________________________________________________________________________________
+Error output from ['/home/pdb/pdb/ep/pdb3epd.ent.gz', '3epd']
+'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "/home/yanting/phenix-1.13/phenix-1.13rc1-2961/modules/cctbx_project/libtbx/scheduling/job_scheduler.py", line 64, in job_cycle
+    value = target( *args, **kwargs )
+  File "../QR/paper-3-non-p1/run_symmetry_stats.py", line 18, in run
+    space_group_symbol = cs.space_group().type().lookup_symbol())
+
+________________________________________________________________________________
+Error output from ['/home/pdb/pdb/m0/pdb1m0f.ent.gz', '1m0f']
+'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "/home/yanting/phenix-1.13/phenix-1.13rc1-2961/modules/cctbx_project/libtbx/scheduling/job_scheduler.py", line 64, in job_cycle
+    value = target( *args, **kwargs )
+  File "../QR/paper-3-non-p1/run_symmetry_stats.py", line 18, in run
+    space_group_symbol = cs.space_group().type().lookup_symbol())
+
+________________________________________________________________________________
