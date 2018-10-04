@@ -11,4 +11,5 @@ Data storage for paper 3 (non-P1 space group)
 
 5c11_standard* has 4WQ replaced with LYS
 
+BTW - 5bmi is not a viable candidate due to the MTN radical. Please ignore!
 
