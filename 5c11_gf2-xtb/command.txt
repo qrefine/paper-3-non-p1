@@ -4,7 +4,7 @@ In case of SCC convergence issues try using: quantum.method='-gfn2 -gbsa h2o -et
 Adapt cluster size, cluster type and nproc settings.
 
 
-OPT
+OPT (might fail from SCC convergence..)
 qr.refine 5c11_modified_noCYS12_HG.pdb 5c11_refine_001.mtz engine_name=xtb clustering=1 maxnum_residues_in_cluster=12 number_of_weight_search_cycles=15 parallel.nproc=4 quantum.nproc=4 opt_log=1 stpmax=0.05 mode=opt quantum.method='-gfn2 -gbsa' line_search=1 &> xtb_opt.out
 
 REFINE
