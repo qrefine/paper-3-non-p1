@@ -1,4 +1,11 @@
-adapt cluster size and nproc settings.
 In case of SCC convergence issues try using: quantum.method='-gfn2 -gbsa h2o -etemp 500'
 
-qr.refine 5c11_update_modHG.pdb.pdb 5c11_refine_001.mtz engine_name=xtb clustering=1 maxnum_residues_in_cluster=10 charge_embedding=1 number_of_weight_search_cycles=10 parallel.nproc=2 quantum.nproc=2 opt_log=1 stpmax=0.5 mode=refine quantum.method='-gfn2 ' &> xtb_opt.out 
+
+Adapt cluster size, cluster type and nproc settings.
+
+
+OPT
+qr.refine 5c11_modified_noCYS12_HG.pdb 5c11_refine_001.mtz engine_name=xtb clustering=1 maxnum_residues_in_cluster=12 number_of_weight_search_cycles=15 parallel.nproc=4 quantum.nproc=4 opt_log=1 stpmax=0.05 mode=opt quantum.method='-gfn2 -gbsa' line_search=1 &> xtb_opt.out
+
+REFINE
+qr.refine 5c11_modified_noCYS12_HG.pdb 5c11_refine_001.mtz engine_name=xtb clustering=1 maxnum_residues_in_cluster=10 charge_embedding=1 number_of_weight_search_cycles=10 parallel.nproc=2 quantum.nproc=2 opt_log=1 stpmax=0.5 mode=refine quantum.method='-gfn2 ' &> xtb_opt.out 
