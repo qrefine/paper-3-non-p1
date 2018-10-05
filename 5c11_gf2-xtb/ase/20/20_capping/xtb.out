@@ -1,0 +1,368 @@
+ 
+        ______________________________________
+       |                                      |
+       |           ==================         |
+       |                 x T B                |
+       |           ==================         |
+       |               S. Grimme              |
+       |        Universitaet Bonn, MCTC       |
+       |         2015-18, Version 5.8.2       |
+       |      Thu Jul 12 08:31:35 CEST 2018   |
+       |______________________________________|
+ 
+        This code comes without any warranty
+        for non-commercial, academia use only.
+        Preliminary GFN2 test version.
+        Cite GFN-xTB work as:
+        S. Grimme, C. Bannwarth, P. Shushkov
+        JCTC, 13 (2017) 1989-2009
+        for GFN2:
+        C. Bannwarth, S. Ehlert, S. Grimme
+        to be published.
+        sTDA-xTB:
+        S. Grimme  &  C. Bannwarth, JCP 145 (2016) 054103
+        in the mass-spec context additionally:
+        V. Asgeirsson, C.Bauer, S. Grimme, Chem. Sci. 8 (2017) 4879
+ 
+        with help from
+        P. Shushkov, G. Brandenburg, S. Dohm, J. Pisarek,
+        F. März, M. Checinski, S. Ehrlich, S. Spicher, 
+        P. Pracht, E. Caldeweyher, S. Ehlert, and C. Bannwarth.
+ 
+        usage        :
+        xtb <coord_file> [options]
+        where <coord_file> is a valid file of TM)
+        (*coord, Bohr) or xmol (*xyz, Angstroem)
+        format.
+
+        options:
+        -chrg <int>   : molecular charge
+        -uhf  <int>   : # of unpaired electrons(=2*S)
+        -nox          : skip second, extended part in sTDA-xTB
+        -pop          : do population analysis
+                      : (default for -nox)
+        -mowr <real>  : cut MO write above (def.3 Eh)
+        -molden       : write formatted molden file
+        -parx <file>  : read parameters for sTDA-xTB
+                        calc (def:~/.param_stda2.xtb)
+        -parv <file>  : read parameters for vTB part in
+                        sTDA-xTB (def: ~/.param_stda1.xtb)
+        -xtemp <real> : el. temp for xTB (def. 0 K)
+        -etemp <real> : el. temp for GFN (def. 300 K)
+        -fod          : calculate the FOD and write
+                        molden.input file with
+                        appropriate occupations
+                        for plotting. Def. T=12500 K
+ 
+        -gfn1         : use GFN-xTB
+        -gfn2         : use GFN2-xTB
+        -gfn2d3       : GFN2-xTB with D3 instead of D4
+        -grad         : GFNn-xTB gradient
+        -acc <real>   : GFNn-xTB accuracy (def. 1.0)
+        -opt [level]  : optimize at GFNn-xTB
+                      : level=crude,vloose,loose,
+                      :       tight,vtight
+        -hess         : compute Hessian at GFNn-xTB
+        -ohess        : optimize and compute Hessian
+        -omd          : optimize and do MD
+        -siman        : conformational search
+        -screen       : opt. loop over ensemble
+        -gmd          : annealed MD for GMD procedure
+        -modef        : vib mode following
+        -gbsa [string1] [string2]
+                        use GBSA implicit solvent
+                        for solvent [string1] and
+                        solvation state [string2]=
+                        reference, bar1M (default=1M)
+        additional GFN/opt/MD/siman options read from
+        $XTBHOME/.xtbrc or $set in coordinate file
+ 
+       spin and charge state information can be on:
+       <.CHRG> (charge) and <.UHF> (=nalpha-nbeta)
+       -uhf and -chrg override the file info.
+       useful machine settings:
+       setenv MKL_NUM_THREADS <NCORE_ON_YOUR_MACHINE>
+       setenv OMP_STACKSIZE 500m
+       limit stacksize unlimited
+ 
+       total energies in Eh, gaps/HL energies in eV
+       please read REVISION and HOWTO files carefully
+          88  days left until this code expires
+ =============================
+  # OMP threads =           2
+ =============================
+ 
+ xtbhome directory:/home/kruse/Progs/XTB/
+ 
+ argument            1 :-chrg
+ argument            2 :-2
+ argument            3 :-grad
+ argument            4 :-gfn2
+ argument            5 :-gbsa
+ argument            6 :h2o
+ argument            7 :-acc
+ argument            8 :1
+ argument            9 :-etemp
+ argument           10 :500
+ 
+ name of molecule           :
+ comment line               :
+ number of atoms            :    49
+ number of electrons        :   144
+ charge                     : -2
+ spin                       : 0.0
+ first test random number   :  0.2432
+ 
+ 
+ -----------------------------------------
+  G F N (Geometry, Frequency, Non-covalent)
+        parametrization, gfnver=           3
+     D4 dispersion model
+ /home/kruse/Progs/XTB/.param_gfn2.xtb
+ -----------------------------------------
+      method parameters     
+ k(s)        :  1.8500
+ k(p)        :  2.2300
+ k(d)        :  2.2300
+ k(f)        :  2.0000
+ kEN (H0ij)  : -2.0000
+ D3 a1       :  0.5200
+ D3 a2       :  5.0000
+ D3 s8       :  2.7000
+ D3atm       :  5.0000
+ alphaj      :  2.0000
+ 
+ Solvent             : h2o
+ GBSA parameter file : /home/kruse/Progs/XTB/.param_gbsa_h2o
+ Gsolv ref. state (COSMO-RS): gsolv [1 M gas/solution]
+ temperature (mdtemp)       :    298.150000000000     
+ dielectric constant        :    78.5000000000000     
+ rho                        :   0.998000000000000     
+ mass                       :    18.0000000000000     
+ surface tension            :    15.5689470637553     
+ probe radius               :   0.976041290000000     
+ vdW radii scaling          :    1.00000000000000     
+ Gshift (Eh)                :   2.075470419022681E-003
+ c1                         :    1.58079374000000     
+ soset                      :   7.194512000000000E-002
+ HB correction              :  T
+ 
+ doing EN charges ...
+ sum q : -0.2000000D+01
+ point charge moment (au)
+     X       Y       Z   
+-248.1113-344.3899-445.0200  total (Debye): 1563.169
+ 
+            Z     q(EN)     CN     RAES       Cart. coordinates
+     1  N   5.0   -0.47    3.19    1.95   124.01231   166.46486   213.97678
+     2  C   4.0   -0.06    4.22    4.05   125.47337   167.18978   216.08695
+     3  C   4.0    0.06    3.19    3.03   126.30322   164.96487   217.62554
+     4  O   6.0   -0.27    1.10    1.80   124.94891   163.28285   218.13343
+     5  C   4.0   -0.17    4.19    3.99   124.20911   169.14369   217.67633
+     6  S   6.0   -0.18    2.23    3.10   126.05146   170.74329   220.22174
+     7  H   1.0    0.13    1.03    1.43   122.31489   167.02917   213.97635
+     8  H   1.0    0.03    1.04    1.43   127.15104   168.09492   215.31662
+     9  H   1.0    0.03    1.05    1.44   123.39947   170.59728   216.49932
+    10  H   1.0    0.03    1.05    1.44   122.56827   168.28462   218.50970
+    11  N   5.0   -0.44    3.18    1.95   119.41944   167.71364   226.06336
+    12  C   4.0   -0.06    4.24    4.08   116.98771   168.25092   225.08006
+    13  C   4.0    0.04    3.21    3.04   116.09828   166.47818   223.01076
+    14  O   6.0   -0.25    1.09    1.80   113.91105   166.31803   222.47089
+    15  C   4.0   -0.15    4.18    3.95   116.70422   170.84119   224.28668
+    16  S   6.0   -0.18    2.15    3.10   117.72906   171.91287   221.21218
+    17  H   1.0    0.11    1.06    1.44   120.58570   169.14430   225.89952
+    18  H   1.0    0.03    1.04    1.43   115.72411   167.80439   226.65993
+    19  H   1.0    0.03    1.04    1.44   114.71176   171.42563   224.47635
+    20  H   1.0    0.03    1.05    1.44   117.56934   172.08882   225.69826
+    21  N   5.0   -0.50    3.22    1.96   129.12982   175.60303   218.88893
+    22  C   4.0   -0.37    4.13    3.87   127.90112   177.88789   217.71295
+    23  C   4.0   -0.02    3.21    3.04   128.16382   179.99824   219.46361
+    24  O   6.0   -0.19    1.08    1.80   129.65744   179.85348   221.38067
+    25  C   4.0   -0.26    4.09    3.79   124.95749   177.20059   217.41055
+    26  S   6.0   -0.23    2.25    3.10   122.95836   176.68834   220.40085
+    27  H   1.0    0.18    1.10    1.44   128.09717   174.46917   219.64864
+    28  H   1.0    0.33    1.11    1.45   128.28644   177.95918   216.30618
+    29  H   1.0    0.10    1.08    1.44   124.17832   178.54942   216.57281
+    30  H   1.0    0.07    1.06    1.44   124.74990   175.74377   216.29476
+    31  N   5.0   -0.43    3.24    1.97   125.12647   178.64836   226.44652
+    32  C   4.0   -0.06    4.31    4.22   126.47035   176.76099   227.63389
+    33  C   4.0    0.03    3.18    3.03   129.15908   177.35196   228.24301
+    34  O   6.0   -0.24    1.09    1.80   130.47156   175.92995   229.44620
+    35  C   4.0   -0.16    4.20    4.00   126.26217   174.32600   226.25350
+    36  S   6.0   -0.26    2.49    3.10   123.25907   173.26492   225.66331
+    37  H   1.0    0.09    1.05    1.44   124.98900   178.38010   224.55749
+    38  H   1.0    0.04    1.06    1.44   125.53194   176.51836   229.43056
+    39  H   1.0    0.04    1.07    1.44   127.27331   174.51275   224.49910
+    40  H   1.0    0.03    1.06    1.44   127.33410   172.87388   227.22264
+    41  ZN  2.0    0.55    3.84    5.00   122.16310   172.69507   221.70366
+    42  H   1.0    0.19    1.05    1.44   124.71886   167.08181   212.55808
+    43  H   1.0    0.06    1.03    1.43   128.07815   164.86885   218.26702
+    44  H   1.0    0.19    1.05    1.44   119.29187   167.33079   227.71554
+    45  H   1.0    0.06    1.03    1.43   117.34983   165.41815   222.07214
+    46  H   1.0    0.19    1.04    1.43   129.96540   174.72904   217.69288
+    47  H   1.0    0.06    1.02    1.43   127.17728   181.58570   219.18470
+    48  H   1.0    0.19    1.06    1.44   123.54921   178.70699   227.08006
+    49  H   1.0    0.06    1.03    1.43   129.92837   178.97245   227.64864
+ 
+  Z AO/shell   Hii/eV     exponent
+  1     Wed Apr 25 08:07:45 CEST 2018   EN: 2.200 GM2: 0.406  GM3: 0.0800  RAES: 1.40
+     1s    -10.707211    1.230000
+  6     Wed Apr 25 08:07:45 CEST 2018   EN: 2.550 GM2: 0.538  GM3: 0.1500  RAES: 3.00
+     2s    -13.970922    2.096432
+     2p    -10.063292    1.800000
+  7     Wed Apr 25 08:07:45 CEST 2018   EN: 3.040 GM2: 0.461  GM3:-0.0640  RAES: 1.90
+     2s    -16.686243    2.339881
+     2p    -12.523956    2.014332
+  8     Wed Apr 25 08:07:45 CEST 2018   EN: 3.440 GM2: 0.452  GM3:-0.0517  RAES: 1.80
+     2s    -20.229985    2.439742
+     2p    -15.503117    2.137023
+ 16     Tue Apr 24 11:44:34 CEST 2018   EN: 2.580 GM2: 0.340  GM3:-0.0502  RAES: 3.10
+     3s    -20.029654    1.981333
+     3p    -11.377694    2.025643
+     3d     -0.420282    1.702555
+ 30     Wed Apr 25 13:34:15 CEST 2018   EN: 1.650 GM2: 0.564  GM3: 0.2313  RAES: 5.00
+     4s     -7.177294    1.664847
+     4p     -0.991895    1.176434
+ no old-style atom pair restraing (fixing) potential
+ 
+             =======================================
+             |                                     |
+             |        S C C  calculation           |
+             |                                     |
+             =======================================
+ #proc     :            2
+ Ncao      :          148
+ Nao       :          144
+ Nel       :          144
+ T(el)     :   500.0
+ intcut    :    25.0
+ scfconv   :  0.100E-05
+   qconv   :  0.100E-03
+ intneglect:  0.100E-07
+ broydamp  :      0.400
+ Nshell    :           78
+ iter      E             dE          RMSdq      gap      omega  full diag
+   1    -80.1202863 -0.801203E+02  0.664E+00    2.15       0.0  T
+   2    -80.8341365 -0.713850E+00  0.327E+00    0.98       1.0  T
+   3    -80.8823436 -0.482071E-01  0.185E+00    1.24       1.0  T
+   4    -80.8935198 -0.111762E-01  0.713E-01    0.81       1.0  T
+   5    -80.9059860 -0.124662E-01  0.375E-01    0.91       1.0  T
+   6    -80.9072673 -0.128127E-02  0.161E-01    0.97       1.0  T
+   7    -80.9079637 -0.696438E-03  0.655E-02    0.93       1.0  T
+   8    -80.9079911 -0.273756E-04  0.322E-02    0.95       1.0  T
+   9    -80.9079981 -0.697330E-05  0.130E-02    0.94       1.1  T
+  10    -80.9079999 -0.177446E-05  0.502E-03    0.94       2.8  T
+  11    -80.9080005 -0.608684E-06  0.235E-03    0.94       6.1  T
+  12    -80.9080005 -0.138821E-07  0.126E-03    0.94      11.3  T
+  13    -80.9080005 -0.167426E-07  0.655E-04    0.94      21.8  T
+  14    -80.9080005 -0.420823E-08  0.238E-04    0.94      60.1  T
+speedup  1.93
+cpu  time for SCC    0.14 s
+wall time for SCC    0.07 s
+
+          eigenvalues
+ #    :          60         61         62         63         64         65         66         67
+ occ. :        2.000      2.000      2.000      2.000      2.000      2.000      2.000      2.000
+ eps  :       -11.250    -11.072    -10.141    -10.112    -10.073     -9.748     -9.382     -9.293
+ #    :          68         69         70         71         72         73         74         75
+ occ. :        2.000      2.000      2.000      2.000      2.000      0.000      0.000      0.000
+ eps  :        -9.139     -9.076     -8.931     -8.843     -8.703     -7.759     -7.602     -7.511
+ #    :          76         77         78         79         80         81         82         83
+ occ. :        0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000
+ eps  :        -7.303     -4.929     -4.808     -4.409     -3.954     -3.438     -0.606     -0.235
+ 
+
+   #   Z            q   n(s)   n(p)   n(d)      C6AA      α(0)    relVol
+   1   7 N     -0.390  1.293  4.097  0.000    30.513     8.207     1.089
+   2   6 C      0.047  1.037  2.916  0.000    19.803     6.337     0.513
+   3   6 C      0.225  1.072  2.703  0.000    23.209     7.885     0.638
+   4   8 O     -0.371  1.726  4.645  0.000    21.223     6.182     1.190
+   5   6 C      0.055  1.045  2.900  0.000    19.660     6.311     0.511
+   6  16 S     -0.661  1.936  4.701  0.024   172.670    22.112     1.127
+   7   1 H      0.166  0.834  0.000  0.000     1.254     1.754     0.347
+   8   1 H      0.046  0.954  0.000  0.000     2.359     2.401     0.475
+   9   1 H      0.015  0.985  0.000  0.000     2.798     2.615     0.517
+  10   1 H     -0.014  1.014  0.000  0.000     3.313     2.845     0.563
+  11   7 N     -0.392  1.302  4.091  0.000    30.590     8.218     1.090
+  12   6 C      0.055  1.036  2.909  0.000    19.660     6.313     0.511
+  13   6 C      0.224  1.078  2.698  0.000    23.225     7.889     0.638
+  14   8 O     -0.366  1.731  4.635  0.000    21.133     6.169     1.187
+  15   6 C      0.058  1.038  2.904  0.000    19.609     6.304     0.510
+  16  16 S     -0.645  1.933  4.690  0.022   171.849    22.059     1.125
+  17   1 H      0.149  0.851  0.000  0.000     1.369     1.831     0.362
+  18   1 H      0.054  0.946  0.000  0.000     2.256     2.348     0.465
+  19   1 H      0.025  0.975  0.000  0.000     2.648     2.544     0.503
+  20   1 H      0.016  0.984  0.000  0.000     2.793     2.612     0.517
+  21   7 N     -0.401  1.296  4.105  0.000    30.819     8.249     1.094
+  22   6 C      0.019  1.009  2.972  0.000    20.334     6.431     0.520
+  23   6 C      0.203  1.083  2.714  0.000    23.643     7.959     0.644
+  24   8 O     -0.440  1.792  4.648  0.000    22.592     6.378     1.227
+  25   6 C      0.003  1.032  2.965  0.000    20.581     6.467     0.523
+  26  16 S     -0.621  1.917  4.672  0.032   170.584    21.978     1.121
+  27   1 H      0.145  0.855  0.000  0.000     1.392     1.846     0.365
+  28   1 H      0.134  0.866  0.000  0.000     1.467     1.893     0.375
+  29   1 H      0.071  0.929  0.000  0.000     2.055     2.240     0.443
+  30   1 H      0.053  0.947  0.000  0.000     2.269     2.355     0.466
+  31   7 N     -0.362  1.286  4.077  0.000    29.761     8.106     1.075
+  32   6 C      0.058  1.030  2.913  0.000    19.590     6.296     0.510
+  33   6 C      0.205  1.082  2.714  0.000    23.600     7.950     0.643
+  34   8 O     -0.392  1.738  4.654  0.000    21.640     6.243     1.201
+  35   6 C      0.096  1.018  2.886  0.000    18.987     6.202     0.502
+  36  16 S     -0.592  1.874  4.682  0.036   169.101    21.882     1.116
+  37   1 H      0.134  0.866  0.000  0.000     1.481     1.905     0.377
+  38   1 H      0.062  0.938  0.000  0.000     2.166     2.300     0.455
+  39   1 H     -0.030  1.030  0.000  0.000     3.631     2.978     0.589
+  40   1 H     -0.008  1.008  0.000  0.000     3.199     2.796     0.553
+  41  30 ZN     0.354  1.150  0.496  0.000   121.856    21.547     0.480
+  42   1 H      0.205  0.795  0.000  0.000     1.031     1.590     0.315
+  43   1 H      0.054  0.946  0.000  0.000     2.262     2.351     0.465
+  44   1 H      0.197  0.803  0.000  0.000     1.074     1.622     0.321
+  45   1 H      0.048  0.952  0.000  0.000     2.342     2.393     0.473
+  46   1 H      0.182  0.818  0.000  0.000     1.157     1.684     0.333
+  47   1 H      0.077  0.923  0.000  0.000     1.995     2.209     0.437
+  48   1 H      0.190  0.810  0.000  0.000     1.113     1.651     0.327
+  49   1 H      0.061  0.939  0.000  0.000     2.181     2.309     0.457
+
+ Mol. C6AA /au*bohr^6 :      36879.923733
+ Mol. C8AA /au*bohr^6 :    1121625.613075
+ Mol. a(0) /au        :        302.746555
+
+ 
+molecular dipole:
+                 x           y           z       tot (Debye)
+ q only:     -246.246    -344.825    -445.927
+   full:      615.403    -344.921    -446.123    1564.230
+molecular quadrupole (traceless):
+                xx          xy          yy          xz          yz          zz
+ q only:    49080.203  -63710.862    5412.023  -82392.282 -115347.019  -54492.225
+  q+dip:    49093.514  -63781.149    5437.192  -82493.407 -115435.623  -54530.706
+   full:    49093.717  -63780.557    5434.890  -82494.561 -115435.681  -54528.607
+ SCC converged in           14  cycles
+speedup  1.77
+cpu  time for grad    0.04 s
+wall time for grad    0.02 s
+ 
+SCC energy    :     -80.8931606
+rep           :       1.2421999
+ES            :       0.5470405
+AES           :      -0.0359086
+AXC           :       0.0382539
+disp          :      -0.0621495
+XB            :       0.0000000
+fix           :       0.0000000
+Gborn         :      -0.2435648
+Gsasa         :       0.0127645
+Ghb           :      -0.0227705
+Gshift        :       0.0020755
+Gsolv         :      -0.2514954     -157.82
+Etot ala COSMO:     -79.6413875
+grad norm     :       1.0293548
+total E       :     -79.6493180
+atomizationE  :      12.4392352     7805.74
+(atE without considerung molecular charge,
+ total energy contains solvation terms)
+H-L gap (eV)  :          0.9437
+ 
+speedup  1.47
+cpu  time for all    0.28 s
+wall time for all    0.19 s
