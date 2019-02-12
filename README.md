@@ -18,5 +18,7 @@ manually corrected model for 5c11: 5c11_gf2-xtb/5c11_modified_noCYS12_HG.pdb
 --------------------------------------------------------------------------------
 
 4gif is a simpler alternative for the non-P1 paper found by Pavel. 
-It is 2.8 A resolution, P_3_2_1 symmetry, 
+
+It is 2.8 A resolution, P_3_2_1 symmetry.
+
 Original PDB is showing several clashscores which are removed fully by both xtb and Terachem qr.refine.
