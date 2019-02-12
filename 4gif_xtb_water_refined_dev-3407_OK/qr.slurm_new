@@ -1,0 +1,16 @@
+#!/bin/bash -l
+#SBATCH -N 1
+#SBATCH -c 12
+#SBATCH -p cpu
+#SBATCH --job-name=4gif_xtb_1buff
+#g16
+clean_tmp
+export g16root=/opt/qmsoft/g16
+export GAUSS_SCRDIR=/tmp
+source $g16root/g16/bsd/g16.profile
+cd $SLURM_SUBMIT_DIR
+source  /opt/intel/parallel_studio_xe_2015/bin/psxevars.sh intel64 > /dev/null 2>&1
+
+qr.refine  4gif_ready.pdb 4gif_ready.mtz  mode=refine maxnum_residues_in_cluster=50 quantum.nproc=12 parallel.nproc=2  max_bond_rmsd=0.02  stpmax=0.2 gradient_only=true clustering=true use_convergence_test=true  opt_log=1 restraints=qm  engine_name=xtb  > qr_4gif_xtb_stpmax02_clust50_dev-3407.log 2>&1
+
+
