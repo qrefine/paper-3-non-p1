@@ -22,3 +22,5 @@ manually corrected model for 5c11: 5c11_gf2-xtb/5c11_modified_noCYS12_HG.pdb
 It is 2.8 A resolution, P_3_2_1 symmetry.
 
 Original PDB is showing several clashscores which are removed fully by both xtb and Terachem qr.refine.
+
+Short summary what have been done + results can be found in "4gif_for_paper3_symmetry"
