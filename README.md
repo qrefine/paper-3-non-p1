@@ -23,4 +23,4 @@ It is 2.8 A resolution, P_3_2_1 symmetry.
 
 Original PDB is showing several clashscores which are removed fully by both xtb and Terachem qr.refine.
 
-Short summary what have been done + results can be found in "4gif_for_paper3_symmetry"
+# Short summary what have been done + results can be found in "4gif_for_paper3_symmetry"
