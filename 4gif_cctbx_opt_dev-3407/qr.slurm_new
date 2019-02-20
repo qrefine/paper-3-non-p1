@@ -1,0 +1,16 @@
+#!/bin/bash -l
+#SBATCH -N 1
+#SBATCH -c 12
+#SBATCH -p cpu
+#SBATCH --job-name=4gif_cctbx_opt
+#g16
+clean_tmp
+export g16root=/opt/qmsoft/g16
+export GAUSS_SCRDIR=/tmp
+source $g16root/g16/bsd/g16.profile
+cd $SLURM_SUBMIT_DIR
+source  /opt/intel/parallel_studio_xe_2015/bin/psxevars.sh intel64 > /dev/null 2>&1
+
+qr.refine  4gif_ready.pdb  mode=opt opt_log=1 restraints=cctbx   > qr_4gif_cctbx_OPT_dev-3407.log 2>&1
+
+
