@@ -1,0 +1,2 @@
+nohup qr.refine 5c11_modified_noCYS12_HG.pdb 5c11.mtz  mode=refine maxnum_residues_in_cluster=50 quantum.nproc=18 parallel.nproc=2 charge_embedding=1 two_buffers=1 max_bond_rmsd=0.03 stpmax=0.2 gradient_only=true clustering=true use_convergence_test=true  opt_log=1 restraints=qm  engine_name=xtb  > qr_5c11_xtb_stpmax02_clust50_TwoBuff_PC_maxbondrmsd003.log 2>&1 &
+
