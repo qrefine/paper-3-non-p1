@@ -25,7 +25,7 @@ Note: with max_bond_rmsd smaller then 0.05 refinement fails to find weight
 
 --------------------------------------------------------------------------------
 
-#4gif is a simpler alternative for the non-P1 paper found by Pavel. 
+# 4gif is a simpler alternative for the non-P1 paper found by Pavel. 
 
 It is 2.8 A resolution, P_3_2_1 symmetry.
 
