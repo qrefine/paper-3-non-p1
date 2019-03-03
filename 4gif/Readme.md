@@ -3,7 +3,7 @@
 
 1.	phenix.refine 4gif.mtz 4gif.pdb > 4gif_phenix.log
 
-       a.	4gif_refine_001.pdb
+        a.	4gif_refine_001.pdb
   
         b.	4gif_refine_001_fresh.mtz
   
