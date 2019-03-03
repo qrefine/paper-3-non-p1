@@ -1,7 +1,7 @@
 # 4gif fresh start model preparation
 
 
-1.	phenix.refine 4gif.mtz 4gif.pdb > 4gif_phenix.log
+1.	phenix.refine 4gif.mtz 4gif.pdb 
 
         a.	4gif_refine_001.pdb
   
