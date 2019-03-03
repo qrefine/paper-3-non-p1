@@ -5,7 +5,7 @@
 
         a.	4gif_refine_001.pdb
   
-        b.	4gif_refine_001_fresh.mtz
+        b.	4gif_refine_001.mtz -> renamed 4gif_refine_001_fresh.mtz
   
 2.	qr.finalise 4gif_refine_001.pdb
 
@@ -19,4 +19,4 @@
 
         a.	4gif_fresh_ready.pdb 
   
-5. Refinemnts done using 4gif_fresh_ready.pdb  and 4gif_refine_001_fresh.mtz
+5. Refinements done using 4gif_fresh_ready.pdb  and 4gif_refine_001_fresh.mtz
