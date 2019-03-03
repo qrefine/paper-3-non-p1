@@ -1,4 +1,4 @@
-4gif fresh start model preparation
+"4gif fresh start model preparation"
 
 
 1.	phenix.refine 4gif.mtz 4gif.pdb > 4gif_phenix.log
