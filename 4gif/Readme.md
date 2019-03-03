@@ -15,7 +15,7 @@
 
         a.	4gif_refine_001_complete.pdb_modified.pdb
   
-4.	Water molecules which are in larger distance from the protein has been removed manually. These are atoms 767-855 from           4gif_refine_001_complete.pdb_modified.pdb. 
+4.	Water molecules which are in larger distance from the protein have been removed manually. These are atoms 767-855 from           4gif_refine_001_complete.pdb_modified.pdb. 
 
         a.	4gif_fresh_ready.pdb 
   
