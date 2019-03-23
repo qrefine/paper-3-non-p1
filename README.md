@@ -29,6 +29,16 @@ Note: with max_bond_rmsd smaller then 0.05 refinement fails to find weight
 
 It is 2.8 A resolution, P_3_2_1 symmetry.
 
+Documented model preparation:
+
+1.	phenix.fetch_pdb --mtz 4gif
+
+2.	phenix.refine 4gif.{pdb,mtz} ordered_solvent=true ordered_solvent.low_res=3
+
+3.	qr.finalise 4gif_refine_001.pdb
+
+4.	phenix.pdbtools 4gif_refine_001_complete.pdb occupancies.set=0 modify.selection="element H"
+
 Original PDB is showing several clashscores which are removed fully by both xtb and Terachem qr.refine.
 
-Short summary what have been done + results can be found in "4gif_for_paper3_symmetry"
+
