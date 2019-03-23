@@ -39,6 +39,8 @@ Documented model preparation:
 
 4.	phenix.pdbtools 4gif_refine_001_complete.pdb occupancies.set=0 modify.selection="element H"
 
+4gif_for_paper3_symmetry_OKdocumented
+
 Original PDB is showing several clashscores which are removed fully by both xtb and Terachem qr.refine.
 
 
