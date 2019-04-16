@@ -1,2 +1,0 @@
-#!/bin/bash
-nohup qr.refine 4gif_ready.pdb 4gif_ready.mtz mode=refine max_bond_rmsd=0.02 stpmax=0.2 clustering=true restraints=qm parallel.method=lsf parallel.qsub_command="bsub -n 4 -q gpu" engine_name=terachem  basis=6-31g opt_log=1 gradient_only=true  use_convergence_test=true > 4gif_HF3D_631G_h2o_dev-3407.log &
