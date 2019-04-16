@@ -1,16 +1,16 @@
-# 4gif is a simpler alternative for the non-P1 paper found by Pavel. 
+# 4gif is a simpler alternative for the non-P1 paper found by Pavel.
 
 It is 2.8 A resolution, P_3_2_1 symmetry.
 
 Documented model preparation:
 
-1.	phenix.fetch_pdb --mtz 4gif
+1.      phenix.fetch_pdb --mtz 4gif
 
-2.	phenix.refine 4gif.{pdb,mtz} ordered_solvent=true ordered_solvent.low_res=3
+2.      phenix.refine 4gif.{pdb,mtz} ordered_solvent=true ordered_solvent.low_res=3
 
-3.	qr.finalise 4gif_refine_001.pdb
+3.      qr.finalise 4gif_refine_001.pdb
 
-4.	phenix.pdbtools 4gif_refine_001_complete.pdb occupancies.set=0 modify.selection="element H"
+4.      phenix.pdbtools 4gif_refine_001_complete.pdb occupancies.set=0 modify.selection="element H"
 
 Short results summary in 4gif_for_paper3_symmetry_OKdocumented
 
