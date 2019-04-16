@@ -1,4 +1,4 @@
-Error output from ['/home/pdb/pdb/gr/pdb1gr5.ent.gz', '1gr5']
+  Error output from ['/home/pdb/pdb/gr/pdb1gr5.ent.gz', '1gr5']
 'NoneType' object has no attribute 'type'
 Traceback (most recent call last):
   File "/home/yanting/phenix-1.13/phenix-1.13rc1-2961/modules/cctbx_project/libtbx/scheduling/job_scheduler.py", line 64, in job_cycle
