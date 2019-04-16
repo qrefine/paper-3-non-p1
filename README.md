@@ -11,8 +11,6 @@ Data storage for paper 3 (non-P1 space group)
 
 5c11_standard* has 4WQ replaced with LYS
 
-BTW - 5bmi is not a viable candidate due to the MTN radical. Please ignore!
-
 manually corrected model for 5c11: 5c11_gf2-xtb/5c11_modified_noCYS12_HG.pdb
 
 # added 5c11 xtb results with Two Buffers 
