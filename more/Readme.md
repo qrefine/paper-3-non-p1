@@ -16,6 +16,13 @@ Documented model preparation:
 
 6.     qr.refine xxxx_complete_refine_001.pdb xxxx_complete_refine_001.mtz mode=refine maxnum_residues_in_cluster=N quantum.nproc=2 parallel.nproc=10 max_bond_rmsd=0.02  stpmax=0.2 gradient_only=true clustering=true use_convergence_test=true  opt_log=1 restraints=qm  engine_name=xtb  > 5zkt_xtb_refine_MaxResN.log   
 
+## 3a5x (7194 atoms)
+method         | bond   | angle |clashscore |rama_outlier| rama_favor|rotamer | CC_mask
+:--:           | :--:   | :--:  |   :--:    |   :--:     |   :--:    |:--:    |:--:
+initial        | 0.013  | 1.530 | 117.79    |   2.85     |   86.59   | 8.72   | 0.292
+cctbx_refine   | 0.001  | 0.4   |  2.36     |   0.61     |   93.50   |  2.05  | 0.3025
+xtb_refine     | 0.010  | 1.70  |  2.5      |   0.81     |   93.90   |  4.36  | 0.3050
+terachem_refine| 0.014  | 1.4   |  1.53     |   0        |   96.75   |  4.62  | 0.3051
 
 ##5zkt – 1.74 A MaxNumRes=15	
 
