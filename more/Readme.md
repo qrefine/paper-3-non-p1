@@ -16,35 +16,5 @@ Documented model preparation:
 
 6.     qr.refine xxxx_complete_refine_001.pdb xxxx_complete_refine_001.mtz mode=refine maxnum_residues_in_cluster=N quantum.nproc=2 parallel.nproc=10 max_bond_rmsd=0.02  stpmax=0.2 gradient_only=true clustering=true use_convergence_test=true  opt_log=1 restraints=qm  engine_name=xtb  > 5zkt_xtb_refine_MaxResN.log   
 
-## 5zkt – 1.74 A MaxNumRes=15	
-aa	                 |	PDB	|	CCTBX	|	GFN-xTB2	
-:--:                     |	:--:   	|	:--:   	|	:--:   
-Rwork	                 |	0.209	|	0.1951	|	0.1938
-Rfree	                 |	0.22	|	0.2061	|	0.2121
-Rgap	                 |	0.0110	|	0.0110	|	0.0183
-RMS(bonds)	         |	0.0067	|	0.0119	|	0.0168
-RMS(angles)	         |	0.98	|	1.01	|	2.18
-Ramachandran favored (%) |	99.05	|	99.05	|	99.05
-Ramachandran outliers(%) |	0	|	0	|	0
-Rotamer outliers(%)	 |	0	|	0	|	2.25
-Clashcore/1000 atoms	 |	2.82	|	2.82	|	3.38
-Cβ deviations	         |	0	|	0	|	2
-MolProbity score	 |	1.07	|	1.07	|	1.4
 
-
-
-	|	##6agy – 1.8 A  MaxNumRes=25	|		|	
-	|	PDB	|	CCTBX	|	GFN-xTB2
-:--:   	|	:--:   	|	:--:   	|	:--:   
-Rwork	|	0.137	|	0.1376	|	0.137
-Rfree	|	0.17	|	0.1779	|	0.1815
-Rgap	|	0.0330	|	0.0403	|	0.0445
-RMS(bonds)	|	0.0058	|	0.0179	|	0.0151
-RMS(angles)	|	1.16	|	1.6	|	2.18
-Ramachandran favored (%)	|	97.96	|	97.96	|	97.96
-Ramachandran outliers(%)	|	0.68	|	0.68	|	0.68
-Rotamer outliers(%)	|	0	|	0	|	0.8
-Clashcore/1000 atoms	|	1.29	|	5.6	|	0.86
-Cβ deviations	|	0	|	0	|	0
-MolProbity score	|	0.86	|	1.31	|	0.77
 
