@@ -1,0 +1,910 @@
+Starting Q|R
+version:   v1.0-114-g3318f9  
+Running refinement
+   input {
+     xray_data {
+       file_name = None
+       labels = None
+       high_resolution = None
+       low_resolution = None
+       outliers_rejection = True
+       french_wilson_scale = True
+       french_wilson {
+         max_bins = 60
+         min_bin_size = 40
+       }
+       sigma_fobs_rejection_criterion = None
+       sigma_iobs_rejection_criterion = None
+       ignore_all_zeros = True
+       force_anomalous_flag_to_be_equal_to = None
+       convert_to_non_anomalous_if_ratio_pairs_lone_less_than_threshold = 0.5
+       r_free_flags {
+         file_name = None
+         label = None
+         test_flag_value = None
+         ignore_r_free_flags = False
+         disable_suitability_test = False
+         ignore_pdb_hexdigest = False
+         generate = False
+         fraction = 0.1
+         max_free = 2000
+         lattice_symmetry_max_delta = 5
+         use_lattice_symmetry = True
+         use_dataman_shells = False
+         n_shells = 20
+       }
+     }
+     pdb {
+       file_name = None
+     }
+     monomers {
+       file_name = None
+     }
+     maps {
+       map_file_name = None
+       d_min = None
+       map_coefficients_file_name = None
+       map_coefficients_label = None
+     }
+     sequence = None
+     scattering_table = wk1995 it1992 *n_gaussian neutron electron
+     wavelength = None
+     energy = None
+     twin_law = Auto
+   }
+   max_atoms = 15000
+   debug = False
+   cluster {
+     charge_cutoff = 8.0
+     clustering = true
+     charge_embedding = False
+     two_buffers = 1
+     maxnum_residues_in_cluster = 15
+     clustering_method = gnc *bcc
+     altloc_method = *average subtract
+     g_scan = 1 5 10 15 25 50
+     g_mode = None
+   }
+   restraints = cctbx *qm
+   quantum {
+     engine_name = mopac ani torchani terachem turbomole pyscf orca gaussian \
+                   *xtb
+     charge = None
+     basis = Auto
+     method = Auto
+     memory = None
+     nproc = 2
+     qm_addon = gcp dftd3 gcp-d3
+     qm_addon_method = None
+   }
+   refine {
+     dry_run = False
+     sf_algorithm = *direct fft
+     refinement_target_name = *ml ls_wunit_k1
+     mode = opt refine *gtest
+     number_of_macro_cycles = 1
+     number_of_weight_search_cycles = 50
+     number_of_refine_cycles = 5
+     number_of_micro_cycles = 50
+     data_weight = None
+     choose_best_use_r_work = False
+     skip_weight_search = False
+     adjust_restraints_weight_scale_value = 2
+     max_iterations_weight = 50
+     max_iterations_refine = 50
+     use_ase_lbfgs = False
+     line_search = True
+     stpmax = 3
+     gradient_only = true
+     update_all_scales = True
+     refine_sites = True
+     refine_adp = False
+     restraints_weight_scale = 1.0
+     shake_sites = False
+     use_convergence_test = true
+     max_bond_rmsd = 0.03
+     max_r_work_r_free_gap = 5.0
+     r_tolerance = 0.001
+     rmsd_tolerance = 0.01
+     opt_log = 1
+     pre_opt = False
+     pre_opt_stpmax = 0.1
+     pre_opt_iter = 10
+     pre_opt_switch = 2
+     pre_opt_gconv = 3000
+   }
+   parallel {
+     method = *multiprocessing slurm pbs sge lsf threading
+     nproc = 10
+     qsub_command = None
+   }
+   output_file_name_prefix = None
+   output_folder_name = "pdb"
+   shared_disk = True
+   rst_file = None
+   dump_gradients = None
+  Default method for xtb is  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o
+ params.gradient_only True
+
+***********************************************************
+restart info will be stored in /home/qr/paper3_nonP1_more/5zkt/pdb/5zkt_complete_refine_001.rst.pickle
+***********************************************************
+
+Calculating  12 gradients 
+
+Starting loop over different fragment sizes
+loop for g_mode = 1 
+g_mode: 1 - 1
+~max cluster size  1
+time taken for fragments 837.733742952
+~  # clusters  :  84
+~  list of atoms per cluster:
+~    [96, 79, 63, 59, 56, 82, 85, 12, 58, 21, 48, 12, 28, 12, 63, 54, 12, 73, 57, 30, 52, 12, 52, 27, 47, 9, 58, 57, 40, 48, 9, 28, 28, 35, 9, 19, 6, 33, 27, 20, 20, 6, 20, 31, 44, 6, 6, 22, 3, 24, 19, 22, 15, 13, 3, 24, 16, 19, 24, 15, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+~  list of atoms per fragment:
+~    [321, 420, 375, 350, 299, 432, 291, 109, 401, 238, 239, 129, 305, 151, 461, 394, 147, 460, 370, 308, 360, 122, 314, 277, 267, 97, 511, 449, 323, 311, 90, 280, 92, 148, 85, 218, 129, 282, 258, 242, 256, 75, 159, 227, 197, 74, 137, 133, 100, 137, 271, 213, 185, 122, 19, 175, 233, 245, 249, 116, 35, 98, 103, 72, 52, 54, 56, 96, 101, 48, 84, 38, 69, 75, 33, 12, 75, 49, 91, 50, 88, 95, 6, 28]
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+~   gnorm 173088.739032
+~   max_g 6823.81409532  min_g 0.328324144014
+total time for gradient 959.03467989 
+
+
+g_mode: 1 - 5
+~max cluster size  5
+time taken for fragments 815.898331881
+~  # clusters  :  73
+~  list of atoms per cluster:
+~    [96, 79, 63, 59, 48, 56, 82, 85, 12, 58, 21, 25, 48, 12, 28, 60, 12, 63, 54, 12, 26, 75, 73, 57, 30, 52, 12, 52, 27, 47, 9, 58, 57, 40, 48, 9, 28, 35, 35, 9, 30, 9, 25, 16, 6, 24, 19, 22, 24, 16, 19, 15, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+~  list of atoms per fragment:
+~    [321, 420, 375, 350, 165, 299, 432, 291, 109, 401, 238, 251, 239, 129, 305, 355, 151, 461, 394, 147, 262, 288, 460, 370, 308, 360, 122, 314, 277, 267, 97, 511, 449, 323, 311, 90, 280, 310, 148, 85, 258, 143, 171, 125, 76, 137, 271, 213, 175, 233, 245, 116, 35, 98, 103, 72, 56, 96, 101, 48, 84, 38, 69, 75, 33, 75, 49, 91, 50, 88, 95, 6, 28]
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+~   gnorm 173076.403113
+~   max_g 6823.82953949  min_g 0.350019191712
+total time for gradient 928.15080905 
+
+
+g_mode: 1 - 10
+~max cluster size  10
+time taken for fragments 481.805747032
+~  # clusters  :  57
+~  list of atoms per cluster:
+~    [142, 122, 129, 97, 79, 60, 66, 87, 64, 68, 40, 79, 56, 115, 57, 44, 96, 48, 82, 25, 60, 26, 75, 35, 30, 9, 25, 16, 6, 24, 19, 22, 24, 16, 19, 15, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+~  list of atoms per fragment:
+~    [560, 563, 504, 291, 447, 279, 400, 429, 369, 446, 304, 430, 270, 640, 311, 161, 321, 165, 432, 251, 355, 262, 288, 310, 258, 143, 171, 125, 76, 137, 271, 213, 175, 233, 245, 116, 35, 98, 103, 72, 56, 96, 101, 48, 84, 38, 69, 75, 33, 75, 49, 91, 50, 88, 95, 6, 28]
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+~   gnorm 173068.676122
+~   max_g 6813.34356444  min_g 0.0900469372094
+total time for gradient 561.742398024 
+
+
+g_mode: 1 - 15
+~max cluster size  15
+time taken for fragments 304.210022211
+~  # clusters  :  31
+~  list of atoms per cluster:
+~    [192, 207, 184, 78, 140, 94, 122, 132, 93, 82, 74, 101, 60, 56, 59, 60, 44, 25, 60, 75, 35, 16, 6, 24, 3, 3, 3, 3, 3, 3, 3]
+~  list of atoms per fragment:
+~    [635, 823, 549, 451, 572, 527, 356, 504, 464, 450, 325, 580, 279, 387, 295, 311, 161, 251, 355, 288, 310, 125, 76, 175, 98, 103, 96, 33, 75, 6, 28]
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+~   gnorm 173025.310344
+~   max_g 6812.19987447  min_g 0.378720300993
+total time for gradient 391.310490131 
+
+
+g_mode: 1 - 25
+~max cluster size  25
+time taken for fragments 315.087280035
+~  # clusters  :  31
+~  list of atoms per cluster:
+~    [192, 207, 184, 78, 140, 94, 122, 132, 93, 82, 74, 101, 60, 56, 59, 60, 44, 25, 60, 75, 35, 16, 6, 24, 3, 3, 3, 3, 3, 3, 3]
+~  list of atoms per fragment:
+~    [635, 823, 549, 451, 572, 527, 356, 504, 464, 450, 325, 580, 279, 387, 295, 311, 161, 251, 355, 288, 310, 125, 76, 175, 98, 103, 96, 33, 75, 6, 28]
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+~   gnorm 173023.77795
+~   max_g 6812.19987447  min_g 0.378720300993
+total time for gradient 403.276615143 
+
+
+g_mode: 1 - 50
+~max cluster size  50
+time taken for fragments 319.02828598
+~  # clusters  :  31
+~  list of atoms per cluster:
+~    [192, 207, 184, 78, 140, 94, 122, 132, 93, 82, 74, 101, 60, 56, 59, 60, 44, 25, 60, 75, 35, 16, 6, 24, 3, 3, 3, 3, 3, 3, 3]
+~  list of atoms per fragment:
+~    [635, 823, 549, 451, 572, 527, 356, 504, 464, 450, 325, 580, 279, 387, 295, 311, 161, 251, 355, 288, 310, 125, 76, 175, 98, 103, 96, 33, 75, 6, 28]
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+~   gnorm 173025.902117
+~   max_g 6812.19987441  min_g 0.378720300993
+total time for gradient 416.076273918 
+
+
+loop for g_mode = 3 
+two_buffers on, pc off
+g_mode: 3 - 1
+~max cluster size  1
+time taken for fragments 1542.5107739
+~  # clusters  :  84
+~  list of atoms per cluster:
+~    [96, 79, 63, 59, 56, 82, 85, 12, 58, 21, 48, 12, 28, 12, 63, 54, 12, 73, 57, 30, 52, 12, 52, 27, 47, 9, 58, 57, 40, 48, 9, 28, 28, 35, 9, 19, 6, 33, 27, 20, 20, 6, 20, 31, 44, 6, 6, 22, 3, 24, 19, 22, 15, 13, 3, 24, 16, 19, 24, 15, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+~  list of atoms per fragment:
+~    [906, 1269, 1199, 977, 932, 1221, 790, 342, 1218, 834, 792, 517, 1038, 582, 1260, 1156, 682, 1086, 1127, 1133, 1087, 513, 789, 1018, 851, 419, 1487, 1407, 1014, 1040, 427, 996, 269, 515, 456, 851, 623, 830, 668, 1041, 964, 388, 496, 650, 588, 409, 637, 449, 438, 481, 1015, 872, 883, 361, 131, 577, 880, 1030, 734, 398, 259, 522, 584, 362, 313, 310, 303, 492, 556, 292, 488, 267, 469, 434, 301, 115, 320, 325, 466, 231, 527, 494, 33, 190]
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 9 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 8 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+~   gnorm 172953.106237
+~   max_g 6812.47212315  min_g 0.292161732857
+total time for gradient 2301.18030882 
+
+
+g_mode: 3 - 5
+~max cluster size  5
+time taken for fragments 1742.21501088
+~  # clusters  :  73
+~  list of atoms per cluster:
+~    [96, 79, 63, 59, 48, 56, 82, 85, 12, 58, 21, 25, 48, 12, 28, 60, 12, 63, 54, 12, 26, 75, 73, 57, 30, 52, 12, 52, 27, 47, 9, 58, 57, 40, 48, 9, 28, 35, 35, 9, 30, 9, 25, 16, 6, 24, 19, 22, 24, 16, 19, 15, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+~  list of atoms per fragment:
+~    [906, 1269, 1199, 977, 519, 932, 1221, 790, 342, 1218, 834, 899, 792, 517, 1038, 870, 582, 1260, 1156, 682, 967, 824, 1086, 1127, 1133, 1087, 513, 789, 1018, 851, 419, 1487, 1407, 1014, 1040, 427, 996, 1281, 515, 456, 734, 649, 551, 367, 373, 481, 1015, 872, 577, 880, 1030, 398, 259, 522, 584, 362, 303, 492, 556, 292, 488, 267, 469, 434, 301, 320, 325, 466, 231, 527, 494, 33, 190]
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 9 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 8 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 8 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+~   gnorm 172945.915476
+~   max_g 6812.47212315  min_g 0.292161732857
+total time for gradient 2734.16378093 
+
+
+g_mode: 3 - 10
+~max cluster size  10
+time taken for fragments 1571.43069506
+~  # clusters  :  57
+~  list of atoms per cluster:
+~    [142, 122, 129, 97, 79, 60, 66, 87, 64, 68, 40, 79, 56, 115, 57, 44, 96, 48, 82, 25, 60, 26, 75, 35, 30, 9, 25, 16, 6, 24, 19, 22, 24, 16, 19, 15, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+~  list of atoms per fragment:
+~    [1549, 1381, 1225, 790, 1268, 888, 1189, 1312, 1087, 1240, 1052, 1124, 851, 1742, 1040, 607, 906, 519, 1221, 899, 870, 967, 824, 1281, 734, 649, 551, 367, 373, 481, 1015, 872, 577, 880, 1030, 398, 259, 522, 584, 362, 303, 492, 556, 292, 488, 267, 469, 434, 301, 320, 325, 466, 231, 527, 494, 33, 190]
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 9 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 8 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 8 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+~   gnorm 172927.050653
+~   max_g 6807.06770798  min_g 0.173790325405
+total time for gradient 2365.51133609 
+
+
+g_mode: 3 - 15
+~max cluster size  15
+time taken for fragments 1078.18715692
+~  # clusters  :  31
+~  list of atoms per cluster:
+~    [192, 207, 184, 78, 140, 94, 122, 132, 93, 82, 74, 101, 60, 56, 59, 60, 44, 25, 60, 75, 35, 16, 6, 24, 3, 3, 3, 3, 3, 3, 3]
+~  list of atoms per fragment:
+~    [1658, 1820, 1343, 1278, 1390, 1269, 900, 1225, 1366, 1268, 980, 1432, 888, 1159, 872, 1040, 607, 899, 870, 824, 1281, 367, 373, 577, 522, 584, 492, 301, 320, 33, 190]
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 9 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 8 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+~   gnorm 172904.631483
+~   max_g 6805.59264363  min_g 0.084131657882
+total time for gradient 2149.56893992 
+
+
+g_mode: 3 - 25
+~max cluster size  25
+time taken for fragments 811.564456224
+~  # clusters  :  31
+~  list of atoms per cluster:
+~    [192, 207, 184, 78, 140, 94, 122, 132, 93, 82, 74, 101, 60, 56, 59, 60, 44, 25, 60, 75, 35, 16, 6, 24, 3, 3, 3, 3, 3, 3, 3]
+~  list of atoms per fragment:
+~    [1658, 1820, 1343, 1278, 1390, 1269, 900, 1225, 1366, 1268, 980, 1432, 888, 1159, 872, 1040, 607, 899, 870, 824, 1281, 367, 373, 577, 522, 584, 492, 301, 320, 33, 190]
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 9 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 8 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+~   gnorm 172904.601093
+~   max_g 6805.59264363  min_g 0.084131657882
+total time for gradient 1723.58058906 
+
+
+g_mode: 3 - 50
+~max cluster size  50
+time taken for fragments 1038.72599912
+~  # clusters  :  31
+~  list of atoms per cluster:
+~    [192, 207, 184, 78, 140, 94, 122, 132, 93, 82, 74, 101, 60, 56, 59, 60, 44, 25, 60, 75, 35, 16, 6, 24, 3, 3, 3, 3, 3, 3, 3]
+~  list of atoms per fragment:
+~    [1658, 1820, 1343, 1278, 1390, 1269, 900, 1225, 1366, 1268, 980, 1432, 888, 1159, 872, 1040, 607, 899, 870, 824, 1281, 367, 373, 577, 522, 584, 492, 301, 320, 33, 190]
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 9 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 3 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 4 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 6 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 8 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg -1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 7 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 2 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 5 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+~   gnorm 172905.28435
+~   max_g 6805.59264363  min_g 0.084131657882
+total time for gradient 1930.522964 
+
+
+ready to run qr.granalyse!
+Time: 16867.2870
