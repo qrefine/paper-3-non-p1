@@ -1,4 +1,5 @@
-# Additional PDB entries chosen to have only standard residues, no alternate locations and represnt variety of space groups: 5zkt, 6agy, 6jqs, 6n1l, 6ney, 6nfs, 6njg.
+# Additional PDB entries 
+chosen to have only standard residues, no alternate locations and represent variety of space groups: 5zkt, 6agy, 6jqs, 6n1l, 6ney, 6nfs, 6njg.
 
 
 Documented model preparation:
