@@ -18,7 +18,8 @@ Documented model preparation:
 
 
 ##5zkt – 1.74 A MaxNumRes=15	
-	|	PDB	|	CCTBX	|	GFN-xTB2
+
+	|	PDB	|	CCTBX	|	GFN-xTB2	
 :--:   	|	:--:   	|	:--:   	|	:--:   
 Rwork	|	0.209	|	0.1951	|	0.1938
 Rfree	|	0.22	|	0.2061	|	0.2121
