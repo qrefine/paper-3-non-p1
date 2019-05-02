@@ -14,7 +14,11 @@ Documented model preparation:
 
 5.     qr.refine xxxx_complete_refine_001.pdb  mode=gtest two_buffers=1 g_scan="1 5 10 15 25 50" > sanity check + chose optimal cpu-time maxnum_residues_in_cluster=N   
 
-6.     qr.refine xxxx_complete_refine_001.pdb xxxx_complete_refine_001.mtz mode=refine maxnum_residues_in_cluster=N quantum.nproc=2 parallel.nproc=10 max_bond_rmsd=0.02  stpmax=0.2 gradient_only=true clustering=true use_convergence_test=true  opt_log=1 restraints=qm  engine_name=xtb  > 5zkt_xtb_refine_MaxResN.log   
+6.     /Refine_MaxResN/ qr.refine xxxx_complete_refine_001.pdb xxxx_complete_refine_001.mtz mode=refine maxnum_residues_in_cluster=N quantum.nproc=2 parallel.nproc=10 max_bond_rmsd=0.02  stpmax=0.2 gradient_only=true clustering=true use_convergence_test=true  opt_log=1 restraints=qm  engine_name=xtb  > xxxx_xtb_refine_MaxResN.log   
+
+7.      /Refine_Step03/ stpmax=0.3 xxxx_xtb_refine_MaxResN_Step03.log
+
+8.      /Refine_Step05/ stpmax=0.5 xxxx_xtb_refine_MaxResN_Step05.log
 
 
 
