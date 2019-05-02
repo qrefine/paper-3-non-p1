@@ -17,7 +17,7 @@ Documented model preparation:
 6.     qr.refine xxxx_complete_refine_001.pdb xxxx_complete_refine_001.mtz mode=refine maxnum_residues_in_cluster=N quantum.nproc=2 parallel.nproc=10 max_bond_rmsd=0.02  stpmax=0.2 gradient_only=true clustering=true use_convergence_test=true  opt_log=1 restraints=qm  engine_name=xtb  > 5zkt_xtb_refine_MaxResN.log   
 
 
-	##5zkt – 1.74 A MaxNumRes=15	|		|	
+##5zkt – 1.74 A MaxNumRes=15	
 	|	PDB	|	CCTBX	|	GFN-xTB2
 :--:   	|	:--:   	|	:--:   	|	:--:   
 Rwork	|	0.209	|	0.1951	|	0.1938
