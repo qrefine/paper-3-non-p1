@@ -20,5 +20,7 @@ Documented model preparation:
 
 8.      /Refine_Step05/ stpmax=0.5 xxxx_xtb_refine_MaxResN_Step05.log
 
+9.      /MaxItRef200/   max_iterations_refine=200 xxxx_xtb_refine_MaxResN_Step05_MaxItRef200.log
+
 
 
