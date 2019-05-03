@@ -1,0 +1,1727 @@
+
+=============================== Model properties ==============================
+
+  Overall:
+    Number of atoms = 760  (anisotropic = 0)
+    B_iso: mean =  63.6  max = 111.2  min =  33.7
+    886 total B-factor or occupancy problem(s) detected
+  Macromolecules:
+    Number of atoms = 752  (anisotropic = 0)
+    B_iso: mean =  63.6  max = 111.2  min =  33.7
+    862 total B-factor or occupancy problem(s) detected
+  Waters:
+    Number of atoms = 8  (anisotropic = 0)
+    B_iso: mean =  60.8  max =  84.2  min =  44.0
+    24 total B-factor or occupancy problem(s) detected
+  (Hydrogen atoms not included in overall counts.)
+
+============================= Geometry restraints =============================
+
+
+                        ----------Bond lengths----------                       
+
+  All restrained atoms within 4.0 sigma of ideal values.
+
+  Min. delta:    0.000 (Z=  0.000)
+  Max. delta:    0.065 (Z=  2.807)
+  Mean delta:    0.013 (Z=  0.600)
+
+                        ----------Bond angles----------                        
+
+  atoms                   ideal    model    delta   sigma  residual   deviation
+   C  52  ASP  CA     
+   C  52  ASP  CB     
+   C  52  ASP  CG        112.60   103.60     9.00  1.00e+00  8.10e+01   9.0*sigma
+   C   4  PHE  CA     
+   C   4  PHE  CB     
+   C   4  PHE  CG        113.80   108.13     5.67  1.00e+00  3.22e+01   5.7*sigma
+   C  71  SER  C      
+   C  71  SER  CA     
+   C  71  SER  CB        110.10   101.22     8.88  1.90e+00  2.18e+01   4.7*sigma
+   C  48  MET  C      
+   C  48  MET  CA     
+   C  48  MET  CB        110.10   101.98     8.12  1.90e+00  1.83e+01   4.3*sigma
+   C  42  ARG  C      
+   C  42  ARG  CA     
+   C  42  ARG  CB        110.10   118.04    -7.94  1.90e+00  1.75e+01   4.2*sigma
+   B   9  ARG  C      
+   B  10  LYS  N      
+   B  10  LYS  CA        121.70   114.43     7.27  1.80e+00  1.63e+01   4.0*sigma
+
+  Min. delta:    0.000 (Z=  0.000)
+  Max. delta:   10.338 (Z=  9.003)
+  Mean delta:    2.241 (Z=  1.160)
+
+                      ----------Dihedral angles----------                      
+
+  atoms                   ideal    model    delta   sigma  residual   deviation
+   B   0  TYR  CA     
+   B   0  TYR  C      
+   B   1  PRO  N      
+   B   1  PRO  CA        180.00  -152.63   -27.37  5.00e+00  3.00e+01   5.5*sigma
+   B   2  GLU  CB     
+   B   2  GLU  CG     
+   B   2  GLU  CD     
+   B   2  GLU  OE1         0.00   136.76  -136.76  3.00e+01  1.84e+01   4.6*sigma
+   C  48  MET  C      
+   C  48  MET  N      
+   C  48  MET  CA     
+   C  48  MET  CB       -122.60  -111.97   -10.63  2.50e+00  1.81e+01   4.3*sigma
+   C  71  SER  C      
+   C  71  SER  N      
+   C  71  SER  CA     
+   C  71  SER  CB       -122.60  -112.51   -10.09  2.50e+00  1.63e+01   4.0*sigma
+
+  Min. delta:    0.007
+  Max. delta:  136.757
+  Mean delta:   16.799
+
+                       ----------Chiral volumes----------                      
+
+  All restrained atoms within 4.0 sigma of ideal values.
+
+  Min. delta:    0.001
+  Max. delta:    0.433
+  Mean delta:    0.123
+
+                       ----------Planar groups----------                       
+
+  atoms                 rms_deltas   delta_max    residual   deviation
+   B   9  ARG  CD     
+   B   9  ARG  NE     
+   B   9  ARG  CZ     
+   B   9  ARG  NH1    
+   B   9  ARG  NH2           0.101       0.176      128.05   8.8*sigma
+   C  42  ARG  CD     
+   C  42  ARG  NE     
+   C  42  ARG  CZ     
+   C  42  ARG  NH1    
+   C  42  ARG  NH2           0.103       0.168      133.50   8.4*sigma
+
+  Min. delta:    0.000
+  Max. delta:    0.103
+  Mean delta:    0.018
+
+============================= Hydrogen validation =============================
+
+
+                ----------H/D atoms in the input model----------               
+
+  Total number of hydrogen atoms : 785
+  Total number of deuterium atoms: 0
+  Number of H atoms (protein)    : 769
+  Number of D atoms (protein)    : 0
+  Number of H atoms (water)      : 16
+  Number of D atoms (water)      : 0
+  Number of H atoms (other)      : 0
+  Number of D atoms (other)      : 0
+
+                      ----------Water molecules----------                      
+
+  Number of water                            : 8
+  Number of water with 0 H (or D)            : 0
+  Number of water with 1 H (or D)            : 0
+  Number of water with 2 H (or D)            : 8
+  Number of water in alternative conformation: 0
+  Number of water without oxygen atom        : 0
+
+             ----------H (or D) atoms with zero occupancy----------            
+
+  pdb=" H1  TYR B   0 "
+  pdb=" H2  TYR B   0 "
+  pdb=" H3  TYR B   0 "
+  pdb=" HA  TYR B   0 "
+  pdb=" HB2 TYR B   0 "
+  pdb=" HB3 TYR B   0 "
+  pdb=" HD1 TYR B   0 "
+  pdb=" HD2 TYR B   0 "
+  pdb=" HE1 TYR B   0 "
+  pdb=" HE2 TYR B   0 "
+  pdb=" HH  TYR B   0 "
+  pdb=" HA  PRO B   1 "
+  pdb=" HB2 PRO B   1 "
+  pdb=" HB3 PRO B   1 "
+  pdb=" HG2 PRO B   1 "
+  pdb=" HG3 PRO B   1 "
+  pdb=" HD2 PRO B   1 "
+  pdb=" HD3 PRO B   1 "
+  pdb=" H   GLU B   2 "
+  pdb=" HA  GLU B   2 "
+  pdb=" HB2 GLU B   2 "
+  pdb=" HB3 GLU B   2 "
+  pdb=" HG2 GLU B   2 "
+  pdb=" HG3 GLU B   2 "
+  pdb=" H   ASP B   3 "
+  pdb=" HA  ASP B   3 "
+  pdb=" HB2 ASP B   3 "
+  pdb=" HB3 ASP B   3 "
+  pdb=" H   GLU B   4 "
+  pdb=" HA  GLU B   4 "
+  pdb=" HB2 GLU B   4 "
+  pdb=" HB3 GLU B   4 "
+  pdb=" HG2 GLU B   4 "
+  pdb=" HG3 GLU B   4 "
+  pdb=" H   GLU B   5 "
+  pdb=" HA  GLU B   5 "
+  pdb=" HB2 GLU B   5 "
+  pdb=" HB3 GLU B   5 "
+  pdb=" HG2 GLU B   5 "
+  pdb=" HG3 GLU B   5 "
+  pdb=" H   GLU B   6 "
+  pdb=" HA  GLU B   6 "
+  pdb=" HB2 GLU B   6 "
+  pdb=" HB3 GLU B   6 "
+  pdb=" HG2 GLU B   6 "
+  pdb=" HG3 GLU B   6 "
+  pdb=" H   LEU B   7 "
+  pdb=" HA  LEU B   7 "
+  pdb=" HB2 LEU B   7 "
+  pdb=" HB3 LEU B   7 "
+  pdb=" HG  LEU B   7 "
+  pdb="HD11 LEU B   7 "
+  pdb="HD12 LEU B   7 "
+  pdb="HD13 LEU B   7 "
+  pdb="HD21 LEU B   7 "
+  pdb="HD22 LEU B   7 "
+  pdb="HD23 LEU B   7 "
+  pdb=" H   ILE B   8 "
+  pdb=" HA  ILE B   8 "
+  pdb=" HB  ILE B   8 "
+  pdb="HG12 ILE B   8 "
+  pdb="HG13 ILE B   8 "
+  pdb="HG21 ILE B   8 "
+  pdb="HG22 ILE B   8 "
+  pdb="HG23 ILE B   8 "
+  pdb="HD11 ILE B   8 "
+  pdb="HD12 ILE B   8 "
+  pdb="HD13 ILE B   8 "
+  pdb=" H   ARG B   9 "
+  pdb=" HA  ARG B   9 "
+  pdb=" HB2 ARG B   9 "
+  pdb=" HB3 ARG B   9 "
+  pdb=" HG2 ARG B   9 "
+  pdb=" HG3 ARG B   9 "
+  pdb=" HD2 ARG B   9 "
+  pdb=" HD3 ARG B   9 "
+  pdb=" HE  ARG B   9 "
+  pdb="HH11 ARG B   9 "
+  pdb="HH12 ARG B   9 "
+  pdb="HH21 ARG B   9 "
+  pdb="HH22 ARG B   9 "
+  pdb=" H   LYS B  10 "
+  pdb=" HA  LYS B  10 "
+  pdb=" HB2 LYS B  10 "
+  pdb=" HB3 LYS B  10 "
+  pdb=" HG2 LYS B  10 "
+  pdb=" HG3 LYS B  10 "
+  pdb=" HD2 LYS B  10 "
+  pdb=" HD3 LYS B  10 "
+  pdb=" HE2 LYS B  10 "
+  pdb=" HE3 LYS B  10 "
+  pdb=" HZ1 LYS B  10 "
+  pdb=" HZ2 LYS B  10 "
+  pdb=" HZ3 LYS B  10 "
+  pdb=" H   ALA B  11 "
+  pdb=" HA  ALA B  11 "
+  pdb=" HB1 ALA B  11 "
+  pdb=" HB2 ALA B  11 "
+  pdb=" HB3 ALA B  11 "
+  pdb=" H   ILE B  12 "
+  pdb=" HA  ILE B  12 "
+  pdb=" HB  ILE B  12 "
+  pdb="HG12 ILE B  12 "
+  pdb="HG13 ILE B  12 "
+  pdb="HG21 ILE B  12 "
+  pdb="HG22 ILE B  12 "
+  pdb="HG23 ILE B  12 "
+  pdb="HD11 ILE B  12 "
+  pdb="HD12 ILE B  12 "
+  pdb="HD13 ILE B  12 "
+  pdb=" H   GLU B  13 "
+  pdb=" HA  GLU B  13 "
+  pdb=" HB2 GLU B  13 "
+  pdb=" HB3 GLU B  13 "
+  pdb=" HG2 GLU B  13 "
+  pdb=" HG3 GLU B  13 "
+  pdb=" H   LEU B  14 "
+  pdb=" HA  LEU B  14 "
+  pdb=" HB2 LEU B  14 "
+  pdb=" HB3 LEU B  14 "
+  pdb=" HG  LEU B  14 "
+  pdb="HD11 LEU B  14 "
+  pdb="HD12 LEU B  14 "
+  pdb="HD13 LEU B  14 "
+  pdb="HD21 LEU B  14 "
+  pdb="HD22 LEU B  14 "
+  pdb="HD23 LEU B  14 "
+  pdb=" H   SER B  15 "
+  pdb=" HA  SER B  15 "
+  pdb=" HB2 SER B  15 "
+  pdb=" HB3 SER B  15 "
+  pdb=" HG  SER B  15 "
+  pdb=" H   LEU B  16 "
+  pdb=" HA  LEU B  16 "
+  pdb=" HB2 LEU B  16 "
+  pdb=" HB3 LEU B  16 "
+  pdb=" HG  LEU B  16 "
+  pdb="HD11 LEU B  16 "
+  pdb="HD12 LEU B  16 "
+  pdb="HD13 LEU B  16 "
+  pdb="HD21 LEU B  16 "
+  pdb="HD22 LEU B  16 "
+  pdb="HD23 LEU B  16 "
+  pdb=" H1  MET C   1 "
+  pdb=" H2  MET C   1 "
+  pdb=" H3  MET C   1 "
+  pdb=" HA  MET C   1 "
+  pdb=" HB2 MET C   1 "
+  pdb=" HB3 MET C   1 "
+  pdb=" HG2 MET C   1 "
+  pdb=" HG3 MET C   1 "
+  pdb=" HE1 MET C   1 "
+  pdb=" HE2 MET C   1 "
+  pdb=" HE3 MET C   1 "
+  pdb=" H   GLN C   2 "
+  pdb=" HA  GLN C   2 "
+  pdb=" HB2 GLN C   2 "
+  pdb=" HB3 GLN C   2 "
+  pdb=" HG2 GLN C   2 "
+  pdb=" HG3 GLN C   2 "
+  pdb="HE21 GLN C   2 "
+  pdb="HE22 GLN C   2 "
+  pdb=" H   ILE C   3 "
+  pdb=" HA  ILE C   3 "
+  pdb=" HB  ILE C   3 "
+  pdb="HG12 ILE C   3 "
+  pdb="HG13 ILE C   3 "
+  pdb="HG21 ILE C   3 "
+  pdb="HG22 ILE C   3 "
+  pdb="HG23 ILE C   3 "
+  pdb="HD11 ILE C   3 "
+  pdb="HD12 ILE C   3 "
+  pdb="HD13 ILE C   3 "
+  pdb=" H   PHE C   4 "
+  pdb=" HA  PHE C   4 "
+  pdb=" HB2 PHE C   4 "
+  pdb=" HB3 PHE C   4 "
+  pdb=" HD1 PHE C   4 "
+  pdb=" HD2 PHE C   4 "
+  pdb=" HE1 PHE C   4 "
+  pdb=" HE2 PHE C   4 "
+  pdb=" HZ  PHE C   4 "
+  pdb=" H   VAL C   5 "
+  pdb=" HA  VAL C   5 "
+  pdb=" HB  VAL C   5 "
+  pdb="HG11 VAL C   5 "
+  pdb="HG12 VAL C   5 "
+  pdb="HG13 VAL C   5 "
+  pdb="HG21 VAL C   5 "
+  pdb="HG22 VAL C   5 "
+  pdb="HG23 VAL C   5 "
+  pdb=" H   GLN C   6 "
+  pdb=" HA  GLN C   6 "
+  pdb=" HB2 GLN C   6 "
+  pdb=" HB3 GLN C   6 "
+  pdb=" HG2 GLN C   6 "
+  pdb=" HG3 GLN C   6 "
+  pdb="HE21 GLN C   6 "
+  pdb="HE22 GLN C   6 "
+  pdb=" H   THR C   7 "
+  pdb=" HA  THR C   7 "
+  pdb=" HB  THR C   7 "
+  pdb=" HG1 THR C   7 "
+  pdb="HG21 THR C   7 "
+  pdb="HG22 THR C   7 "
+  pdb="HG23 THR C   7 "
+  pdb=" H   ILE C   8 "
+  pdb=" HA  ILE C   8 "
+  pdb=" HB  ILE C   8 "
+  pdb="HG12 ILE C   8 "
+  pdb="HG13 ILE C   8 "
+  pdb="HG21 ILE C   8 "
+  pdb="HG22 ILE C   8 "
+  pdb="HG23 ILE C   8 "
+  pdb="HD11 ILE C   8 "
+  pdb="HD12 ILE C   8 "
+  pdb="HD13 ILE C   8 "
+  pdb=" H   THR C   9 "
+  pdb=" HA  THR C   9 "
+  pdb=" HB  THR C   9 "
+  pdb=" HG1 THR C   9 "
+  pdb="HG21 THR C   9 "
+  pdb="HG22 THR C   9 "
+  pdb="HG23 THR C   9 "
+  pdb=" H   VAL C  10 "
+  pdb=" HA  VAL C  10 "
+  pdb=" HB  VAL C  10 "
+  pdb="HG11 VAL C  10 "
+  pdb="HG12 VAL C  10 "
+  pdb="HG13 VAL C  10 "
+  pdb="HG21 VAL C  10 "
+  pdb="HG22 VAL C  10 "
+  pdb="HG23 VAL C  10 "
+  pdb=" H   MET C  11 "
+  pdb=" HA  MET C  11 "
+  pdb=" HB2 MET C  11 "
+  pdb=" HB3 MET C  11 "
+  pdb=" HG2 MET C  11 "
+  pdb=" HG3 MET C  11 "
+  pdb=" HE1 MET C  11 "
+  pdb=" HE2 MET C  11 "
+  pdb=" HE3 MET C  11 "
+  pdb=" H   ARG C  12 "
+  pdb=" HA  ARG C  12 "
+  pdb=" HB2 ARG C  12 "
+  pdb=" HB3 ARG C  12 "
+  pdb=" HG2 ARG C  12 "
+  pdb=" HG3 ARG C  12 "
+  pdb=" HD2 ARG C  12 "
+  pdb=" HD3 ARG C  12 "
+  pdb=" HE  ARG C  12 "
+  pdb="HH11 ARG C  12 "
+  pdb="HH12 ARG C  12 "
+  pdb="HH21 ARG C  12 "
+  pdb="HH22 ARG C  12 "
+  pdb=" H   ILE C  13 "
+  pdb=" HA  ILE C  13 "
+  pdb=" HB  ILE C  13 "
+  pdb="HG12 ILE C  13 "
+  pdb="HG13 ILE C  13 "
+  pdb="HG21 ILE C  13 "
+  pdb="HG22 ILE C  13 "
+  pdb="HG23 ILE C  13 "
+  pdb="HD11 ILE C  13 "
+  pdb="HD12 ILE C  13 "
+  pdb="HD13 ILE C  13 "
+  pdb=" H   ALA C  14 "
+  pdb=" HA  ALA C  14 "
+  pdb=" HB1 ALA C  14 "
+  pdb=" HB2 ALA C  14 "
+  pdb=" HB3 ALA C  14 "
+  pdb=" H   LEU C  15 "
+  pdb=" HA  LEU C  15 "
+  pdb=" HB2 LEU C  15 "
+  pdb=" HB3 LEU C  15 "
+  pdb=" HG  LEU C  15 "
+  pdb="HD11 LEU C  15 "
+  pdb="HD12 LEU C  15 "
+  pdb="HD13 LEU C  15 "
+  pdb="HD21 LEU C  15 "
+  pdb="HD22 LEU C  15 "
+  pdb="HD23 LEU C  15 "
+  pdb=" H   GLU C  16 "
+  pdb=" HA  GLU C  16 "
+  pdb=" HB2 GLU C  16 "
+  pdb=" HB3 GLU C  16 "
+  pdb=" HG2 GLU C  16 "
+  pdb=" HG3 GLU C  16 "
+  pdb=" H   VAL C  17 "
+  pdb=" HA  VAL C  17 "
+  pdb=" HB  VAL C  17 "
+  pdb="HG11 VAL C  17 "
+  pdb="HG12 VAL C  17 "
+  pdb="HG13 VAL C  17 "
+  pdb="HG21 VAL C  17 "
+  pdb="HG22 VAL C  17 "
+  pdb="HG23 VAL C  17 "
+  pdb=" H   GLU C  18 "
+  pdb=" HA  GLU C  18 "
+  pdb=" HB2 GLU C  18 "
+  pdb=" HB3 GLU C  18 "
+  pdb=" HG2 GLU C  18 "
+  pdb=" HG3 GLU C  18 "
+  pdb=" HA  PRO C  19 "
+  pdb=" HB2 PRO C  19 "
+  pdb=" HB3 PRO C  19 "
+  pdb=" HG2 PRO C  19 "
+  pdb=" HG3 PRO C  19 "
+  pdb=" HD2 PRO C  19 "
+  pdb=" HD3 PRO C  19 "
+  pdb=" H   SER C  20 "
+  pdb=" HA  SER C  20 "
+  pdb=" HB2 SER C  20 "
+  pdb=" HB3 SER C  20 "
+  pdb=" HG  SER C  20 "
+  pdb=" H   ASP C  21 "
+  pdb=" HA  ASP C  21 "
+  pdb=" HB2 ASP C  21 "
+  pdb=" HB3 ASP C  21 "
+  pdb=" H   THR C  22 "
+  pdb=" HA  THR C  22 "
+  pdb=" HB  THR C  22 "
+  pdb=" HG1 THR C  22 "
+  pdb="HG21 THR C  22 "
+  pdb="HG22 THR C  22 "
+  pdb="HG23 THR C  22 "
+  pdb=" H   ILE C  23 "
+  pdb=" HA  ILE C  23 "
+  pdb=" HB  ILE C  23 "
+  pdb="HG12 ILE C  23 "
+  pdb="HG13 ILE C  23 "
+  pdb="HG21 ILE C  23 "
+  pdb="HG22 ILE C  23 "
+  pdb="HG23 ILE C  23 "
+  pdb="HD11 ILE C  23 "
+  pdb="HD12 ILE C  23 "
+  pdb="HD13 ILE C  23 "
+  pdb=" H   GLU C  24 "
+  pdb=" HA  GLU C  24 "
+  pdb=" HB2 GLU C  24 "
+  pdb=" HB3 GLU C  24 "
+  pdb=" HG2 GLU C  24 "
+  pdb=" HG3 GLU C  24 "
+  pdb=" H   ASN C  25 "
+  pdb=" HA  ASN C  25 "
+  pdb=" HB2 ASN C  25 "
+  pdb=" HB3 ASN C  25 "
+  pdb="HD21 ASN C  25 "
+  pdb="HD22 ASN C  25 "
+  pdb=" H   VAL C  26 "
+  pdb=" HA  VAL C  26 "
+  pdb=" HB  VAL C  26 "
+  pdb="HG11 VAL C  26 "
+  pdb="HG12 VAL C  26 "
+  pdb="HG13 VAL C  26 "
+  pdb="HG21 VAL C  26 "
+  pdb="HG22 VAL C  26 "
+  pdb="HG23 VAL C  26 "
+  pdb=" H   LYS C  27 "
+  pdb=" HA  LYS C  27 "
+  pdb=" HB2 LYS C  27 "
+  pdb=" HB3 LYS C  27 "
+  pdb=" HG2 LYS C  27 "
+  pdb=" HG3 LYS C  27 "
+  pdb=" HD2 LYS C  27 "
+  pdb=" HD3 LYS C  27 "
+  pdb=" HE2 LYS C  27 "
+  pdb=" HE3 LYS C  27 "
+  pdb=" HZ1 LYS C  27 "
+  pdb=" HZ2 LYS C  27 "
+  pdb=" HZ3 LYS C  27 "
+  pdb=" H   ALA C  28 "
+  pdb=" HA  ALA C  28 "
+  pdb=" HB1 ALA C  28 "
+  pdb=" HB2 ALA C  28 "
+  pdb=" HB3 ALA C  28 "
+  pdb=" H   LYS C  29 "
+  pdb=" HA  LYS C  29 "
+  pdb=" HB2 LYS C  29 "
+  pdb=" HB3 LYS C  29 "
+  pdb=" HG2 LYS C  29 "
+  pdb=" HG3 LYS C  29 "
+  pdb=" HD2 LYS C  29 "
+  pdb=" HD3 LYS C  29 "
+  pdb=" HE2 LYS C  29 "
+  pdb=" HE3 LYS C  29 "
+  pdb=" HZ1 LYS C  29 "
+  pdb=" HZ2 LYS C  29 "
+  pdb=" HZ3 LYS C  29 "
+  pdb=" H   ILE C  30 "
+  pdb=" HA  ILE C  30 "
+  pdb=" HB  ILE C  30 "
+  pdb="HG12 ILE C  30 "
+  pdb="HG13 ILE C  30 "
+  pdb="HG21 ILE C  30 "
+  pdb="HG22 ILE C  30 "
+  pdb="HG23 ILE C  30 "
+  pdb="HD11 ILE C  30 "
+  pdb="HD12 ILE C  30 "
+  pdb="HD13 ILE C  30 "
+  pdb=" H   GLN C  31 "
+  pdb=" HA  GLN C  31 "
+  pdb=" HB2 GLN C  31 "
+  pdb=" HB3 GLN C  31 "
+  pdb=" HG2 GLN C  31 "
+  pdb=" HG3 GLN C  31 "
+  pdb="HE21 GLN C  31 "
+  pdb="HE22 GLN C  31 "
+  pdb=" H   ASP C  32 "
+  pdb=" HA  ASP C  32 "
+  pdb=" HB2 ASP C  32 "
+  pdb=" HB3 ASP C  32 "
+  pdb=" H   LYS C  33 "
+  pdb=" HA  LYS C  33 "
+  pdb=" HB2 LYS C  33 "
+  pdb=" HB3 LYS C  33 "
+  pdb=" HG2 LYS C  33 "
+  pdb=" HG3 LYS C  33 "
+  pdb=" HD2 LYS C  33 "
+  pdb=" HD3 LYS C  33 "
+  pdb=" HE2 LYS C  33 "
+  pdb=" HE3 LYS C  33 "
+  pdb=" HZ1 LYS C  33 "
+  pdb=" HZ2 LYS C  33 "
+  pdb=" HZ3 LYS C  33 "
+  pdb=" H   GLU C  34 "
+  pdb=" HA  GLU C  34 "
+  pdb=" HB2 GLU C  34 "
+  pdb=" HB3 GLU C  34 "
+  pdb=" HG2 GLU C  34 "
+  pdb=" HG3 GLU C  34 "
+  pdb=" H   GLY C  35 "
+  pdb=" HA2 GLY C  35 "
+  pdb=" HA3 GLY C  35 "
+  pdb=" H   ILE C  36 "
+  pdb=" HA  ILE C  36 "
+  pdb=" HB  ILE C  36 "
+  pdb="HG12 ILE C  36 "
+  pdb="HG13 ILE C  36 "
+  pdb="HG21 ILE C  36 "
+  pdb="HG22 ILE C  36 "
+  pdb="HG23 ILE C  36 "
+  pdb="HD11 ILE C  36 "
+  pdb="HD12 ILE C  36 "
+  pdb="HD13 ILE C  36 "
+  pdb=" HA  PRO C  37 "
+  pdb=" HB2 PRO C  37 "
+  pdb=" HB3 PRO C  37 "
+  pdb=" HG2 PRO C  37 "
+  pdb=" HG3 PRO C  37 "
+  pdb=" HD2 PRO C  37 "
+  pdb=" HD3 PRO C  37 "
+  pdb=" HA  PRO C  38 "
+  pdb=" HB2 PRO C  38 "
+  pdb=" HB3 PRO C  38 "
+  pdb=" HG2 PRO C  38 "
+  pdb=" HG3 PRO C  38 "
+  pdb=" HD2 PRO C  38 "
+  pdb=" HD3 PRO C  38 "
+  pdb=" H   ASP C  39 "
+  pdb=" HA  ASP C  39 "
+  pdb=" HB2 ASP C  39 "
+  pdb=" HB3 ASP C  39 "
+  pdb=" H   GLN C  40 "
+  pdb=" HA  GLN C  40 "
+  pdb=" HB2 GLN C  40 "
+  pdb=" HB3 GLN C  40 "
+  pdb=" HG2 GLN C  40 "
+  pdb=" HG3 GLN C  40 "
+  pdb="HE21 GLN C  40 "
+  pdb="HE22 GLN C  40 "
+  pdb=" H   GLN C  41 "
+  pdb=" HA  GLN C  41 "
+  pdb=" HB2 GLN C  41 "
+  pdb=" HB3 GLN C  41 "
+  pdb=" HG2 GLN C  41 "
+  pdb=" HG3 GLN C  41 "
+  pdb="HE21 GLN C  41 "
+  pdb="HE22 GLN C  41 "
+  pdb=" H   ARG C  42 "
+  pdb=" HA  ARG C  42 "
+  pdb=" HB2 ARG C  42 "
+  pdb=" HB3 ARG C  42 "
+  pdb=" HG2 ARG C  42 "
+  pdb=" HG3 ARG C  42 "
+  pdb=" HD2 ARG C  42 "
+  pdb=" HD3 ARG C  42 "
+  pdb=" HE  ARG C  42 "
+  pdb="HH11 ARG C  42 "
+  pdb="HH12 ARG C  42 "
+  pdb="HH21 ARG C  42 "
+  pdb="HH22 ARG C  42 "
+  pdb=" H   LEU C  43 "
+  pdb=" HA  LEU C  43 "
+  pdb=" HB2 LEU C  43 "
+  pdb=" HB3 LEU C  43 "
+  pdb=" HG  LEU C  43 "
+  pdb="HD11 LEU C  43 "
+  pdb="HD12 LEU C  43 "
+  pdb="HD13 LEU C  43 "
+  pdb="HD21 LEU C  43 "
+  pdb="HD22 LEU C  43 "
+  pdb="HD23 LEU C  43 "
+  pdb=" H   ILE C  44 "
+  pdb=" HA  ILE C  44 "
+  pdb=" HB  ILE C  44 "
+  pdb="HG12 ILE C  44 "
+  pdb="HG13 ILE C  44 "
+  pdb="HG21 ILE C  44 "
+  pdb="HG22 ILE C  44 "
+  pdb="HG23 ILE C  44 "
+  pdb="HD11 ILE C  44 "
+  pdb="HD12 ILE C  44 "
+  pdb="HD13 ILE C  44 "
+  pdb=" H   PHE C  45 "
+  pdb=" HA  PHE C  45 "
+  pdb=" HB2 PHE C  45 "
+  pdb=" HB3 PHE C  45 "
+  pdb=" HD1 PHE C  45 "
+  pdb=" HD2 PHE C  45 "
+  pdb=" HE1 PHE C  45 "
+  pdb=" HE2 PHE C  45 "
+  pdb=" HZ  PHE C  45 "
+  pdb=" H   ALA C  46 "
+  pdb=" HA  ALA C  46 "
+  pdb=" HB1 ALA C  46 "
+  pdb=" HB2 ALA C  46 "
+  pdb=" HB3 ALA C  46 "
+  pdb=" H   GLY C  47 "
+  pdb=" HA2 GLY C  47 "
+  pdb=" HA3 GLY C  47 "
+  pdb=" H   MET C  48 "
+  pdb=" HA  MET C  48 "
+  pdb=" HB2 MET C  48 "
+  pdb=" HB3 MET C  48 "
+  pdb=" HG2 MET C  48 "
+  pdb=" HG3 MET C  48 "
+  pdb=" HE1 MET C  48 "
+  pdb=" HE2 MET C  48 "
+  pdb=" HE3 MET C  48 "
+  pdb=" H   GLN C  49 "
+  pdb=" HA  GLN C  49 "
+  pdb=" HB2 GLN C  49 "
+  pdb=" HB3 GLN C  49 "
+  pdb=" HG2 GLN C  49 "
+  pdb=" HG3 GLN C  49 "
+  pdb="HE21 GLN C  49 "
+  pdb="HE22 GLN C  49 "
+  pdb=" H   LEU C  50 "
+  pdb=" HA  LEU C  50 "
+  pdb=" HB2 LEU C  50 "
+  pdb=" HB3 LEU C  50 "
+  pdb=" HG  LEU C  50 "
+  pdb="HD11 LEU C  50 "
+  pdb="HD12 LEU C  50 "
+  pdb="HD13 LEU C  50 "
+  pdb="HD21 LEU C  50 "
+  pdb="HD22 LEU C  50 "
+  pdb="HD23 LEU C  50 "
+  pdb=" H   GLU C  51 "
+  pdb=" HA  GLU C  51 "
+  pdb=" HB2 GLU C  51 "
+  pdb=" HB3 GLU C  51 "
+  pdb=" HG2 GLU C  51 "
+  pdb=" HG3 GLU C  51 "
+  pdb=" H   ASP C  52 "
+  pdb=" HA  ASP C  52 "
+  pdb=" HB2 ASP C  52 "
+  pdb=" HB3 ASP C  52 "
+  pdb=" H   GLY C  53 "
+  pdb=" HA2 GLY C  53 "
+  pdb=" HA3 GLY C  53 "
+  pdb=" H   ARG C  54 "
+  pdb=" HA  ARG C  54 "
+  pdb=" HB2 ARG C  54 "
+  pdb=" HB3 ARG C  54 "
+  pdb=" HG2 ARG C  54 "
+  pdb=" HG3 ARG C  54 "
+  pdb=" HD2 ARG C  54 "
+  pdb=" HD3 ARG C  54 "
+  pdb=" HE  ARG C  54 "
+  pdb="HH11 ARG C  54 "
+  pdb="HH12 ARG C  54 "
+  pdb="HH21 ARG C  54 "
+  pdb="HH22 ARG C  54 "
+  pdb=" H   THR C  55 "
+  pdb=" HA  THR C  55 "
+  pdb=" HB  THR C  55 "
+  pdb=" HG1 THR C  55 "
+  pdb="HG21 THR C  55 "
+  pdb="HG22 THR C  55 "
+  pdb="HG23 THR C  55 "
+  pdb=" H   LEU C  56 "
+  pdb=" HA  LEU C  56 "
+  pdb=" HB2 LEU C  56 "
+  pdb=" HB3 LEU C  56 "
+  pdb=" HG  LEU C  56 "
+  pdb="HD11 LEU C  56 "
+  pdb="HD12 LEU C  56 "
+  pdb="HD13 LEU C  56 "
+  pdb="HD21 LEU C  56 "
+  pdb="HD22 LEU C  56 "
+  pdb="HD23 LEU C  56 "
+  pdb=" H   SER C  57 "
+  pdb=" HA  SER C  57 "
+  pdb=" HB2 SER C  57 "
+  pdb=" HB3 SER C  57 "
+  pdb=" HG  SER C  57 "
+  pdb=" H   ASP C  58 "
+  pdb=" HA  ASP C  58 "
+  pdb=" HB2 ASP C  58 "
+  pdb=" HB3 ASP C  58 "
+  pdb=" H   TYR C  59 "
+  pdb=" HA  TYR C  59 "
+  pdb=" HB2 TYR C  59 "
+  pdb=" HB3 TYR C  59 "
+  pdb=" HD1 TYR C  59 "
+  pdb=" HD2 TYR C  59 "
+  pdb=" HE1 TYR C  59 "
+  pdb=" HE2 TYR C  59 "
+  pdb=" HH  TYR C  59 "
+  pdb=" H   ASN C  60 "
+  pdb=" HA  ASN C  60 "
+  pdb=" HB2 ASN C  60 "
+  pdb=" HB3 ASN C  60 "
+  pdb="HD21 ASN C  60 "
+  pdb="HD22 ASN C  60 "
+  pdb=" H   ILE C  61 "
+  pdb=" HA  ILE C  61 "
+  pdb=" HB  ILE C  61 "
+  pdb="HG12 ILE C  61 "
+  pdb="HG13 ILE C  61 "
+  pdb="HG21 ILE C  61 "
+  pdb="HG22 ILE C  61 "
+  pdb="HG23 ILE C  61 "
+  pdb="HD11 ILE C  61 "
+  pdb="HD12 ILE C  61 "
+  pdb="HD13 ILE C  61 "
+  pdb=" H   LYS C  62 "
+  pdb=" HA  LYS C  62 "
+  pdb=" HB2 LYS C  62 "
+  pdb=" HB3 LYS C  62 "
+  pdb=" HG2 LYS C  62 "
+  pdb=" HG3 LYS C  62 "
+  pdb=" HD2 LYS C  62 "
+  pdb=" HD3 LYS C  62 "
+  pdb=" HE2 LYS C  62 "
+  pdb=" HE3 LYS C  62 "
+  pdb=" HZ1 LYS C  62 "
+  pdb=" HZ2 LYS C  62 "
+  pdb=" HZ3 LYS C  62 "
+  pdb=" H   ARG C  63 "
+  pdb=" HA  ARG C  63 "
+  pdb=" HB2 ARG C  63 "
+  pdb=" HB3 ARG C  63 "
+  pdb=" HG2 ARG C  63 "
+  pdb=" HG3 ARG C  63 "
+  pdb=" HD2 ARG C  63 "
+  pdb=" HD3 ARG C  63 "
+  pdb=" HE  ARG C  63 "
+  pdb="HH11 ARG C  63 "
+  pdb="HH12 ARG C  63 "
+  pdb="HH21 ARG C  63 "
+  pdb="HH22 ARG C  63 "
+  pdb=" H   ASP C  64 "
+  pdb=" HA  ASP C  64 "
+  pdb=" HB2 ASP C  64 "
+  pdb=" HB3 ASP C  64 "
+  pdb=" H   SER C  65 "
+  pdb=" HA  SER C  65 "
+  pdb=" HB2 SER C  65 "
+  pdb=" HB3 SER C  65 "
+  pdb=" HG  SER C  65 "
+  pdb=" H   ASN C  66 "
+  pdb=" HA  ASN C  66 "
+  pdb=" HB2 ASN C  66 "
+  pdb=" HB3 ASN C  66 "
+  pdb="HD21 ASN C  66 "
+  pdb="HD22 ASN C  66 "
+  pdb=" H   LEU C  67 "
+  pdb=" HA  LEU C  67 "
+  pdb=" HB2 LEU C  67 "
+  pdb=" HB3 LEU C  67 "
+  pdb=" HG  LEU C  67 "
+  pdb="HD11 LEU C  67 "
+  pdb="HD12 LEU C  67 "
+  pdb="HD13 LEU C  67 "
+  pdb="HD21 LEU C  67 "
+  pdb="HD22 LEU C  67 "
+  pdb="HD23 LEU C  67 "
+  pdb=" H   TYR C  68 "
+  pdb=" HA  TYR C  68 "
+  pdb=" HB2 TYR C  68 "
+  pdb=" HB3 TYR C  68 "
+  pdb=" HD1 TYR C  68 "
+  pdb=" HD2 TYR C  68 "
+  pdb=" HE1 TYR C  68 "
+  pdb=" HE2 TYR C  68 "
+  pdb=" HH  TYR C  68 "
+  pdb=" H   LEU C  69 "
+  pdb=" HA  LEU C  69 "
+  pdb=" HB2 LEU C  69 "
+  pdb=" HB3 LEU C  69 "
+  pdb=" HG  LEU C  69 "
+  pdb="HD11 LEU C  69 "
+  pdb="HD12 LEU C  69 "
+  pdb="HD13 LEU C  69 "
+  pdb="HD21 LEU C  69 "
+  pdb="HD22 LEU C  69 "
+  pdb="HD23 LEU C  69 "
+  pdb=" H   VAL C  70 "
+  pdb=" HA  VAL C  70 "
+  pdb=" HB  VAL C  70 "
+  pdb="HG11 VAL C  70 "
+  pdb="HG12 VAL C  70 "
+  pdb="HG13 VAL C  70 "
+  pdb="HG21 VAL C  70 "
+  pdb="HG22 VAL C  70 "
+  pdb="HG23 VAL C  70 "
+  pdb=" H   SER C  71 "
+  pdb=" HA  SER C  71 "
+  pdb=" HB2 SER C  71 "
+  pdb=" HB3 SER C  71 "
+  pdb=" HG  SER C  71 "
+  pdb=" H   SER C  72 "
+  pdb=" HA  SER C  72 "
+  pdb=" HB2 SER C  72 "
+  pdb=" HB3 SER C  72 "
+  pdb=" HG  SER C  72 "
+  pdb=" H   LEU C  73 "
+  pdb=" HA  LEU C  73 "
+  pdb=" HB2 LEU C  73 "
+  pdb=" HB3 LEU C  73 "
+  pdb=" HG  LEU C  73 "
+  pdb="HD11 LEU C  73 "
+  pdb="HD12 LEU C  73 "
+  pdb="HD13 LEU C  73 "
+  pdb="HD21 LEU C  73 "
+  pdb="HD22 LEU C  73 "
+  pdb="HD23 LEU C  73 "
+  pdb=" H   ARG C  74 "
+  pdb=" HA  ARG C  74 "
+  pdb=" HB2 ARG C  74 "
+  pdb=" HB3 ARG C  74 "
+  pdb=" HG2 ARG C  74 "
+  pdb=" HG3 ARG C  74 "
+  pdb=" HD2 ARG C  74 "
+  pdb=" HD3 ARG C  74 "
+  pdb=" HE  ARG C  74 "
+  pdb="HH11 ARG C  74 "
+  pdb="HH12 ARG C  74 "
+  pdb="HH21 ARG C  74 "
+  pdb="HH22 ARG C  74 "
+  pdb=" H   SER C  75 "
+  pdb=" HA  SER C  75 "
+  pdb=" HB2 SER C  75 "
+  pdb=" HB3 SER C  75 "
+  pdb=" HG  SER C  75 "
+  pdb=" H   LEU C  76 "
+  pdb=" HA  LEU C  76 "
+  pdb=" HB2 LEU C  76 "
+  pdb=" HB3 LEU C  76 "
+  pdb=" HG  LEU C  76 "
+  pdb="HD11 LEU C  76 "
+  pdb="HD12 LEU C  76 "
+  pdb="HD13 LEU C  76 "
+  pdb="HD21 LEU C  76 "
+  pdb="HD22 LEU C  76 "
+  pdb="HD23 LEU C  76 "
+
+                       ----------Bond outliers----------                       
+
+   C  62  LYS  HZ1, Bond NZ--HZ1, observed: 1.088, delta from target: -0.198
+   B   9  ARG HH11, Bond NH1--HH11, observed: 1.055, delta from target: -0.195
+   B  10  LYS  HZ2, Bond NZ--HZ2, observed: 1.080, delta from target: -0.190
+   C  54  ARG HH12, Bond NH1--HH12, observed: 1.040, delta from target: -0.180
+   C  42  ARG HH21, Bond NH2--HH21, observed: 1.031, delta from target: -0.171
+   C   1  MET  H1 , Bond N--H1, observed: 1.059, delta from target: -0.169
+   C  54  ARG HH22, Bond NH2--HH22, observed: 1.029, delta from target: -0.169
+   C  29  LYS  HZ3, Bond NZ--HZ3, observed: 1.059, delta from target: -0.169
+   C  27  LYS  HZ2, Bond NZ--HZ2, observed: 1.058, delta from target: -0.168
+   C  39  ASP  H  , Bond N--H, observed: 1.027, delta from target: -0.167
+   B  10  LYS  HZ1, Bond NZ--HZ1, observed: 1.056, delta from target: -0.166
+   C  12  ARG HH22, Bond NH2--HH22, observed: 1.024, delta from target: -0.164
+   C  52  ASP  H  , Bond N--H, observed: 1.024, delta from target: -0.164
+   C  74  ARG  H  , Bond N--H, observed: 1.021, delta from target: -0.161
+   C  17  VAL  H  , Bond N--H, observed: 1.021, delta from target: -0.161
+   C  43  LEU  H  , Bond N--H, observed: 1.020, delta from target: -0.160
+   B  11  ALA  H  , Bond N--H, observed: 1.020, delta from target: -0.160
+   C  68  TYR  H  , Bond N--H, observed: 1.020, delta from target: -0.160
+   B  12  ILE  H  , Bond N--H, observed: 1.019, delta from target: -0.159
+   C  31  GLN  H  , Bond N--H, observed: 1.019, delta from target: -0.159
+   C  63  ARG HH22, Bond NH2--HH22, observed: 1.019, delta from target: -0.159
+   C  24  GLU  H  , Bond N--H, observed: 1.019, delta from target: -0.159
+   C  34  GLU  H  , Bond N--H, observed: 1.018, delta from target: -0.158
+   C  48  MET  H  , Bond N--H, observed: 1.018, delta from target: -0.158
+   C  33  LYS  H  , Bond N--H, observed: 1.017, delta from target: -0.157
+   C  12  ARG  HE , Bond NE--HE, observed: 1.017, delta from target: -0.157
+   C   6  GLN  H  , Bond N--H, observed: 1.017, delta from target: -0.157
+   C  70  VAL  H  , Bond N--H, observed: 1.017, delta from target: -0.157
+   C  21  ASP  H  , Bond N--H, observed: 1.017, delta from target: -0.157
+   C   9  THR  H  , Bond N--H, observed: 1.017, delta from target: -0.157
+   C  25  ASN HD21, Bond ND2--HD21, observed: 1.017, delta from target: -0.157
+   C  51  GLU  H  , Bond N--H, observed: 1.016, delta from target: -0.156
+   C   4  PHE  H  , Bond N--H, observed: 1.016, delta from target: -0.156
+   B  14  LEU  H  , Bond N--H, observed: 1.016, delta from target: -0.156
+   C  50  LEU  H  , Bond N--H, observed: 1.016, delta from target: -0.156
+   C  10  VAL  H  , Bond N--H, observed: 1.016, delta from target: -0.156
+   B  10  LYS  H  , Bond N--H, observed: 1.016, delta from target: -0.156
+   C  40  GLN  H  , Bond N--H, observed: 1.016, delta from target: -0.156
+   C  41  GLN HE22, Bond NE2--HE22, observed: 1.016, delta from target: -0.156
+   C   5  VAL  H  , Bond N--H, observed: 1.016, delta from target: -0.156
+   C  32  ASP  H  , Bond N--H, observed: 1.016, delta from target: -0.156
+   C  71  SER  H  , Bond N--H, observed: 1.016, delta from target: -0.156
+   C  54  ARG  H  , Bond N--H, observed: 1.015, delta from target: -0.155
+   C  73  LEU  H  , Bond N--H, observed: 1.015, delta from target: -0.155
+   C  11  MET  H  , Bond N--H, observed: 1.015, delta from target: -0.155
+   B   4  GLU  H  , Bond N--H, observed: 1.015, delta from target: -0.155
+   C  75  SER  H  , Bond N--H, observed: 1.015, delta from target: -0.155
+   B   9  ARG  H  , Bond N--H, observed: 1.015, delta from target: -0.155
+   B  13  GLU  H  , Bond N--H, observed: 1.015, delta from target: -0.155
+   B  15  SER  H  , Bond N--H, observed: 1.015, delta from target: -0.155
+   C  67  LEU  H  , Bond N--H, observed: 1.015, delta from target: -0.155
+   C   6  GLN HE21, Bond NE2--HE21, observed: 1.014, delta from target: -0.154
+   C  30  ILE  H  , Bond N--H, observed: 1.014, delta from target: -0.154
+   C  18  GLU  H  , Bond N--H, observed: 1.014, delta from target: -0.154
+   C  44  ILE  H  , Bond N--H, observed: 1.014, delta from target: -0.154
+   C  14  ALA  H  , Bond N--H, observed: 1.014, delta from target: -0.154
+   C  45  PHE  H  , Bond N--H, observed: 1.014, delta from target: -0.154
+   C  15  LEU  H  , Bond N--H, observed: 1.014, delta from target: -0.154
+   B   9  ARG  HE , Bond NE--HE, observed: 1.014, delta from target: -0.154
+   C  35  GLY  H  , Bond N--H, observed: 1.014, delta from target: -0.154
+   B   5  GLU  H  , Bond N--H, observed: 1.014, delta from target: -0.154
+   C  28  ALA  H  , Bond N--H, observed: 1.014, delta from target: -0.154
+   C  69  LEU  H  , Bond N--H, observed: 1.014, delta from target: -0.154
+   C   2  GLN HE21, Bond NE2--HE21, observed: 1.014, delta from target: -0.154
+   C  27  LYS  H  , Bond N--H, observed: 1.014, delta from target: -0.154
+   C  42  ARG  HE , Bond NE--HE, observed: 1.014, delta from target: -0.154
+   B   8  ILE  H  , Bond N--H, observed: 1.014, delta from target: -0.154
+   C  60  ASN  H  , Bond N--H, observed: 1.013, delta from target: -0.153
+   B   7  LEU  H  , Bond N--H, observed: 1.013, delta from target: -0.153
+   C  72  SER  H  , Bond N--H, observed: 1.013, delta from target: -0.153
+   C   3  ILE  H  , Bond N--H, observed: 1.013, delta from target: -0.153
+   C  26  VAL  H  , Bond N--H, observed: 1.013, delta from target: -0.153
+   C  29  LYS  H  , Bond N--H, observed: 1.013, delta from target: -0.153
+   C   8  ILE  H  , Bond N--H, observed: 1.013, delta from target: -0.153
+   C  12  ARG  H  , Bond N--H, observed: 1.013, delta from target: -0.153
+   C  63  ARG HH12, Bond NH1--HH12, observed: 1.013, delta from target: -0.153
+   C  23  ILE  H  , Bond N--H, observed: 1.013, delta from target: -0.153
+   C  33  LYS  HZ2, Bond NZ--HZ2, observed: 1.043, delta from target: -0.153
+   C  13  ILE  H  , Bond N--H, observed: 1.013, delta from target: -0.153
+   C  25  ASN  H  , Bond N--H, observed: 1.012, delta from target: -0.152
+   C  47  GLY  H  , Bond N--H, observed: 1.012, delta from target: -0.152
+   C  64  ASP  H  , Bond N--H, observed: 1.012, delta from target: -0.152
+   C  58  ASP  H  , Bond N--H, observed: 1.012, delta from target: -0.152
+   C  59  TYR  H  , Bond N--H, observed: 1.012, delta from target: -0.152
+   C   6  GLN HE22, Bond NE2--HE22, observed: 1.012, delta from target: -0.152
+   C  27  LYS  HZ1, Bond NZ--HZ1, observed: 1.042, delta from target: -0.152
+   C  74  ARG  HE , Bond NE--HE, observed: 1.012, delta from target: -0.152
+   C  22  THR  H  , Bond N--H, observed: 1.012, delta from target: -0.152
+   C  55  THR  H  , Bond N--H, observed: 1.012, delta from target: -0.152
+   B  16  LEU  H  , Bond N--H, observed: 1.012, delta from target: -0.152
+   C  33  LYS  HZ1, Bond NZ--HZ1, observed: 1.042, delta from target: -0.152
+   C  61  ILE  H  , Bond N--H, observed: 1.012, delta from target: -0.152
+   C   7  THR  H  , Bond N--H, observed: 1.011, delta from target: -0.151
+   C   2  GLN  H  , Bond N--H, observed: 1.011, delta from target: -0.151
+   B   0  TYR  HE2, Bond CE2--HE2, observed: 1.081, delta from target: -0.151
+   C   1  MET  H3 , Bond N--H3, observed: 1.041, delta from target: -0.151
+   B   6  GLU  H  , Bond N--H, observed: 1.011, delta from target: -0.151
+   C  49  GLN  H  , Bond N--H, observed: 1.011, delta from target: -0.151
+   C  42  ARG HH12, Bond NH1--HH12, observed: 1.011, delta from target: -0.151
+   C  66  ASN  H  , Bond N--H, observed: 1.011, delta from target: -0.151
+   C  40  GLN HE22, Bond NE2--HE22, observed: 1.011, delta from target: -0.151
+   B   9  ARG HH12, Bond NH1--HH12, observed: 1.011, delta from target: -0.151
+   C  68  TYR  HE1, Bond CE1--HE1, observed: 1.081, delta from target: -0.151
+   C  62  LYS  H  , Bond N--H, observed: 1.011, delta from target: -0.151
+   C   4  PHE  HD2, Bond CD2--HD2, observed: 1.081, delta from target: -0.151
+   C  56  LEU  H  , Bond N--H, observed: 1.011, delta from target: -0.151
+   C  59  TYR  HE1, Bond CE1--HE1, observed: 1.081, delta from target: -0.151
+   C  65  SER  H  , Bond N--H, observed: 1.011, delta from target: -0.151
+   C   4  PHE  HD1, Bond CD1--HD1, observed: 1.081, delta from target: -0.151
+   C  42  ARG  H  , Bond N--H, observed: 1.010, delta from target: -0.150
+   C  68  TYR  HE2, Bond CE2--HE2, observed: 1.080, delta from target: -0.150
+   C  54  ARG  HE , Bond NE--HE, observed: 1.010, delta from target: -0.150
+   B   2  GLU  H  , Bond N--H, observed: 1.010, delta from target: -0.150
+   C  63  ARG  HE , Bond NE--HE, observed: 1.010, delta from target: -0.150
+   C  45  PHE  HD1, Bond CD1--HD1, observed: 1.080, delta from target: -0.150
+   B   0  TYR  H3 , Bond N--H3, observed: 1.040, delta from target: -0.150
+   C  12  ARG HH21, Bond NH2--HH21, observed: 1.010, delta from target: -0.150
+   C   4  PHE  HE2, Bond CE2--HE2, observed: 1.080, delta from target: -0.150
+   C  68  TYR  HD2, Bond CD2--HD2, observed: 1.080, delta from target: -0.150
+   C  57  SER  H  , Bond N--H, observed: 1.010, delta from target: -0.150
+   C  16  GLU  H  , Bond N--H, observed: 1.010, delta from target: -0.150
+   C   4  PHE  HE1, Bond CE1--HE1, observed: 1.080, delta from target: -0.150
+   C  59  TYR  HD2, Bond CD2--HD2, observed: 1.080, delta from target: -0.150
+   C  41  GLN  H  , Bond N--H, observed: 1.010, delta from target: -0.150
+   C  76  LEU  H  , Bond N--H, observed: 1.009, delta from target: -0.149
+   C   2  GLN HE22, Bond NE2--HE22, observed: 1.009, delta from target: -0.149
+   C  31  GLN HE22, Bond NE2--HE22, observed: 1.009, delta from target: -0.149
+   C  45  PHE  HD2, Bond CD2--HD2, observed: 1.079, delta from target: -0.149
+   C  36  ILE  H  , Bond N--H, observed: 1.009, delta from target: -0.149
+   C  45  PHE  HE1, Bond CE1--HE1, observed: 1.079, delta from target: -0.149
+   C  25  ASN HD22, Bond ND2--HD22, observed: 1.009, delta from target: -0.149
+   C  45  PHE  HZ , Bond CZ--HZ, observed: 1.079, delta from target: -0.149
+   C  66  ASN HD21, Bond ND2--HD21, observed: 1.009, delta from target: -0.149
+   C  20  SER  H  , Bond N--H, observed: 1.009, delta from target: -0.149
+   C  68  TYR  HD1, Bond CD1--HD1, observed: 1.079, delta from target: -0.149
+   C  54  ARG HH11, Bond NH1--HH11, observed: 1.009, delta from target: -0.149
+   C  41  GLN HE21, Bond NE2--HE21, observed: 1.008, delta from target: -0.148
+   C  60  ASN HD22, Bond ND2--HD22, observed: 1.008, delta from target: -0.148
+   C  53  GLY  H  , Bond N--H, observed: 1.008, delta from target: -0.148
+   B   0  TYR  HD2, Bond CD2--HD2, observed: 1.078, delta from target: -0.148
+   C  40  GLN HE21, Bond NE2--HE21, observed: 1.008, delta from target: -0.148
+   C  49  GLN HE22, Bond NE2--HE22, observed: 1.008, delta from target: -0.148
+   C  45  PHE  HE2, Bond CE2--HE2, observed: 1.078, delta from target: -0.148
+   C  63  ARG  H  , Bond N--H, observed: 1.008, delta from target: -0.148
+   B   0  TYR  HD1, Bond CD1--HD1, observed: 1.078, delta from target: -0.148
+   C  46  ALA  H  , Bond N--H, observed: 1.008, delta from target: -0.148
+   B   3  ASP  H  , Bond N--H, observed: 1.007, delta from target: -0.147
+   C  59  TYR  HD1, Bond CD1--HD1, observed: 1.077, delta from target: -0.147
+   C  59  TYR  HE2, Bond CE2--HE2, observed: 1.077, delta from target: -0.147
+   B   9  ARG HH22, Bond NH2--HH22, observed: 1.007, delta from target: -0.147
+   C  12  ARG HH12, Bond NH1--HH12, observed: 1.007, delta from target: -0.147
+   B   9  ARG HH21, Bond NH2--HH21, observed: 1.007, delta from target: -0.147
+   C  42  ARG HH11, Bond NH1--HH11, observed: 1.007, delta from target: -0.147
+   C  74  ARG HH12, Bond NH1--HH12, observed: 1.007, delta from target: -0.147
+   C  74  ARG HH22, Bond NH2--HH22, observed: 1.007, delta from target: -0.147
+   B   0  TYR  HE1, Bond CE1--HE1, observed: 1.077, delta from target: -0.147
+   B   0  TYR  H1 , Bond N--H1, observed: 1.036, delta from target: -0.146
+   C  74  ARG HH11, Bond NH1--HH11, observed: 1.006, delta from target: -0.146
+   C  74  ARG HH21, Bond NH2--HH21, observed: 1.006, delta from target: -0.146
+   C  66  ASN HD22, Bond ND2--HD22, observed: 1.006, delta from target: -0.146
+   C  31  GLN HE21, Bond NE2--HE21, observed: 1.006, delta from target: -0.146
+   C   4  PHE  HZ , Bond CZ--HZ, observed: 1.076, delta from target: -0.146
+   C  60  ASN HD21, Bond ND2--HD21, observed: 1.006, delta from target: -0.146
+   C  63  ARG HH21, Bond NH2--HH21, observed: 1.005, delta from target: -0.145
+   C  42  ARG HH22, Bond NH2--HH22, observed: 1.005, delta from target: -0.145
+   C  12  ARG HH11, Bond NH1--HH11, observed: 1.005, delta from target: -0.145
+   C  65  SER  HG , Bond OG--HG, observed: 0.985, delta from target: -0.145
+   C  54  ARG HH21, Bond NH2--HH21, observed: 1.005, delta from target: -0.145
+   C  63  ARG HH11, Bond NH1--HH11, observed: 1.005, delta from target: -0.145
+   C  49  GLN HE21, Bond NE2--HE21, observed: 1.005, delta from target: -0.145
+   C  68  TYR  HH , Bond OH--HH, observed: 0.983, delta from target: -0.143
+   B   0  TYR  H2 , Bond N--H2, observed: 1.033, delta from target: -0.143
+   C  29  LYS  HZ2, Bond NZ--HZ2, observed: 1.031, delta from target: -0.141
+   B  15  SER  HG , Bond OG--HG, observed: 0.979, delta from target: -0.139
+   C  72  SER  HG , Bond OG--HG, observed: 0.979, delta from target: -0.139
+   C  27  LYS  HZ3, Bond NZ--HZ3, observed: 1.028, delta from target: -0.138
+   C  29  LYS  HZ1, Bond NZ--HZ1, observed: 1.028, delta from target: -0.138
+   C   7  THR  HG1, Bond OG1--HG1, observed: 0.977, delta from target: -0.137
+   B   0  TYR  HH , Bond OH--HH, observed: 0.977, delta from target: -0.137
+   C  62  LYS  HZ2, Bond NZ--HZ2, observed: 1.025, delta from target: -0.135
+   C  20  SER  HB3, Bond CB--HB3, observed: 1.105, delta from target: -0.135
+   C  33  LYS  HZ3, Bond NZ--HZ3, observed: 1.025, delta from target: -0.135
+   C  20  SER  HG , Bond OG--HG, observed: 0.974, delta from target: -0.134
+   C   1  MET  H2 , Bond N--H2, observed: 1.023, delta from target: -0.133
+   C  62  LYS  HZ3, Bond NZ--HZ3, observed: 1.023, delta from target: -0.133
+   C  22  THR  HB , Bond CB--HB, observed: 1.103, delta from target: -0.133
+   C   9  THR  HB , Bond CB--HB, observed: 1.103, delta from target: -0.133
+   C  71  SER  HB2, Bond CB--HB2, observed: 1.102, delta from target: -0.132
+   C 101  HOH  H2 , Bond O--H2, observed: 0.972, delta from target: -0.132
+   C  21  ASP  HA , Bond CA--HA, observed: 1.101, delta from target: -0.131
+   C  55  THR  HB , Bond CB--HB, observed: 1.101, delta from target: -0.131
+   C 102  HOH  H1 , Bond O--H1, observed: 0.971, delta from target: -0.131
+   B   3  ASP  HA , Bond CA--HA, observed: 1.101, delta from target: -0.131
+   B   4  GLU  HA , Bond CA--HA, observed: 1.101, delta from target: -0.131
+   C  52  ASP  HA , Bond CA--HA, observed: 1.101, delta from target: -0.131
+   C  33  LYS  HA , Bond CA--HA, observed: 1.101, delta from target: -0.131
+   B  13  GLU  HA , Bond CA--HA, observed: 1.100, delta from target: -0.130
+   C  24  GLU  HA , Bond CA--HA, observed: 1.100, delta from target: -0.130
+   B  15  SER  HA , Bond CA--HA, observed: 1.100, delta from target: -0.130
+   B  11  ALA  HA , Bond CA--HA, observed: 1.100, delta from target: -0.130
+   B  14  LEU  HA , Bond CA--HA, observed: 1.100, delta from target: -0.130
+   C  29  LYS  HA , Bond CA--HA, observed: 1.100, delta from target: -0.130
+   C  58  ASP  HA , Bond CA--HA, observed: 1.100, delta from target: -0.130
+   C  26  VAL  HA , Bond CA--HA, observed: 1.100, delta from target: -0.130
+   C  27  LYS  HA , Bond CA--HA, observed: 1.100, delta from target: -0.130
+   B   5  GLU  HA , Bond CA--HA, observed: 1.100, delta from target: -0.130
+   C  75  SER  HB2, Bond CB--HB2, observed: 1.100, delta from target: -0.130
+   B  10  LYS  HZ3, Bond NZ--HZ3, observed: 1.020, delta from target: -0.130
+   C  32  ASP  HA , Bond CA--HA, observed: 1.100, delta from target: -0.130
+   B  12  ILE  HA , Bond CA--HA, observed: 1.100, delta from target: -0.130
+   B  15  SER  HB3, Bond CB--HB3, observed: 1.100, delta from target: -0.130
+   C  25  ASN  HA , Bond CA--HA, observed: 1.100, delta from target: -0.130
+   C 104  HOH  H2 , Bond O--H2, observed: 0.969, delta from target: -0.129
+   B   2  GLU  HA , Bond CA--HA, observed: 1.099, delta from target: -0.129
+   C  57  SER  HA , Bond CA--HA, observed: 1.099, delta from target: -0.129
+   C  65  SER  HB2, Bond CB--HB2, observed: 1.099, delta from target: -0.129
+   C  31  GLN  HA , Bond CA--HA, observed: 1.099, delta from target: -0.129
+   B   9  ARG  HA , Bond CA--HA, observed: 1.099, delta from target: -0.129
+   B   6  GLU  HA , Bond CA--HA, observed: 1.099, delta from target: -0.129
+   C  39  ASP  HA , Bond CA--HA, observed: 1.099, delta from target: -0.129
+   C  28  ALA  HA , Bond CA--HA, observed: 1.099, delta from target: -0.129
+   C  19  PRO  HA , Bond CA--HA, observed: 1.099, delta from target: -0.129
+   C  74  ARG  HA , Bond CA--HA, observed: 1.098, delta from target: -0.128
+   C  30  ILE  HA , Bond CA--HA, observed: 1.098, delta from target: -0.128
+   C  20  SER  HA , Bond CA--HA, observed: 1.098, delta from target: -0.128
+   C  57  SER  HB3, Bond CB--HB3, observed: 1.098, delta from target: -0.128
+   C  63  ARG  HA , Bond CA--HA, observed: 1.098, delta from target: -0.128
+   B   7  LEU  HA , Bond CA--HA, observed: 1.098, delta from target: -0.128
+   C  23  ILE  HA , Bond CA--HA, observed: 1.098, delta from target: -0.128
+   C   3  ILE  HA , Bond CA--HA, observed: 1.098, delta from target: -0.128
+   C  64  ASP  HA , Bond CA--HA, observed: 1.097, delta from target: -0.127
+   C   7  THR  HB , Bond CB--HB, observed: 1.097, delta from target: -0.127
+   C  76  LEU  HB2, Bond CB--HB2, observed: 1.097, delta from target: -0.127
+   C  55  THR  HG1, Bond OG1--HG1, observed: 0.967, delta from target: -0.127
+   C  72  SER  HB3, Bond CB--HB3, observed: 1.097, delta from target: -0.127
+   B 301  HOH  H1 , Bond O--H1, observed: 0.967, delta from target: -0.127
+   C   3  ILE  HB , Bond CB--HB, observed: 1.097, delta from target: -0.127
+   C  36  ILE  HB , Bond CB--HB, observed: 1.097, delta from target: -0.127
+   C  56  LEU  HA , Bond CA--HA, observed: 1.097, delta from target: -0.127
+   C  71  SER  HG , Bond OG--HG, observed: 0.967, delta from target: -0.127
+   C  34  GLU  HA , Bond CA--HA, observed: 1.097, delta from target: -0.127
+   C  47  GLY  HA3, Bond CA--HA3, observed: 1.096, delta from target: -0.126
+   C  40  GLN  HA , Bond CA--HA, observed: 1.096, delta from target: -0.126
+   B  10  LYS  HA , Bond CA--HA, observed: 1.096, delta from target: -0.126
+   C  57  SER  HB2, Bond CB--HB2, observed: 1.096, delta from target: -0.126
+   C  59  TYR  HH , Bond OH--HH, observed: 0.966, delta from target: -0.126
+   B  16  LEU  HA , Bond CA--HA, observed: 1.096, delta from target: -0.126
+   B   8  ILE  HA , Bond CA--HA, observed: 1.096, delta from target: -0.126
+   C  76  LEU  HB3, Bond CB--HB3, observed: 1.096, delta from target: -0.126
+   C  38  PRO  HA , Bond CA--HA, observed: 1.096, delta from target: -0.126
+   B   1  PRO  HA , Bond CA--HA, observed: 1.096, delta from target: -0.126
+   C  46  ALA  HA , Bond CA--HA, observed: 1.096, delta from target: -0.126
+   C  45  PHE  HA , Bond CA--HA, observed: 1.096, delta from target: -0.126
+   C  62  LYS  HA , Bond CA--HA, observed: 1.096, delta from target: -0.126
+   B  16  LEU  HG , Bond CG--HG, observed: 1.096, delta from target: -0.126
+   C   8  ILE  HB , Bond CB--HB, observed: 1.096, delta from target: -0.126
+   C  56  LEU  HG , Bond CG--HG, observed: 1.096, delta from target: -0.126
+   C  54  ARG  HD3, Bond CD--HD3, observed: 1.096, delta from target: -0.126
+   C  35  GLY  HA3, Bond CA--HA3, observed: 1.096, delta from target: -0.126
+   C  76  LEU  HA , Bond CA--HA, observed: 1.096, delta from target: -0.126
+   C  15  LEU  HG , Bond CG--HG, observed: 1.096, delta from target: -0.126
+   C  18  GLU  HB3, Bond CB--HB3, observed: 1.095, delta from target: -0.125
+   C  69  LEU  HG , Bond CG--HG, observed: 1.095, delta from target: -0.125
+   C  59  TYR  HA , Bond CA--HA, observed: 1.095, delta from target: -0.125
+   C  63  ARG  HD3, Bond CD--HD3, observed: 1.095, delta from target: -0.125
+   C  61  ILE  HA , Bond CA--HA, observed: 1.095, delta from target: -0.125
+   C  44  ILE  HB , Bond CB--HB, observed: 1.095, delta from target: -0.125
+   C  51  GLU  HA , Bond CA--HA, observed: 1.095, delta from target: -0.125
+   C  75  SER  HG , Bond OG--HG, observed: 0.965, delta from target: -0.125
+   C 106  HOH  H1 , Bond O--H1, observed: 0.965, delta from target: -0.125
+   C  37  PRO  HD2, Bond CD--HD2, observed: 1.095, delta from target: -0.125
+   C  53  GLY  HA2, Bond CA--HA2, observed: 1.095, delta from target: -0.125
+   C  76  LEU  HG , Bond CG--HG, observed: 1.095, delta from target: -0.125
+   B   5  GLU  HB2, Bond CB--HB2, observed: 1.095, delta from target: -0.125
+   C  18  GLU  HA , Bond CA--HA, observed: 1.095, delta from target: -0.125
+   B   1  PRO  HD2, Bond CD--HD2, observed: 1.095, delta from target: -0.125
+   C  15  LEU  HB3, Bond CB--HB3, observed: 1.095, delta from target: -0.125
+   C  21  ASP  HB3, Bond CB--HB3, observed: 1.095, delta from target: -0.125
+   C  48  MET  HB2, Bond CB--HB2, observed: 1.095, delta from target: -0.125
+   C  12  ARG  HD2, Bond CD--HD2, observed: 1.095, delta from target: -0.125
+   C  54  ARG  HD2, Bond CD--HD2, observed: 1.095, delta from target: -0.125
+   B   7  LEU  HG , Bond CG--HG, observed: 1.095, delta from target: -0.125
+   C  73  LEU  HG , Bond CG--HG, observed: 1.095, delta from target: -0.125
+   C  66  ASN  HB3, Bond CB--HB3, observed: 1.094, delta from target: -0.124
+   C  30  ILE  HB , Bond CB--HB, observed: 1.094, delta from target: -0.124
+   C  18  GLU  HB2, Bond CB--HB2, observed: 1.094, delta from target: -0.124
+   C  13  ILE  HA , Bond CA--HA, observed: 1.094, delta from target: -0.124
+   C  22  THR  HG1, Bond OG1--HG1, observed: 0.964, delta from target: -0.124
+   C  42  ARG  HA , Bond CA--HA, observed: 1.094, delta from target: -0.124
+   C  16  GLU  HB3, Bond CB--HB3, observed: 1.094, delta from target: -0.124
+   C  50  LEU  HA , Bond CA--HA, observed: 1.094, delta from target: -0.124
+   C  65  SER  HB3, Bond CB--HB3, observed: 1.094, delta from target: -0.124
+   C  10  VAL  HB , Bond CB--HB, observed: 1.094, delta from target: -0.124
+   C  41  GLN  HA , Bond CA--HA, observed: 1.094, delta from target: -0.124
+   C  54  ARG  HA , Bond CA--HA, observed: 1.094, delta from target: -0.124
+   B  16  LEU  HB2, Bond CB--HB2, observed: 1.094, delta from target: -0.124
+   C  34  GLU  HG3, Bond CG--HG3, observed: 1.094, delta from target: -0.124
+   C  18  GLU  HG3, Bond CG--HG3, observed: 1.094, delta from target: -0.124
+   B  14  LEU  HB2, Bond CB--HB2, observed: 1.094, delta from target: -0.124
+   C 105  HOH  H2 , Bond O--H2, observed: 0.964, delta from target: -0.124
+   B  12  ILE  HB , Bond CB--HB, observed: 1.094, delta from target: -0.124
+   C  26  VAL  HB , Bond CB--HB, observed: 1.094, delta from target: -0.124
+   B 301  HOH  H2 , Bond O--H2, observed: 0.964, delta from target: -0.124
+   C  27  LYS  HB2, Bond CB--HB2, observed: 1.094, delta from target: -0.124
+   C  34  GLU  HB2, Bond CB--HB2, observed: 1.094, delta from target: -0.124
+   C  61  ILE  HB , Bond CB--HB, observed: 1.094, delta from target: -0.124
+   C   3  ILE HG13, Bond CG1--HG13, observed: 1.094, delta from target: -0.124
+   C 106  HOH  H2 , Bond O--H2, observed: 0.964, delta from target: -0.124
+   C 103  HOH  H1 , Bond O--H1, observed: 0.964, delta from target: -0.124
+   C  67  LEU  HG , Bond CG--HG, observed: 1.094, delta from target: -0.124
+   C  57  SER  HG , Bond OG--HG, observed: 0.964, delta from target: -0.124
+   C  23  ILE  HB , Bond CB--HB, observed: 1.094, delta from target: -0.124
+   C  72  SER  HA , Bond CA--HA, observed: 1.094, delta from target: -0.124
+   C  71  SER  HA , Bond CA--HA, observed: 1.094, delta from target: -0.124
+   C   9  THR  HG1, Bond OG1--HG1, observed: 0.964, delta from target: -0.124
+   C  17  VAL  HA , Bond CA--HA, observed: 1.094, delta from target: -0.124
+   C  17  VAL  HB , Bond CB--HB, observed: 1.094, delta from target: -0.124
+   B  13  GLU  HG2, Bond CG--HG2, observed: 1.094, delta from target: -0.124
+   C  40  GLN  HG3, Bond CG--HG3, observed: 1.094, delta from target: -0.124
+   C  38  PRO  HD2, Bond CD--HD2, observed: 1.093, delta from target: -0.123
+   C  24  GLU  HG3, Bond CG--HG3, observed: 1.093, delta from target: -0.123
+   C   7  THR  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   C  20  SER  HB2, Bond CB--HB2, observed: 1.093, delta from target: -0.123
+   C  36  ILE HG13, Bond CG1--HG13, observed: 1.093, delta from target: -0.123
+   C  19  PRO  HD2, Bond CD--HD2, observed: 1.093, delta from target: -0.123
+   C  60  ASN  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   B   6  GLU  HG3, Bond CG--HG3, observed: 1.093, delta from target: -0.123
+   B   6  GLU  HG2, Bond CG--HG2, observed: 1.093, delta from target: -0.123
+   C  70  VAL  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   C  16  GLU  HG2, Bond CG--HG2, observed: 1.093, delta from target: -0.123
+   B   8  ILE  HB , Bond CB--HB, observed: 1.093, delta from target: -0.123
+   B  10  LYS  HE2, Bond CE--HE2, observed: 1.093, delta from target: -0.123
+   C  51  GLU  HB2, Bond CB--HB2, observed: 1.093, delta from target: -0.123
+   C  14  ALA  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   C   6  GLN  HG3, Bond CG--HG3, observed: 1.093, delta from target: -0.123
+   C  23  ILE HG12, Bond CG1--HG12, observed: 1.093, delta from target: -0.123
+   C  50  LEU  HB2, Bond CB--HB2, observed: 1.093, delta from target: -0.123
+   C   1  MET  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   C   5  VAL  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   C   8  ILE HG13, Bond CG1--HG13, observed: 1.093, delta from target: -0.123
+   C  43  LEU  HB3, Bond CB--HB3, observed: 1.093, delta from target: -0.123
+   C   2  GLN  HB2, Bond CB--HB2, observed: 1.093, delta from target: -0.123
+   C 101  HOH  H1 , Bond O--H1, observed: 0.963, delta from target: -0.123
+   C  30  ILE HG12, Bond CG1--HG12, observed: 1.093, delta from target: -0.123
+   B   2  GLU  HG3, Bond CG--HG3, observed: 1.093, delta from target: -0.123
+   C  51  GLU  HB3, Bond CB--HB3, observed: 1.093, delta from target: -0.123
+   C  60  ASN  HB2, Bond CB--HB2, observed: 1.093, delta from target: -0.123
+   C  71  SER  HB3, Bond CB--HB3, observed: 1.093, delta from target: -0.123
+   C  25  ASN  HB3, Bond CB--HB3, observed: 1.093, delta from target: -0.123
+   C  43  LEU  HG , Bond CG--HG, observed: 1.093, delta from target: -0.123
+   B   5  GLU  HG3, Bond CG--HG3, observed: 1.093, delta from target: -0.123
+   B  13  GLU  HB3, Bond CB--HB3, observed: 1.093, delta from target: -0.123
+   C  75  SER  HB3, Bond CB--HB3, observed: 1.093, delta from target: -0.123
+   B   2  GLU  HB2, Bond CB--HB2, observed: 1.093, delta from target: -0.123
+   C  11  MET  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   C  67  LEU  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   C   6  GLN  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   C  33  LYS  HB3, Bond CB--HB3, observed: 1.093, delta from target: -0.123
+   C  68  TYR  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   C   9  THR  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   C  31  GLN  HG2, Bond CG--HG2, observed: 1.093, delta from target: -0.123
+   C  50  LEU  HG , Bond CG--HG, observed: 1.093, delta from target: -0.123
+   C  42  ARG  HD3, Bond CD--HD3, observed: 1.093, delta from target: -0.123
+   C   2  GLN  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   C  65  SER  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   C  48  MET  HB3, Bond CB--HB3, observed: 1.093, delta from target: -0.123
+   C  12  ARG  HA , Bond CA--HA, observed: 1.093, delta from target: -0.123
+   B  10  LYS  HG2, Bond CG--HG2, observed: 1.092, delta from target: -0.122
+   B   3  ASP  HB3, Bond CB--HB3, observed: 1.092, delta from target: -0.122
+   C  61  ILE HG13, Bond CG1--HG13, observed: 1.092, delta from target: -0.122
+   C  42  ARG  HD2, Bond CD--HD2, observed: 1.092, delta from target: -0.122
+   C  66  ASN  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   C  49  GLN  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   C  73  LEU  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   C  49  GLN  HB2, Bond CB--HB2, observed: 1.092, delta from target: -0.122
+   C  75  SER  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   C  34  GLU  HB3, Bond CB--HB3, observed: 1.092, delta from target: -0.122
+   C  70  VAL  HB , Bond CB--HB, observed: 1.092, delta from target: -0.122
+   C  10  VAL  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   C  44  ILE  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   C  18  GLU  HG2, Bond CG--HG2, observed: 1.092, delta from target: -0.122
+   C  41  GLN  HG2, Bond CG--HG2, observed: 1.092, delta from target: -0.122
+   C  24  GLU  HB3, Bond CB--HB3, observed: 1.092, delta from target: -0.122
+   C  13  ILE HG13, Bond CG1--HG13, observed: 1.092, delta from target: -0.122
+   C  22  THR  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   C  45  PHE  HB2, Bond CB--HB2, observed: 1.092, delta from target: -0.122
+   C  69  LEU  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   C  43  LEU  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   C  40  GLN  HB2, Bond CB--HB2, observed: 1.092, delta from target: -0.122
+   C   4  PHE  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   C  67  LEU  HB3, Bond CB--HB3, observed: 1.092, delta from target: -0.122
+   C  69  LEU  HB3, Bond CB--HB3, observed: 1.092, delta from target: -0.122
+   C  33  LYS  HG2, Bond CG--HG2, observed: 1.092, delta from target: -0.122
+   C  47  GLY  HA2, Bond CA--HA2, observed: 1.092, delta from target: -0.122
+   C  67  LEU  HB2, Bond CB--HB2, observed: 1.092, delta from target: -0.122
+   C  25  ASN  HB2, Bond CB--HB2, observed: 1.092, delta from target: -0.122
+   B  12  ILE HG12, Bond CG1--HG12, observed: 1.092, delta from target: -0.122
+   C  35  GLY  HA2, Bond CA--HA2, observed: 1.092, delta from target: -0.122
+   C  48  MET  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   C  24  GLU  HB2, Bond CB--HB2, observed: 1.092, delta from target: -0.122
+   C   2  GLN  HB3, Bond CB--HB3, observed: 1.092, delta from target: -0.122
+   C  13  ILE  HB , Bond CB--HB, observed: 1.092, delta from target: -0.122
+   C  32  ASP  HB2, Bond CB--HB2, observed: 1.092, delta from target: -0.122
+   B   4  GLU  HG2, Bond CG--HG2, observed: 1.092, delta from target: -0.122
+   C  54  ARG  HB2, Bond CB--HB2, observed: 1.092, delta from target: -0.122
+   C   5  VAL  HB , Bond CB--HB, observed: 1.092, delta from target: -0.122
+   B   8  ILE HG12, Bond CG1--HG12, observed: 1.092, delta from target: -0.122
+   C  16  GLU  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   B   4  GLU  HB3, Bond CB--HB3, observed: 1.092, delta from target: -0.122
+   C  30  ILE HG13, Bond CG1--HG13, observed: 1.092, delta from target: -0.122
+   B   0  TYR  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   B  15  SER  HB2, Bond CB--HB2, observed: 1.092, delta from target: -0.122
+   C  31  GLN  HG3, Bond CG--HG3, observed: 1.092, delta from target: -0.122
+   C  56  LEU  HB3, Bond CB--HB3, observed: 1.092, delta from target: -0.122
+   C  64  ASP  HB3, Bond CB--HB3, observed: 1.092, delta from target: -0.122
+   B  10  LYS  HB3, Bond CB--HB3, observed: 1.092, delta from target: -0.122
+   B   2  GLU  HB3, Bond CB--HB3, observed: 1.092, delta from target: -0.122
+   B   6  GLU  HB2, Bond CB--HB2, observed: 1.092, delta from target: -0.122
+   C  62  LYS  HB2, Bond CB--HB2, observed: 1.092, delta from target: -0.122
+   C  36  ILE  HA , Bond CA--HA, observed: 1.092, delta from target: -0.122
+   C 102  HOH  H2 , Bond O--H2, observed: 0.961, delta from target: -0.121
+   C  56  LEU  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   B   9  ARG  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   C  39  ASP  HB3, Bond CB--HB3, observed: 1.091, delta from target: -0.121
+   C  33  LYS  HG3, Bond CG--HG3, observed: 1.091, delta from target: -0.121
+   C  31  GLN  HB3, Bond CB--HB3, observed: 1.091, delta from target: -0.121
+   C  11  MET  HB3, Bond CB--HB3, observed: 1.091, delta from target: -0.121
+   C  59  TYR  HB3, Bond CB--HB3, observed: 1.091, delta from target: -0.121
+   B   9  ARG  HB3, Bond CB--HB3, observed: 1.091, delta from target: -0.121
+   C 103  HOH  H2 , Bond O--H2, observed: 0.961, delta from target: -0.121
+   B   9  ARG  HD2, Bond CD--HD2, observed: 1.091, delta from target: -0.121
+   C   8  ILE HG12, Bond CG1--HG12, observed: 1.091, delta from target: -0.121
+   C   6  GLN  HB3, Bond CB--HB3, observed: 1.091, delta from target: -0.121
+   C  73  LEU  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   B  14  LEU  HG , Bond CG--HG, observed: 1.091, delta from target: -0.121
+   C  42  ARG  HG3, Bond CG--HG3, observed: 1.091, delta from target: -0.121
+   C  29  LYS  HD2, Bond CD--HD2, observed: 1.091, delta from target: -0.121
+   C  12  ARG  HB3, Bond CB--HB3, observed: 1.091, delta from target: -0.121
+   C  54  ARG  HG3, Bond CG--HG3, observed: 1.091, delta from target: -0.121
+   B  14  LEU  HB3, Bond CB--HB3, observed: 1.091, delta from target: -0.121
+   C  74  ARG  HD2, Bond CD--HD2, observed: 1.091, delta from target: -0.121
+   C  63  ARG  HB3, Bond CB--HB3, observed: 1.091, delta from target: -0.121
+   C   1  MET  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   C  36  ILE HG12, Bond CG1--HG12, observed: 1.091, delta from target: -0.121
+   C  31  GLN  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   C  29  LYS  HG2, Bond CG--HG2, observed: 1.091, delta from target: -0.121
+   C  73  LEU  HB3, Bond CB--HB3, observed: 1.091, delta from target: -0.121
+   C  37  PRO  HA , Bond CA--HA, observed: 1.091, delta from target: -0.121
+   C  54  ARG  HG2, Bond CG--HG2, observed: 1.091, delta from target: -0.121
+   C  29  LYS  HE3, Bond CE--HE3, observed: 1.091, delta from target: -0.121
+   C  53  GLY  HA3, Bond CA--HA3, observed: 1.091, delta from target: -0.121
+   C  62  LYS  HG2, Bond CG--HG2, observed: 1.091, delta from target: -0.121
+   C  74  ARG  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   C 105  HOH  H1 , Bond O--H1, observed: 0.961, delta from target: -0.121
+   C  34  GLU  HG2, Bond CG--HG2, observed: 1.091, delta from target: -0.121
+   C  23  ILE HG13, Bond CG1--HG13, observed: 1.091, delta from target: -0.121
+   C  27  LYS  HD2, Bond CD--HD2, observed: 1.091, delta from target: -0.121
+   C  58  ASP  HB3, Bond CB--HB3, observed: 1.091, delta from target: -0.121
+   C  42  ARG  HB3, Bond CB--HB3, observed: 1.091, delta from target: -0.121
+   C   2  GLN  HG3, Bond CG--HG3, observed: 1.091, delta from target: -0.121
+   C  27  LYS  HE2, Bond CE--HE2, observed: 1.091, delta from target: -0.121
+   C  62  LYS  HE3, Bond CE--HE3, observed: 1.091, delta from target: -0.121
+   C 107  HOH  H1 , Bond O--H1, observed: 0.961, delta from target: -0.121
+   C  62  LYS  HD2, Bond CD--HD2, observed: 1.091, delta from target: -0.121
+   C  60  ASN  HB3, Bond CB--HB3, observed: 1.091, delta from target: -0.121
+   C  19  PRO  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   C  63  ARG  HD2, Bond CD--HD2, observed: 1.091, delta from target: -0.121
+   B   3  ASP  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   B  10  LYS  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   C  64  ASP  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   C  15  LEU  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   C  61  ILE HG12, Bond CG1--HG12, observed: 1.091, delta from target: -0.121
+   C  33  LYS  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   C  41  GLN  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   C  55  THR  HA , Bond CA--HA, observed: 1.091, delta from target: -0.121
+   C  63  ARG  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   C  15  LEU  HA , Bond CA--HA, observed: 1.091, delta from target: -0.121
+   B  10  LYS  HE3, Bond CE--HE3, observed: 1.091, delta from target: -0.121
+   C  29  LYS  HB2, Bond CB--HB2, observed: 1.091, delta from target: -0.121
+   C  49  GLN  HG2, Bond CG--HG2, observed: 1.090, delta from target: -0.120
+   B   2  GLU  HG2, Bond CG--HG2, observed: 1.090, delta from target: -0.120
+   B  12  ILE HG13, Bond CG1--HG13, observed: 1.090, delta from target: -0.120
+   C  12  ARG  HB2, Bond CB--HB2, observed: 1.090, delta from target: -0.120
+   B   7  LEU  HB3, Bond CB--HB3, observed: 1.090, delta from target: -0.120
+   C  38  PRO  HB2, Bond CB--HB2, observed: 1.090, delta from target: -0.120
+   C  44  ILE HG12, Bond CG1--HG12, observed: 1.090, delta from target: -0.120
+   C  51  GLU  HG3, Bond CG--HG3, observed: 1.090, delta from target: -0.120
+   B   0  TYR  HB3, Bond CB--HB3, observed: 1.090, delta from target: -0.120
+   B   1  PRO  HB2, Bond CB--HB2, observed: 1.090, delta from target: -0.120
+   C  49  GLN  HB3, Bond CB--HB3, observed: 1.090, delta from target: -0.120
+   B  13  GLU  HB2, Bond CB--HB2, observed: 1.090, delta from target: -0.120
+   C  12  ARG  HG2, Bond CG--HG2, observed: 1.090, delta from target: -0.120
+   C  37  PRO  HD3, Bond CD--HD3, observed: 1.090, delta from target: -0.120
+   C  29  LYS  HE2, Bond CE--HE2, observed: 1.090, delta from target: -0.120
+   C  24  GLU  HG2, Bond CG--HG2, observed: 1.090, delta from target: -0.120
+   C  43  LEU  HB2, Bond CB--HB2, observed: 1.090, delta from target: -0.120
+   C  44  ILE HG13, Bond CG1--HG13, observed: 1.090, delta from target: -0.120
+   C   1  MET  HB3, Bond CB--HB3, observed: 1.090, delta from target: -0.120
+   C  63  ARG  HG3, Bond CG--HG3, observed: 1.090, delta from target: -0.120
+   C  27  LYS  HD3, Bond CD--HD3, observed: 1.090, delta from target: -0.120
+   C  74  ARG  HG3, Bond CG--HG3, observed: 1.090, delta from target: -0.120
+   C  27  LYS  HG3, Bond CG--HG3, observed: 1.090, delta from target: -0.120
+   C  37  PRO  HB2, Bond CB--HB2, observed: 1.090, delta from target: -0.120
+   B   7  LEU  HB2, Bond CB--HB2, observed: 1.090, delta from target: -0.120
+   B  10  LYS  HD2, Bond CD--HD2, observed: 1.090, delta from target: -0.120
+   B   9  ARG  HD3, Bond CD--HD3, observed: 1.090, delta from target: -0.120
+   C  48  MET  HG3, Bond CG--HG3, observed: 1.090, delta from target: -0.120
+   C  54  ARG  HB3, Bond CB--HB3, observed: 1.090, delta from target: -0.120
+   C  27  LYS  HG2, Bond CG--HG2, observed: 1.090, delta from target: -0.120
+   C  68  TYR  HB2, Bond CB--HB2, observed: 1.090, delta from target: -0.120
+   B  13  GLU  HG3, Bond CG--HG3, observed: 1.090, delta from target: -0.120
+   C  68  TYR  HB3, Bond CB--HB3, observed: 1.090, delta from target: -0.120
+   C  62  LYS  HG3, Bond CG--HG3, observed: 1.090, delta from target: -0.120
+   C   2  GLN  HG2, Bond CG--HG2, observed: 1.090, delta from target: -0.120
+   B   4  GLU  HB2, Bond CB--HB2, observed: 1.090, delta from target: -0.120
+   C  29  LYS  HG3, Bond CG--HG3, observed: 1.090, delta from target: -0.120
+   C  52  ASP  HB2, Bond CB--HB2, observed: 1.090, delta from target: -0.120
+   C   4  PHE  HB2, Bond CB--HB2, observed: 1.090, delta from target: -0.120
+   C  63  ARG  HG2, Bond CG--HG2, observed: 1.090, delta from target: -0.120
+   C  32  ASP  HB3, Bond CB--HB3, observed: 1.090, delta from target: -0.120
+   C  13  ILE HG23, Bond CG2--HG23, observed: 1.090, delta from target: -0.120
+   C  13  ILE HG12, Bond CG1--HG12, observed: 1.090, delta from target: -0.120
+   C  72  SER  HB2, Bond CB--HB2, observed: 1.090, delta from target: -0.120
+   C   8  ILE HG22, Bond CG2--HG22, observed: 1.090, delta from target: -0.120
+   C  13  ILE HG22, Bond CG2--HG22, observed: 1.090, delta from target: -0.120
+   C  27  LYS  HB3, Bond CB--HB3, observed: 1.090, delta from target: -0.120
+   C 107  HOH  H2 , Bond O--H2, observed: 0.960, delta from target: -0.120
+   C  73  LEU HD13, Bond CD1--HD13, observed: 1.090, delta from target: -0.120
+   B   1  PRO  HG3, Bond CG--HG3, observed: 1.090, delta from target: -0.120
+   C  38  PRO  HG3, Bond CG--HG3, observed: 1.090, delta from target: -0.120
+   C  40  GLN  HG2, Bond CG--HG2, observed: 1.089, delta from target: -0.119
+   B   4  GLU  HG3, Bond CG--HG3, observed: 1.089, delta from target: -0.119
+   C  29  LYS  HB3, Bond CB--HB3, observed: 1.089, delta from target: -0.119
+   C  51  GLU  HG2, Bond CG--HG2, observed: 1.089, delta from target: -0.119
+   C  42  ARG  HG2, Bond CG--HG2, observed: 1.089, delta from target: -0.119
+   C  74  ARG  HB3, Bond CB--HB3, observed: 1.089, delta from target: -0.119
+   C  45  PHE  HB3, Bond CB--HB3, observed: 1.089, delta from target: -0.119
+   C  33  LYS  HE3, Bond CE--HE3, observed: 1.089, delta from target: -0.119
+   C  69  LEU  HB2, Bond CB--HB2, observed: 1.089, delta from target: -0.119
+   C  12  ARG  HG3, Bond CG--HG3, observed: 1.089, delta from target: -0.119
+   C  19  PRO  HD3, Bond CD--HD3, observed: 1.089, delta from target: -0.119
+   C  23  ILE HG22, Bond CG2--HG22, observed: 1.089, delta from target: -0.119
+   C  33  LYS  HD2, Bond CD--HD2, observed: 1.089, delta from target: -0.119
+   C  52  ASP  HB3, Bond CB--HB3, observed: 1.089, delta from target: -0.119
+   C   8  ILE  HA , Bond CA--HA, observed: 1.089, delta from target: -0.119
+   B  16  LEU  HB3, Bond CB--HB3, observed: 1.089, delta from target: -0.119
+   C   3  ILE HG12, Bond CG1--HG12, observed: 1.089, delta from target: -0.119
+   C  33  LYS  HD3, Bond CD--HD3, observed: 1.089, delta from target: -0.119
+   C  29  LYS  HD3, Bond CD--HD3, observed: 1.089, delta from target: -0.119
+   C  16  GLU  HB2, Bond CB--HB2, observed: 1.089, delta from target: -0.119
+   C  44  ILE HG22, Bond CG2--HG22, observed: 1.089, delta from target: -0.119
+   C  76  LEU HD12, Bond CD1--HD12, observed: 1.089, delta from target: -0.119
+   C  42  ARG  HB2, Bond CB--HB2, observed: 1.089, delta from target: -0.119
+   C  36  ILE HG22, Bond CG2--HG22, observed: 1.089, delta from target: -0.119
+   C  41  GLN  HG3, Bond CG--HG3, observed: 1.089, delta from target: -0.119
+   C  37  PRO  HG3, Bond CG--HG3, observed: 1.089, delta from target: -0.119
+   B  14  LEU HD22, Bond CD2--HD22, observed: 1.089, delta from target: -0.119
+   B  10  LYS  HD3, Bond CD--HD3, observed: 1.089, delta from target: -0.119
+   C  21  ASP  HB2, Bond CB--HB2, observed: 1.089, delta from target: -0.119
+   B   5  GLU  HB3, Bond CB--HB3, observed: 1.089, delta from target: -0.119
+   C  12  ARG  HD3, Bond CD--HD3, observed: 1.089, delta from target: -0.119
+   C  62  LYS  HB3, Bond CB--HB3, observed: 1.089, delta from target: -0.119
+   C  41  GLN  HB3, Bond CB--HB3, observed: 1.089, delta from target: -0.119
+   C  26  VAL HG23, Bond CG2--HG23, observed: 1.089, delta from target: -0.119
+   C   4  PHE  HB3, Bond CB--HB3, observed: 1.089, delta from target: -0.119
+   B   6  GLU  HB3, Bond CB--HB3, observed: 1.089, delta from target: -0.119
+   B   5  GLU  HG2, Bond CG--HG2, observed: 1.089, delta from target: -0.119
+   B  14  LEU HD13, Bond CD1--HD13, observed: 1.089, delta from target: -0.119
+   C  39  ASP  HB2, Bond CB--HB2, observed: 1.089, delta from target: -0.119
+   C   3  ILE HG23, Bond CG2--HG23, observed: 1.089, delta from target: -0.119
+   C  48  MET  HG2, Bond CG--HG2, observed: 1.089, delta from target: -0.119
+   C  56  LEU HD12, Bond CD1--HD12, observed: 1.089, delta from target: -0.119
+   C  11  MET  HB2, Bond CB--HB2, observed: 1.089, delta from target: -0.119
+   C  27  LYS  HE3, Bond CE--HE3, observed: 1.089, delta from target: -0.119
+   B  14  LEU HD23, Bond CD2--HD23, observed: 1.089, delta from target: -0.119
+   C   6  GLN  HB2, Bond CB--HB2, observed: 1.089, delta from target: -0.119
+   B   0  TYR  HB2, Bond CB--HB2, observed: 1.089, delta from target: -0.119
+   C  70  VAL HG12, Bond CG1--HG12, observed: 1.089, delta from target: -0.119
+   C  19  PRO  HG3, Bond CG--HG3, observed: 1.089, delta from target: -0.119
+   C  11  MET  HG2, Bond CG--HG2, observed: 1.088, delta from target: -0.118
+   C  76  LEU HD22, Bond CD2--HD22, observed: 1.088, delta from target: -0.118
+   C  59  TYR  HB2, Bond CB--HB2, observed: 1.088, delta from target: -0.118
+   B   9  ARG  HG3, Bond CG--HG3, observed: 1.088, delta from target: -0.118
+   C  40  GLN  HB3, Bond CB--HB3, observed: 1.088, delta from target: -0.118
+   C  14  ALA  HB3, Bond CB--HB3, observed: 1.088, delta from target: -0.118
+   C  74  ARG  HG2, Bond CG--HG2, observed: 1.088, delta from target: -0.118
+   C  50  LEU  HB3, Bond CB--HB3, observed: 1.088, delta from target: -0.118
+   C 104  HOH  H1 , Bond O--H1, observed: 0.958, delta from target: -0.118
+   C  10  VAL HG22, Bond CG2--HG22, observed: 1.088, delta from target: -0.118
+   C  15  LEU HD13, Bond CD1--HD13, observed: 1.088, delta from target: -0.118
+   C   1  MET  HG2, Bond CG--HG2, observed: 1.088, delta from target: -0.118
+   C  33  LYS  HE2, Bond CE--HE2, observed: 1.088, delta from target: -0.118
+   C  74  ARG  HD3, Bond CD--HD3, observed: 1.088, delta from target: -0.118
+   C  73  LEU HD21, Bond CD2--HD21, observed: 1.088, delta from target: -0.118
+   B  16  LEU HD12, Bond CD1--HD12, observed: 1.088, delta from target: -0.118
+   C  43  LEU HD22, Bond CD2--HD22, observed: 1.088, delta from target: -0.118
+   C  17  VAL HG12, Bond CG1--HG12, observed: 1.088, delta from target: -0.118
+   C  76  LEU HD13, Bond CD1--HD13, observed: 1.088, delta from target: -0.118
+   C  73  LEU HD12, Bond CD1--HD12, observed: 1.088, delta from target: -0.118
+   C  58  ASP  HB2, Bond CB--HB2, observed: 1.088, delta from target: -0.118
+   C  13  ILE HD12, Bond CD1--HD12, observed: 1.088, delta from target: -0.118
+   C  76  LEU HD11, Bond CD1--HD11, observed: 1.088, delta from target: -0.118
+   C  66  ASN  HB2, Bond CB--HB2, observed: 1.088, delta from target: -0.118
+   C  49  GLN  HG3, Bond CG--HG3, observed: 1.088, delta from target: -0.118
+   C  30  ILE HD13, Bond CD1--HD13, observed: 1.088, delta from target: -0.118
+   C  16  GLU  HG3, Bond CG--HG3, observed: 1.088, delta from target: -0.118
+   C  15  LEU HD22, Bond CD2--HD22, observed: 1.088, delta from target: -0.118
+   C  30  ILE HG23, Bond CG2--HG23, observed: 1.088, delta from target: -0.118
+   C  73  LEU HD23, Bond CD2--HD23, observed: 1.088, delta from target: -0.118
+   C   5  VAL HG13, Bond CG1--HG13, observed: 1.088, delta from target: -0.118
+   B  10  LYS  HG3, Bond CG--HG3, observed: 1.088, delta from target: -0.118
+   B   9  ARG  HG2, Bond CG--HG2, observed: 1.088, delta from target: -0.118
+   B  14  LEU HD12, Bond CD1--HD12, observed: 1.088, delta from target: -0.118
+   C  70  VAL HG13, Bond CG1--HG13, observed: 1.088, delta from target: -0.118
+   C   6  GLN  HG2, Bond CG--HG2, observed: 1.088, delta from target: -0.118
+   C   8  ILE HD12, Bond CD1--HD12, observed: 1.088, delta from target: -0.118
+   C  30  ILE HG22, Bond CG2--HG22, observed: 1.088, delta from target: -0.118
+   C  28  ALA  HB3, Bond CB--HB3, observed: 1.088, delta from target: -0.118
+   B  12  ILE HG22, Bond CG2--HG22, observed: 1.088, delta from target: -0.118
+   C  10  VAL HG13, Bond CG1--HG13, observed: 1.088, delta from target: -0.118
+   C  23  ILE HG21, Bond CG2--HG21, observed: 1.088, delta from target: -0.118
+   C  67  LEU HD11, Bond CD1--HD11, observed: 1.088, delta from target: -0.118
+   C  73  LEU HD11, Bond CD1--HD11, observed: 1.088, delta from target: -0.118
+   C  44  ILE HD12, Bond CD1--HD12, observed: 1.087, delta from target: -0.117
+   B  12  ILE HG23, Bond CG2--HG23, observed: 1.087, delta from target: -0.117
+   B  16  LEU HD21, Bond CD2--HD21, observed: 1.087, delta from target: -0.117
+   C  69  LEU HD21, Bond CD2--HD21, observed: 1.087, delta from target: -0.117
+   C  61  ILE HD12, Bond CD1--HD12, observed: 1.087, delta from target: -0.117
+   C  55  THR HG21, Bond CG2--HG21, observed: 1.087, delta from target: -0.117
+   C  38  PRO  HD3, Bond CD--HD3, observed: 1.087, delta from target: -0.117
+   C  70  VAL HG22, Bond CG2--HG22, observed: 1.087, delta from target: -0.117
+   C  22  THR HG23, Bond CG2--HG23, observed: 1.087, delta from target: -0.117
+   C  44  ILE HD11, Bond CD1--HD11, observed: 1.087, delta from target: -0.117
+   C  67  LEU HD13, Bond CD1--HD13, observed: 1.087, delta from target: -0.117
+   B   8  ILE HG13, Bond CG1--HG13, observed: 1.087, delta from target: -0.117
+   C  11  MET  HG3, Bond CG--HG3, observed: 1.087, delta from target: -0.117
+   C  62  LYS  HD3, Bond CD--HD3, observed: 1.087, delta from target: -0.117
+   B   7  LEU HD11, Bond CD1--HD11, observed: 1.087, delta from target: -0.117
+   C  17  VAL HG22, Bond CG2--HG22, observed: 1.087, delta from target: -0.117
+   C  44  ILE HG23, Bond CG2--HG23, observed: 1.087, delta from target: -0.117
+   B   7  LEU HD12, Bond CD1--HD12, observed: 1.087, delta from target: -0.117
+   C   9  THR HG22, Bond CG2--HG22, observed: 1.087, delta from target: -0.117
+   C  69  LEU HD22, Bond CD2--HD22, observed: 1.087, delta from target: -0.117
+   B   8  ILE HD12, Bond CD1--HD12, observed: 1.087, delta from target: -0.117
+   C  15  LEU HD21, Bond CD2--HD21, observed: 1.087, delta from target: -0.117
+   C  56  LEU HD11, Bond CD1--HD11, observed: 1.087, delta from target: -0.117
+   C   5  VAL HG12, Bond CG1--HG12, observed: 1.087, delta from target: -0.117
+   C   3  ILE HD11, Bond CD1--HD11, observed: 1.087, delta from target: -0.117
+   B   7  LEU HD22, Bond CD2--HD22, observed: 1.087, delta from target: -0.117
+   C  13  ILE HD11, Bond CD1--HD11, observed: 1.087, delta from target: -0.117
+   C  22  THR HG21, Bond CG2--HG21, observed: 1.087, delta from target: -0.117
+   C  11  MET  HE1, Bond CE--HE1, observed: 1.087, delta from target: -0.117
+   C   8  ILE HD11, Bond CD1--HD11, observed: 1.087, delta from target: -0.117
+   C  50  LEU HD13, Bond CD1--HD13, observed: 1.087, delta from target: -0.117
+   B  12  ILE HD12, Bond CD1--HD12, observed: 1.087, delta from target: -0.117
+   B   7  LEU HD21, Bond CD2--HD21, observed: 1.087, delta from target: -0.117
+   C   1  MET  HE3, Bond CE--HE3, observed: 1.087, delta from target: -0.117
+   C  73  LEU HD22, Bond CD2--HD22, observed: 1.087, delta from target: -0.117
+   C  43  LEU HD23, Bond CD2--HD23, observed: 1.087, delta from target: -0.117
+   C  28  ALA  HB2, Bond CB--HB2, observed: 1.087, delta from target: -0.117
+   C  23  ILE HD11, Bond CD1--HD11, observed: 1.087, delta from target: -0.117
+   C   5  VAL HG22, Bond CG2--HG22, observed: 1.087, delta from target: -0.117
+   C  55  THR HG23, Bond CG2--HG23, observed: 1.087, delta from target: -0.117
+   C   1  MET  HE2, Bond CE--HE2, observed: 1.087, delta from target: -0.117
+   C  76  LEU HD23, Bond CD2--HD23, observed: 1.087, delta from target: -0.117
+   C  56  LEU HD13, Bond CD1--HD13, observed: 1.087, delta from target: -0.117
+   C  43  LEU HD13, Bond CD1--HD13, observed: 1.087, delta from target: -0.117
+   C  55  THR HG22, Bond CG2--HG22, observed: 1.087, delta from target: -0.117
+   C   5  VAL HG23, Bond CG2--HG23, observed: 1.087, delta from target: -0.117
+   C  11  MET  HE2, Bond CE--HE2, observed: 1.087, delta from target: -0.117
+   C  23  ILE HG23, Bond CG2--HG23, observed: 1.087, delta from target: -0.117
+   C  61  ILE HG22, Bond CG2--HG22, observed: 1.087, delta from target: -0.117
+   B  16  LEU HD23, Bond CD2--HD23, observed: 1.087, delta from target: -0.117
+   C  69  LEU HD12, Bond CD1--HD12, observed: 1.087, delta from target: -0.117
+   C  36  ILE HG23, Bond CG2--HG23, observed: 1.087, delta from target: -0.117
+   C  50  LEU HD12, Bond CD1--HD12, observed: 1.087, delta from target: -0.117
+   C  67  LEU HD23, Bond CD2--HD23, observed: 1.087, delta from target: -0.117
+   C  56  LEU HD21, Bond CD2--HD21, observed: 1.087, delta from target: -0.117
+   C  10  VAL HG11, Bond CG1--HG11, observed: 1.087, delta from target: -0.117
+   C  70  VAL HG11, Bond CG1--HG11, observed: 1.087, delta from target: -0.117
+   C   3  ILE HD13, Bond CD1--HD13, observed: 1.087, delta from target: -0.117
+   C  10  VAL HG21, Bond CG2--HG21, observed: 1.087, delta from target: -0.117
+   C  76  LEU HD21, Bond CD2--HD21, observed: 1.087, delta from target: -0.117
+   C  10  VAL HG23, Bond CG2--HG23, observed: 1.087, delta from target: -0.117
+   C   7  THR HG23, Bond CG2--HG23, observed: 1.087, delta from target: -0.117
+   B  16  LEU HD11, Bond CD1--HD11, observed: 1.087, delta from target: -0.117
+   C  28  ALA  HB1, Bond CB--HB1, observed: 1.087, delta from target: -0.117
+   C   8  ILE HG23, Bond CG2--HG23, observed: 1.087, delta from target: -0.117
+   C  15  LEU HD12, Bond CD1--HD12, observed: 1.087, delta from target: -0.117
+   C  14  ALA  HB1, Bond CB--HB1, observed: 1.086, delta from target: -0.116
+   C  13  ILE HD13, Bond CD1--HD13, observed: 1.086, delta from target: -0.116
+   C  26  VAL HG22, Bond CG2--HG22, observed: 1.086, delta from target: -0.116
+   C  70  VAL HG21, Bond CG2--HG21, observed: 1.086, delta from target: -0.116
+   C  30  ILE HD11, Bond CD1--HD11, observed: 1.086, delta from target: -0.116
+   C   7  THR HG21, Bond CG2--HG21, observed: 1.086, delta from target: -0.116
+   B   7  LEU HD13, Bond CD1--HD13, observed: 1.086, delta from target: -0.116
+   C  22  THR HG22, Bond CG2--HG22, observed: 1.086, delta from target: -0.116
+   B  12  ILE HD11, Bond CD1--HD11, observed: 1.086, delta from target: -0.116
+   C  61  ILE HD11, Bond CD1--HD11, observed: 1.086, delta from target: -0.116
+   C  61  ILE HD13, Bond CD1--HD13, observed: 1.086, delta from target: -0.116
+   B  11  ALA  HB2, Bond CB--HB2, observed: 1.086, delta from target: -0.116
+   C  17  VAL HG13, Bond CG1--HG13, observed: 1.086, delta from target: -0.116
+   C  69  LEU HD13, Bond CD1--HD13, observed: 1.086, delta from target: -0.116
+   C   3  ILE HG22, Bond CG2--HG22, observed: 1.086, delta from target: -0.116
+   C  67  LEU HD22, Bond CD2--HD22, observed: 1.086, delta from target: -0.116
+   C  50  LEU HD23, Bond CD2--HD23, observed: 1.086, delta from target: -0.116
+   C  36  ILE HD12, Bond CD1--HD12, observed: 1.086, delta from target: -0.116
+   C  43  LEU HD21, Bond CD2--HD21, observed: 1.086, delta from target: -0.116
+   B  14  LEU HD11, Bond CD1--HD11, observed: 1.086, delta from target: -0.116
+   B   1  PRO  HG2, Bond CG--HG2, observed: 1.086, delta from target: -0.116
+   C  61  ILE HG21, Bond CG2--HG21, observed: 1.086, delta from target: -0.116
+   C  36  ILE HD11, Bond CD1--HD11, observed: 1.086, delta from target: -0.116
+   C   9  THR HG21, Bond CG2--HG21, observed: 1.086, delta from target: -0.116
+   C  67  LEU HD21, Bond CD2--HD21, observed: 1.086, delta from target: -0.116
+   C   1  MET  HE1, Bond CE--HE1, observed: 1.086, delta from target: -0.116
+   C  10  VAL HG12, Bond CG1--HG12, observed: 1.086, delta from target: -0.116
+   B  14  LEU HD21, Bond CD2--HD21, observed: 1.086, delta from target: -0.116
+   C   3  ILE HG21, Bond CG2--HG21, observed: 1.086, delta from target: -0.116
+   B   7  LEU HD23, Bond CD2--HD23, observed: 1.086, delta from target: -0.116
+   C  13  ILE HG21, Bond CG2--HG21, observed: 1.086, delta from target: -0.116
+   C  48  MET  HE3, Bond CE--HE3, observed: 1.086, delta from target: -0.116
+   C   8  ILE HD13, Bond CD1--HD13, observed: 1.086, delta from target: -0.116
+   C  46  ALA  HB2, Bond CB--HB2, observed: 1.086, delta from target: -0.116
+   C  26  VAL HG13, Bond CG1--HG13, observed: 1.086, delta from target: -0.116
+   C  30  ILE HD12, Bond CD1--HD12, observed: 1.086, delta from target: -0.116
+   C  19  PRO  HB3, Bond CB--HB3, observed: 1.086, delta from target: -0.116
+   C  44  ILE HD13, Bond CD1--HD13, observed: 1.086, delta from target: -0.116
+   C  70  VAL HG23, Bond CG2--HG23, observed: 1.086, delta from target: -0.116
+   C  26  VAL HG21, Bond CG2--HG21, observed: 1.086, delta from target: -0.116
+   C  17  VAL HG11, Bond CG1--HG11, observed: 1.086, delta from target: -0.116
+   C  44  ILE HG21, Bond CG2--HG21, observed: 1.086, delta from target: -0.116
+   C   9  THR HG23, Bond CG2--HG23, observed: 1.086, delta from target: -0.116
+   B  16  LEU HD22, Bond CD2--HD22, observed: 1.086, delta from target: -0.116
+   C  50  LEU HD11, Bond CD1--HD11, observed: 1.086, delta from target: -0.116
+   C  17  VAL HG21, Bond CG2--HG21, observed: 1.086, delta from target: -0.116
+   C  23  ILE HD13, Bond CD1--HD13, observed: 1.086, delta from target: -0.116
+   C  56  LEU HD22, Bond CD2--HD22, observed: 1.086, delta from target: -0.116
+   C  61  ILE HG23, Bond CG2--HG23, observed: 1.086, delta from target: -0.116
+   B   8  ILE HD11, Bond CD1--HD11, observed: 1.086, delta from target: -0.116
+   B   1  PRO  HB3, Bond CB--HB3, observed: 1.086, delta from target: -0.116
+   C  43  LEU HD12, Bond CD1--HD12, observed: 1.086, delta from target: -0.116
+   C   8  ILE HG21, Bond CG2--HG21, observed: 1.086, delta from target: -0.116
+   C  11  MET  HE3, Bond CE--HE3, observed: 1.086, delta from target: -0.116
+   C  46  ALA  HB3, Bond CB--HB3, observed: 1.086, delta from target: -0.116
+   C  69  LEU HD23, Bond CD2--HD23, observed: 1.086, delta from target: -0.116
+   B   8  ILE HD13, Bond CD1--HD13, observed: 1.085, delta from target: -0.115
+   C   5  VAL HG21, Bond CG2--HG21, observed: 1.085, delta from target: -0.115
+   C  15  LEU HD23, Bond CD2--HD23, observed: 1.085, delta from target: -0.115
+   C  50  LEU HD21, Bond CD2--HD21, observed: 1.085, delta from target: -0.115
+   C  30  ILE HG21, Bond CG2--HG21, observed: 1.085, delta from target: -0.115
+   C  48  MET  HE2, Bond CE--HE2, observed: 1.085, delta from target: -0.115
+   C   5  VAL HG11, Bond CG1--HG11, observed: 1.085, delta from target: -0.115
+   C  43  LEU HD11, Bond CD1--HD11, observed: 1.085, delta from target: -0.115
+   B  16  LEU HD13, Bond CD1--HD13, observed: 1.085, delta from target: -0.115
+   C   3  ILE HD12, Bond CD1--HD12, observed: 1.085, delta from target: -0.115
+   B   8  ILE HG23, Bond CG2--HG23, observed: 1.085, delta from target: -0.115
+   C  26  VAL HG12, Bond CG1--HG12, observed: 1.085, delta from target: -0.115
+   C  56  LEU HD23, Bond CD2--HD23, observed: 1.085, delta from target: -0.115
+   B  12  ILE HD13, Bond CD1--HD13, observed: 1.085, delta from target: -0.115
+   C  37  PRO  HG2, Bond CG--HG2, observed: 1.085, delta from target: -0.115
+   B   8  ILE HG22, Bond CG2--HG22, observed: 1.085, delta from target: -0.115
+   C  37  PRO  HB3, Bond CB--HB3, observed: 1.085, delta from target: -0.115
+   B   8  ILE HG21, Bond CG2--HG21, observed: 1.085, delta from target: -0.115
+   C  62  LYS  HE2, Bond CE--HE2, observed: 1.085, delta from target: -0.115
+   C  46  ALA  HB1, Bond CB--HB1, observed: 1.085, delta from target: -0.115
+   C  19  PRO  HG2, Bond CG--HG2, observed: 1.085, delta from target: -0.115
+   C  67  LEU HD12, Bond CD1--HD12, observed: 1.085, delta from target: -0.115
+   C   1  MET  HG3, Bond CG--HG3, observed: 1.085, delta from target: -0.115
+   C  17  VAL HG23, Bond CG2--HG23, observed: 1.085, delta from target: -0.115
+   C  38  PRO  HG2, Bond CG--HG2, observed: 1.085, delta from target: -0.115
+   B  11  ALA  HB3, Bond CB--HB3, observed: 1.085, delta from target: -0.115
+   C  23  ILE HD12, Bond CD1--HD12, observed: 1.085, delta from target: -0.115
+   C  26  VAL HG11, Bond CG1--HG11, observed: 1.085, delta from target: -0.115
+   C  36  ILE HD13, Bond CD1--HD13, observed: 1.084, delta from target: -0.114
+   B  11  ALA  HB1, Bond CB--HB1, observed: 1.084, delta from target: -0.114
+   B   1  PRO  HD3, Bond CD--HD3, observed: 1.084, delta from target: -0.114
+   C   7  THR HG22, Bond CG2--HG22, observed: 1.084, delta from target: -0.114
+   C  50  LEU HD22, Bond CD2--HD22, observed: 1.084, delta from target: -0.114
+   C  14  ALA  HB2, Bond CB--HB2, observed: 1.083, delta from target: -0.113
+   C  38  PRO  HB3, Bond CB--HB3, observed: 1.083, delta from target: -0.113
+   C  36  ILE HG21, Bond CG2--HG21, observed: 1.083, delta from target: -0.113
+   C  69  LEU HD11, Bond CD1--HD11, observed: 1.083, delta from target: -0.113
+   B  12  ILE HG21, Bond CG2--HG21, observed: 1.082, delta from target: -0.112
+   C  15  LEU HD11, Bond CD1--HD11, observed: 1.082, delta from target: -0.112
+   C  48  MET  HE1, Bond CE--HE1, observed: 1.082, delta from target: -0.112
+
+============================ Molprobity validation ============================
+
+  
+  Geometry Restraints Library: GeoStd + Monomer Library
+  Deviations from Ideal Values.
+    Bond      :  0.013   0.065    759
+    Angle     :  2.241  10.338   1023
+    Chirality :  0.123   0.433    120
+    Planarity :  0.018   0.103    134
+    Dihedral  : 16.799 136.757    483
+    Min Nonbonded Distance : 2.494
+  
+  Molprobity Statistics.
+    All-atom Clashscore : 1.97
+    Ramachandran Plot:
+      Outliers :  0.00 %
+      Allowed  :  1.12 %
+      Favored  : 98.88 %
+    Rotamer Outliers :  0.00 %
+    Cbeta Deviations :  2.22 %
+    Peptide Plane:
+      Cis-proline     : 0.00 %
+      Cis-general     : 0.00 %
+      Twisted Proline : 0.00 %
+      Twisted General : 0.00 %
+
+                     ----------Asn/Gln/His flips----------                     
+
+  No backwards Asn/Gln/His sidechains found.
+
+=================================== Summary ===================================
+
+  Ramachandran outliers =   0.00 %
+                favored =  98.88 %
+  Rotamer outliers      =   0.00 %
+  C-beta deviations     =     2
+  Clashscore            =   1.97
+  RMS(bonds)            =   0.0132
+  RMS(angles)           =   2.24
+  MolProbity score      =   0.96
