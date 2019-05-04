@@ -18,9 +18,4 @@ Documented model preparation:
 
 ## Notes
 
-1. 3glw : Error 
-  File "/usr/local/phenix-dev-3409_qrefine_update/modules/qrefine/super_cell.py", line 143, in create_super_sphere
-    assert n_linked in [1, 0], n_linked # Either linked or not!
-AssertionError: 2
-
 
