@@ -22,5 +22,9 @@ Documented model preparation:
 
 9.      /Refine_MaxItRef200/  stpmax=0.3 max_iterations_refine=200 xxxx_xtb_refine_MaxResN_Step03_MaxItRef200.log
 
+#Notes
 
+1.  6n1l: stpmax=0.3 and 0.5 "lost" good weights 
+
+2.  6njg: stpmax=0.5 minimization failed
 
