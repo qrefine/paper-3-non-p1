@@ -1,0 +1,2 @@
+nohup qr.refine CYS12_Symm.pdb mode=opt two_buffers=1 maxnum_residues_in_cluster=5 quantum.nproc=2 parallel.nproc=10 max_bond_rmsd=0.03 stpmax=0.2 number_of_micro_cycles=1 gradient_only=true clustering=true use_convergence_test=true  opt_log=1 restraints=qm  engine_name=xtb  > CYS12_Res5_2buff.log 2>&1 &
+

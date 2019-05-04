@@ -1,0 +1,3335 @@
+Starting Q|R
+version:   v1.0-114-g3318f9  
+Running refinement
+   input {
+     xray_data {
+       file_name = None
+       labels = None
+       high_resolution = None
+       low_resolution = None
+       outliers_rejection = True
+       french_wilson_scale = True
+       french_wilson {
+         max_bins = 60
+         min_bin_size = 40
+       }
+       sigma_fobs_rejection_criterion = None
+       sigma_iobs_rejection_criterion = None
+       ignore_all_zeros = True
+       force_anomalous_flag_to_be_equal_to = None
+       convert_to_non_anomalous_if_ratio_pairs_lone_less_than_threshold = 0.5
+       r_free_flags {
+         file_name = None
+         label = None
+         test_flag_value = None
+         ignore_r_free_flags = False
+         disable_suitability_test = False
+         ignore_pdb_hexdigest = False
+         generate = False
+         fraction = 0.1
+         max_free = 2000
+         lattice_symmetry_max_delta = 5
+         use_lattice_symmetry = True
+         use_dataman_shells = False
+         n_shells = 20
+       }
+     }
+     pdb {
+       file_name = None
+     }
+     monomers {
+       file_name = None
+     }
+     maps {
+       map_file_name = None
+       d_min = None
+       map_coefficients_file_name = None
+       map_coefficients_label = None
+     }
+     sequence = None
+     scattering_table = wk1995 it1992 *n_gaussian neutron electron
+     wavelength = None
+     energy = None
+     twin_law = Auto
+   }
+   max_atoms = 15000
+   debug = False
+   cluster {
+     charge_cutoff = 8.0
+     clustering = true
+     charge_embedding = False
+     two_buffers = 1
+     maxnum_residues_in_cluster = 50
+     clustering_method = gnc *bcc
+     altloc_method = *average subtract
+     g_scan = 10 15 20
+     g_ref = None
+     g_mode = None
+   }
+   restraints = cctbx *qm
+   quantum {
+     engine_name = mopac ani torchani terachem turbomole pyscf orca gaussian \
+                   *xtb
+     charge = None
+     basis = Auto
+     method = Auto
+     memory = None
+     nproc = 2
+     qm_addon = gcp dftd3 gcp-d3
+     qm_addon_method = None
+   }
+   refine {
+     dry_run = False
+     sf_algorithm = *direct fft
+     refinement_target_name = *ml ls_wunit_k1
+     mode = *opt refine gtest
+     number_of_macro_cycles = 1
+     number_of_weight_search_cycles = 50
+     number_of_refine_cycles = 5
+     number_of_micro_cycles = 1
+     data_weight = None
+     choose_best_use_r_work = False
+     skip_weight_search = False
+     adjust_restraints_weight_scale_value = 2
+     max_iterations_weight = 50
+     max_iterations_refine = 50
+     use_ase_lbfgs = False
+     line_search = True
+     stpmax = 0.2
+     gradient_only = true
+     update_all_scales = True
+     refine_sites = True
+     refine_adp = False
+     restraints_weight_scale = 1.0
+     shake_sites = False
+     use_convergence_test = true
+     max_bond_rmsd = 0.03
+     max_r_work_r_free_gap = 5.0
+     r_tolerance = 0.001
+     rmsd_tolerance = 0.01
+     opt_log = 1
+     pre_opt = False
+     pre_opt_stpmax = 0.1
+     pre_opt_iter = 10
+     pre_opt_switch = 2
+     pre_opt_gconv = 3000
+   }
+   parallel {
+     method = *multiprocessing slurm pbs sge lsf threading
+     nproc = 10
+     qsub_command = None
+   }
+   output_file_name_prefix = None
+   output_folder_name = "pdb"
+   shared_disk = True
+   rst_file = None
+   dump_gradients = None
+  Default method for xtb is  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o
+ params.gradient_only True
+
+***********************************************************
+restart info will be stored in /home/qr/paper3_5c11/OptTests_15April/ZN_Tests/Clust_True_2buff/pdb/ZN_CYS.rst.pickle
+***********************************************************
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+start   0 rmsd(b):  0.0140 rws:  1.000 n_fev: 0
+lbfgs minimizer():
+  x.size(): 768
+  m: 5
+  maxfev: 20
+  gtol: 0.9
+  xtol: 1e-16
+  stpmin: 1e-09
+  stpmax: 0.2
+lbfgs traditional_convergence_test: True
+  step:   1 bond rmsd: 0.013966
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.585  34.726  37.772  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.015  36.669  35.373  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.860  36.747  34.937  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17574e+07, |g|=12423.9, x_min=19.902, x_mean=34.2996, x_max=46.499
+  step:   2 bond rmsd: 0.019932
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.736  37.777  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.681  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.861  36.762  34.906  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.736  37.777  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.681  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.861  36.762  34.906  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.736  37.777  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.681  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.861  36.762  34.906  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.736  37.777  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.681  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.861  36.762  34.906  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.736  37.777  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.681  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.861  36.762  34.906  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.736  37.777  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.681  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.861  36.762  34.906  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.736  37.777  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.681  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.861  36.762  34.906  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.736  37.777  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.681  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.861  36.762  34.906  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17597e+07, |g|=7538.09, x_min=19.9057, x_mean=34.2996, x_max=46.4915
+lbfgs minimizer step
+  step:   3 bond rmsd: 0.017954
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.737  37.778  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.682  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.862  36.764  34.904  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.737  37.778  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.682  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.862  36.764  34.904  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.737  37.778  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.682  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.862  36.764  34.904  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.737  37.778  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.682  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.862  36.764  34.904  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.737  37.778  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.682  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.862  36.764  34.904  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.737  37.778  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.682  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.862  36.764  34.904  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.737  37.778  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.682  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.862  36.764  34.904  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.737  37.778  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.682  35.380  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.862  36.764  34.904  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.176e+07, |g|=6389.44, x_min=19.9059, x_mean=34.2996, x_max=46.4911
+lbfgs minimizer step
+  step:   4 bond rmsd: 0.016052
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.738  37.779  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.685  35.381  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.864  36.768  34.898  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.738  37.779  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.685  35.381  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.864  36.768  34.898  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.738  37.779  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.685  35.381  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.864  36.768  34.898  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.738  37.779  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.685  35.381  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.864  36.768  34.898  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.738  37.779  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.685  35.381  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.864  36.768  34.898  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.738  37.779  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.685  35.381  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.864  36.768  34.898  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.738  37.779  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.685  35.381  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.864  36.768  34.898  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.738  37.779  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.017  36.685  35.381  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.864  36.768  34.898  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17604e+07, |g|=5232.56, x_min=19.9061, x_mean=34.2996, x_max=46.4903
+lbfgs minimizer step
+  step:   5 bond rmsd: 0.014542
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.739  37.781  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.688  35.382  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.867  36.773  34.891  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.739  37.781  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.688  35.382  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.867  36.773  34.891  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.739  37.781  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.688  35.382  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.867  36.773  34.891  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.739  37.781  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.688  35.382  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.867  36.773  34.891  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.739  37.781  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.688  35.382  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.867  36.773  34.891  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.739  37.781  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.688  35.382  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.867  36.773  34.891  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.739  37.781  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.688  35.382  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.867  36.773  34.891  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.739  37.781  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.688  35.382  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.867  36.773  34.891  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17607e+07, |g|=4164.23, x_min=19.9063, x_mean=34.2996, x_max=46.4891
+lbfgs minimizer step
+  step:   6 bond rmsd: 0.013586
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.740  37.784  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.693  35.384  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.871  36.781  34.881  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.740  37.784  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.693  35.384  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.871  36.781  34.881  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.740  37.784  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.693  35.384  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.871  36.781  34.881  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.740  37.784  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.693  35.384  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.871  36.781  34.881  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.740  37.784  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.693  35.384  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.871  36.781  34.881  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.740  37.784  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.693  35.384  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.871  36.781  34.881  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.740  37.784  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.693  35.384  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.871  36.781  34.881  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.740  37.784  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.018  36.693  35.384  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.871  36.781  34.881  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.1761e+07, |g|=3258.67, x_min=19.9065, x_mean=34.2996, x_max=46.4877
+lbfgs minimizer step
+  step:   7 bond rmsd: 0.013061
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.787  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.699  35.386  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.877  36.791  34.869  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.787  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.699  35.386  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.877  36.791  34.869  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.787  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.699  35.386  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.877  36.791  34.869  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.787  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.699  35.386  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.877  36.791  34.869  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.787  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.699  35.386  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.877  36.791  34.869  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.787  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.699  35.386  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.877  36.791  34.869  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.787  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.699  35.386  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.877  36.791  34.869  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.787  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.699  35.386  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.877  36.791  34.869  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17613e+07, |g|=2507.31, x_min=19.9066, x_mean=34.2996, x_max=46.4856
+lbfgs minimizer step
+  step:   8 bond rmsd: 0.012844
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.791  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.705  35.387  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.883  36.802  34.857  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.791  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.705  35.387  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.883  36.802  34.857  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.791  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.705  35.387  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.883  36.802  34.857  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.791  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.705  35.387  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.883  36.802  34.857  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.791  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.705  35.387  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.883  36.802  34.857  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.791  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.705  35.387  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.883  36.802  34.857  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.791  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.705  35.387  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.883  36.802  34.857  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.591  34.741  37.791  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.019  36.705  35.387  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.883  36.802  34.857  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17616e+07, |g|=1944.69, x_min=19.9064, x_mean=34.2996, x_max=46.4847
+lbfgs minimizer step
+  step:   9 bond rmsd: 0.013033
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.741  37.796  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.712  35.389  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.892  36.815  34.843  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.741  37.796  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.712  35.389  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.892  36.815  34.843  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.741  37.796  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.712  35.389  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.892  36.815  34.843  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.741  37.796  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.712  35.389  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.892  36.815  34.843  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.741  37.796  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.712  35.389  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.892  36.815  34.843  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.741  37.796  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.712  35.389  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.892  36.815  34.843  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.741  37.796  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.712  35.389  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.892  36.815  34.843  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.590  34.741  37.796  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.712  35.389  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.892  36.815  34.843  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17618e+07, |g|=1553.16, x_min=19.9062, x_mean=34.2996, x_max=46.4825
+lbfgs minimizer step
+  step:  10 bond rmsd: 0.013175
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.589  34.740  37.803  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.021  36.721  35.390  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.903  36.831  34.826  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.589  34.740  37.803  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.021  36.721  35.390  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.903  36.831  34.826  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.589  34.740  37.803  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.021  36.721  35.390  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.903  36.831  34.826  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.589  34.740  37.803  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.021  36.721  35.390  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.903  36.831  34.826  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.589  34.740  37.803  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.021  36.721  35.390  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.903  36.831  34.826  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.589  34.740  37.803  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.021  36.721  35.390  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.903  36.831  34.826  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.589  34.740  37.803  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.021  36.721  35.390  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.903  36.831  34.826  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.589  34.740  37.803  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.021  36.721  35.390  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.903  36.831  34.826  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.1762e+07, |g|=1402.97, x_min=19.9056, x_mean=34.2996, x_max=46.4821
+lbfgs minimizer step
+  step:  11 bond rmsd: 0.013696
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.588  34.738  37.810  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.730  35.392  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.915  36.850  34.807  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.588  34.738  37.810  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.730  35.392  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.915  36.850  34.807  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.588  34.738  37.810  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.730  35.392  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.915  36.850  34.807  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.588  34.738  37.810  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.730  35.392  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.915  36.850  34.807  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.588  34.738  37.810  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.730  35.392  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.915  36.850  34.807  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.588  34.738  37.810  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.730  35.392  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.915  36.850  34.807  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.588  34.738  37.810  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.730  35.392  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.915  36.850  34.807  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.588  34.738  37.810  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.730  35.392  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.915  36.850  34.807  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17622e+07, |g|=1114.51, x_min=19.9049, x_mean=34.2996, x_max=46.4802
+lbfgs minimizer step
+  step:  12 bond rmsd: 0.014067
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.586  34.735  37.817  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.023  36.738  35.394  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.925  36.866  34.793  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.586  34.735  37.817  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.023  36.738  35.394  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.925  36.866  34.793  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.586  34.735  37.817  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.023  36.738  35.394  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.925  36.866  34.793  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.586  34.735  37.817  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.023  36.738  35.394  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.925  36.866  34.793  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.586  34.735  37.817  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.023  36.738  35.394  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.925  36.866  34.793  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.586  34.735  37.817  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.023  36.738  35.394  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.925  36.866  34.793  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.586  34.735  37.817  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.023  36.738  35.394  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.925  36.866  34.793  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.586  34.735  37.817  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.023  36.738  35.394  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.925  36.866  34.793  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17624e+07, |g|=1064.34, x_min=19.9042, x_mean=34.2996, x_max=46.4775
+lbfgs minimizer step
+  step:  13 bond rmsd: 0.014081
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.584  34.730  37.825  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.748  35.395  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.938  36.885  34.777  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.584  34.730  37.825  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.748  35.395  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.938  36.885  34.777  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.584  34.730  37.825  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.748  35.395  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.938  36.885  34.777  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.584  34.730  37.825  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.748  35.395  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.938  36.885  34.777  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.584  34.730  37.825  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.748  35.395  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.938  36.885  34.777  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.584  34.730  37.825  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.748  35.395  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.938  36.885  34.777  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.584  34.730  37.825  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.748  35.395  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.938  36.885  34.777  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.584  34.730  37.825  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.748  35.395  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.938  36.885  34.777  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17625e+07, |g|=1215.96, x_min=19.9032, x_mean=34.2996, x_max=46.4801
+lbfgs minimizer step
+  step:  14 bond rmsd: 0.014443
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.583  34.726  37.833  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.026  36.755  35.397  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.948  36.901  34.764  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.583  34.726  37.833  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.026  36.755  35.397  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.948  36.901  34.764  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.583  34.726  37.833  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.026  36.755  35.397  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.948  36.901  34.764  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.583  34.726  37.833  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.026  36.755  35.397  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.948  36.901  34.764  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.583  34.726  37.833  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.026  36.755  35.397  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.948  36.901  34.764  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.583  34.726  37.833  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.026  36.755  35.397  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.948  36.901  34.764  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.583  34.726  37.833  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.026  36.755  35.397  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.948  36.901  34.764  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.583  34.726  37.833  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.026  36.755  35.397  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.948  36.901  34.764  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17627e+07, |g|=976.278, x_min=19.9024, x_mean=34.2996, x_max=46.4781
+lbfgs minimizer step
+  step:  15 bond rmsd: 0.014227
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.719  37.839  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.028  36.762  35.399  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  36.917  34.754  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.719  37.839  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.028  36.762  35.399  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  36.917  34.754  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.719  37.839  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.028  36.762  35.399  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  36.917  34.754  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.719  37.839  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.028  36.762  35.399  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  36.917  34.754  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.719  37.839  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.028  36.762  35.399  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  36.917  34.754  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.719  37.839  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.028  36.762  35.399  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  36.917  34.754  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.719  37.839  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.028  36.762  35.399  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  36.917  34.754  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.719  37.839  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.028  36.762  35.399  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  36.917  34.754  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17627e+07, |g|=1123.32, x_min=19.9016, x_mean=34.2996, x_max=46.476
+lbfgs minimizer step
+  step:  16 bond rmsd: 0.014490
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.712  37.846  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.030  36.768  35.402  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.967  36.933  34.744  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.712  37.846  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.030  36.768  35.402  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.967  36.933  34.744  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.712  37.846  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.030  36.768  35.402  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.967  36.933  34.744  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.712  37.846  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.030  36.768  35.402  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.967  36.933  34.744  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.712  37.846  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.030  36.768  35.402  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.967  36.933  34.744  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.712  37.846  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.030  36.768  35.402  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.967  36.933  34.744  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.712  37.846  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.030  36.768  35.402  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.967  36.933  34.744  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.712  37.846  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.030  36.768  35.402  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.967  36.933  34.744  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17628e+07, |g|=876.659, x_min=19.9008, x_mean=34.2996, x_max=46.4759
+lbfgs minimizer step
+  step:  17 bond rmsd: 0.014469
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.706  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.773  35.404  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.973  36.945  34.737  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.706  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.773  35.404  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.973  36.945  34.737  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.706  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.773  35.404  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.973  36.945  34.737  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.706  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.773  35.404  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.973  36.945  34.737  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.706  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.773  35.404  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.973  36.945  34.737  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.706  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.773  35.404  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.973  36.945  34.737  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.706  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.773  35.404  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.973  36.945  34.737  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.706  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.773  35.404  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.973  36.945  34.737  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17629e+07, |g|=832.839, x_min=19.9003, x_mean=34.2996, x_max=46.4751
+lbfgs minimizer step
+  step:  18 bond rmsd: 0.014797
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.694  37.858  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.036  36.778  35.410  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.980  36.963  34.728  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.694  37.858  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.036  36.778  35.410  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.980  36.963  34.728  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.694  37.858  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.036  36.778  35.410  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.980  36.963  34.728  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.694  37.858  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.036  36.778  35.410  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.980  36.963  34.728  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.694  37.858  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.036  36.778  35.410  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.980  36.963  34.728  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.694  37.858  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.036  36.778  35.410  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.980  36.963  34.728  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.694  37.858  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.036  36.778  35.410  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.980  36.963  34.728  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.694  37.858  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.036  36.778  35.410  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.980  36.963  34.728  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.1763e+07, |g|=1088.82, x_min=19.8998, x_mean=34.2996, x_max=46.476
+lbfgs minimizer step
+  step:  19 bond rmsd: 0.014790
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.686  37.861  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.039  36.782  35.414  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.984  36.974  34.723  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.686  37.861  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.039  36.782  35.414  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.984  36.974  34.723  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.686  37.861  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.039  36.782  35.414  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.984  36.974  34.723  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.686  37.861  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.039  36.782  35.414  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.984  36.974  34.723  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.686  37.861  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.039  36.782  35.414  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.984  36.974  34.723  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.686  37.861  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.039  36.782  35.414  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.984  36.974  34.723  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.686  37.861  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.039  36.782  35.414  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.984  36.974  34.723  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.686  37.861  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.039  36.782  35.414  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.984  36.974  34.723  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17631e+07, |g|=916.443, x_min=19.8996, x_mean=34.2996, x_max=46.4761
+lbfgs minimizer step
+  step:  20 bond rmsd: 0.014780
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.677  37.865  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.042  36.784  35.419  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.986  34.719  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.677  37.865  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.042  36.784  35.419  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.986  34.719  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.677  37.865  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.042  36.784  35.419  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.986  34.719  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.677  37.865  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.042  36.784  35.419  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.986  34.719  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.677  37.865  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.042  36.784  35.419  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.986  34.719  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.677  37.865  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.042  36.784  35.419  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.986  34.719  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.677  37.865  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.042  36.784  35.419  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.986  34.719  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.677  37.865  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.042  36.784  35.419  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.986  34.719  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17631e+07, |g|=928.179, x_min=19.8997, x_mean=34.2996, x_max=46.4756
+lbfgs minimizer step
+  step:  21 bond rmsd: 0.014738
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.666  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.046  36.787  35.426  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.000  34.714  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.666  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.046  36.787  35.426  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.000  34.714  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.666  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.046  36.787  35.426  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.000  34.714  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.666  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.046  36.787  35.426  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.000  34.714  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.666  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.046  36.787  35.426  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.000  34.714  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.666  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.046  36.787  35.426  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.000  34.714  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.666  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.046  36.787  35.426  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.000  34.714  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.666  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.046  36.787  35.426  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.000  34.714  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17632e+07, |g|=723.913, x_min=19.9, x_mean=34.2996, x_max=46.4768
+lbfgs minimizer step
+  step:  22 bond rmsd: 0.014696
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.656  37.869  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.788  35.433  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.011  34.711  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.656  37.869  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.788  35.433  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.011  34.711  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.656  37.869  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.788  35.433  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.011  34.711  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.656  37.869  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.788  35.433  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.011  34.711  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.656  37.869  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.788  35.433  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.011  34.711  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.656  37.869  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.788  35.433  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.011  34.711  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.656  37.869  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.788  35.433  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.011  34.711  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.656  37.869  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.788  35.433  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.988  37.011  34.711  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17632e+07, |g|=683.638, x_min=19.9005, x_mean=34.2996, x_max=46.4774
+lbfgs minimizer step
+  step:  23 bond rmsd: 0.014708
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.643  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.054  36.788  35.443  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.987  37.024  34.707  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.643  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.054  36.788  35.443  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.987  37.024  34.707  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.643  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.054  36.788  35.443  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.987  37.024  34.707  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.643  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.054  36.788  35.443  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.987  37.024  34.707  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.643  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.054  36.788  35.443  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.987  37.024  34.707  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.643  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.054  36.788  35.443  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.987  37.024  34.707  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.643  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.054  36.788  35.443  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.987  37.024  34.707  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.575  34.643  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.054  36.788  35.443  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.987  37.024  34.707  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17633e+07, |g|=706.551, x_min=19.9014, x_mean=34.2995, x_max=46.478
+lbfgs minimizer step
+  step:  24 bond rmsd: 0.014596
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.633  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.057  36.787  35.452  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.985  37.034  34.704  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.633  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.057  36.787  35.452  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.985  37.034  34.704  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.633  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.057  36.787  35.452  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.985  37.034  34.704  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.633  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.057  36.787  35.452  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.985  37.034  34.704  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.633  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.057  36.787  35.452  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.985  37.034  34.704  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.633  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.057  36.787  35.452  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.985  37.034  34.704  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.633  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.057  36.787  35.452  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.985  37.034  34.704  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.633  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.057  36.787  35.452  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.985  37.034  34.704  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17634e+07, |g|=615.126, x_min=19.9023, x_mean=34.2995, x_max=46.4788
+lbfgs minimizer step
+  step:  25 bond rmsd: 0.014703
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.577  34.622  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.060  36.785  35.463  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.982  37.045  34.701  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.577  34.622  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.060  36.785  35.463  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.982  37.045  34.701  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.577  34.622  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.060  36.785  35.463  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.982  37.045  34.701  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.577  34.622  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.060  36.785  35.463  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.982  37.045  34.701  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.577  34.622  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.060  36.785  35.463  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.982  37.045  34.701  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.577  34.622  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.060  36.785  35.463  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.982  37.045  34.701  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.577  34.622  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.060  36.785  35.463  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.982  37.045  34.701  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.577  34.622  37.870  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.060  36.785  35.463  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.982  37.045  34.701  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17634e+07, |g|=734.094, x_min=19.9035, x_mean=34.2995, x_max=46.4809
+lbfgs minimizer step
+  step:  26 bond rmsd: 0.014525
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.611  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.783  35.474  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.979  37.054  34.699  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.611  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.783  35.474  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.979  37.054  34.699  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.611  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.783  35.474  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.979  37.054  34.699  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.611  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.783  35.474  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.979  37.054  34.699  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.611  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.783  35.474  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.979  37.054  34.699  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.611  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.783  35.474  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.979  37.054  34.699  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.611  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.783  35.474  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.979  37.054  34.699  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.611  37.868  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.783  35.474  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.979  37.054  34.699  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17635e+07, |g|=598.319, x_min=19.9049, x_mean=34.2995, x_max=46.4823
+lbfgs minimizer step
+  step:  27 bond rmsd: 0.014551
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.602  37.866  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.780  35.484  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  37.062  34.696  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.602  37.866  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.780  35.484  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  37.062  34.696  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.602  37.866  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.780  35.484  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  37.062  34.696  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.602  37.866  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.780  35.484  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  37.062  34.696  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.602  37.866  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.780  35.484  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  37.062  34.696  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.602  37.866  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.780  35.484  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  37.062  34.696  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.602  37.866  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.780  35.484  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  37.062  34.696  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.579  34.602  37.866  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.780  35.484  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  37.062  34.696  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17635e+07, |g|=621.563, x_min=19.9064, x_mean=34.2995, x_max=46.4833
+lbfgs minimizer step
+  step:  28 bond rmsd: 0.014235
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.590  37.862  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.776  35.499  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.969  37.071  34.693  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.590  37.862  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.776  35.499  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.969  37.071  34.693  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.590  37.862  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.776  35.499  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.969  37.071  34.693  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.590  37.862  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.776  35.499  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.969  37.071  34.693  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.590  37.862  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.776  35.499  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.969  37.071  34.693  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.590  37.862  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.776  35.499  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.969  37.071  34.693  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.590  37.862  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.776  35.499  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.969  37.071  34.693  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.590  37.862  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.776  35.499  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.969  37.071  34.693  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17635e+07, |g|=647.503, x_min=19.9084, x_mean=34.2995, x_max=46.4851
+lbfgs minimizer step
+  step:  29 bond rmsd: 0.014230
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.583  37.859  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.772  35.510  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.964  37.076  34.691  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.583  37.859  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.772  35.510  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.964  37.076  34.691  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.583  37.859  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.772  35.510  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.964  37.076  34.691  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.583  37.859  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.772  35.510  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.964  37.076  34.691  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.583  37.859  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.772  35.510  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.964  37.076  34.691  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.583  37.859  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.772  35.510  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.964  37.076  34.691  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.583  37.859  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.772  35.510  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.964  37.076  34.691  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.583  37.859  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.772  35.510  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.964  37.076  34.691  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17636e+07, |g|=566.799, x_min=19.9099, x_mean=34.2995, x_max=46.4861
+lbfgs minimizer step
+  step:  30 bond rmsd: 0.014030
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.573  37.855  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.766  35.524  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.959  37.082  34.689  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.573  37.855  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.766  35.524  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.959  37.082  34.689  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.573  37.855  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.766  35.524  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.959  37.082  34.689  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.573  37.855  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.766  35.524  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.959  37.082  34.689  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.573  37.855  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.766  35.524  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.959  37.082  34.689  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.573  37.855  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.766  35.524  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.959  37.082  34.689  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.573  37.855  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.766  35.524  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.959  37.082  34.689  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.573  37.855  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.067  36.766  35.524  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.959  37.082  34.689  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17636e+07, |g|=763.212, x_min=19.9117, x_mean=34.2995, x_max=46.4874
+lbfgs minimizer step
+  step:  31 bond rmsd: 0.013990
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.566  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.761  35.535  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.954  37.086  34.687  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.566  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.761  35.535  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.954  37.086  34.687  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.566  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.761  35.535  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.954  37.086  34.687  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.566  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.761  35.535  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.954  37.086  34.687  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.566  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.761  35.535  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.954  37.086  34.687  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.566  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.761  35.535  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.954  37.086  34.687  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.566  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.761  35.535  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.954  37.086  34.687  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.581  34.566  37.851  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.066  36.761  35.535  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.954  37.086  34.687  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17637e+07, |g|=645.504, x_min=19.9133, x_mean=34.2995, x_max=46.4884
+lbfgs minimizer step
+  step:  32 bond rmsd: 0.013989
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.558  37.847  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.065  36.756  35.548  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.950  37.088  34.685  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.558  37.847  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.065  36.756  35.548  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.950  37.088  34.685  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.558  37.847  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.065  36.756  35.548  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.950  37.088  34.685  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.558  37.847  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.065  36.756  35.548  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.950  37.088  34.685  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.558  37.847  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.065  36.756  35.548  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.950  37.088  34.685  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.558  37.847  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.065  36.756  35.548  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.950  37.088  34.685  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.558  37.847  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.065  36.756  35.548  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.950  37.088  34.685  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.580  34.558  37.847  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.065  36.756  35.548  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.950  37.088  34.685  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17637e+07, |g|=709.035, x_min=19.915, x_mean=34.2995, x_max=46.4892
+lbfgs minimizer step
+  step:  33 bond rmsd: 0.013883
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.550  37.843  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.750  35.562  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.089  34.684  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.550  37.843  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.750  35.562  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.089  34.684  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.550  37.843  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.750  35.562  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.089  34.684  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.550  37.843  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.750  35.562  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.089  34.684  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.550  37.843  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.750  35.562  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.089  34.684  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.550  37.843  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.750  35.562  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.089  34.684  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.550  37.843  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.750  35.562  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.089  34.684  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.578  34.550  37.843  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.064  36.750  35.562  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.089  34.684  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17637e+07, |g|=587.878, x_min=19.9167, x_mean=34.2995, x_max=46.4904
+lbfgs minimizer step
+  step:  34 bond rmsd: 0.013950
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.543  37.838  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.744  35.575  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.941  37.088  34.682  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.543  37.838  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.744  35.575  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.941  37.088  34.682  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.543  37.838  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.744  35.575  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.941  37.088  34.682  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.543  37.838  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.744  35.575  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.941  37.088  34.682  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.543  37.838  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.744  35.575  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.941  37.088  34.682  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.543  37.838  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.744  35.575  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.941  37.088  34.682  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.543  37.838  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.744  35.575  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.941  37.088  34.682  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.576  34.543  37.838  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.062  36.744  35.575  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.941  37.088  34.682  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17638e+07, |g|=598.337, x_min=19.9181, x_mean=34.2995, x_max=46.4916
+lbfgs minimizer step
+  step:  35 bond rmsd: 0.013845
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.573  34.537  37.834  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.059  36.738  35.589  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.937  37.086  34.681  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.573  34.537  37.834  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.059  36.738  35.589  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.937  37.086  34.681  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.573  34.537  37.834  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.059  36.738  35.589  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.937  37.086  34.681  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.573  34.537  37.834  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.059  36.738  35.589  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.937  37.086  34.681  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.573  34.537  37.834  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.059  36.738  35.589  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.937  37.086  34.681  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.573  34.537  37.834  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.059  36.738  35.589  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.937  37.086  34.681  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.573  34.537  37.834  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.059  36.738  35.589  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.937  37.086  34.681  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.573  34.537  37.834  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.059  36.738  35.589  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.937  37.086  34.681  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17638e+07, |g|=530.269, x_min=19.9195, x_mean=34.2995, x_max=46.4926
+lbfgs minimizer step
+  step:  36 bond rmsd: 0.013917
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.568  34.531  37.830  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.056  36.732  35.601  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.082  34.680  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.568  34.531  37.830  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.056  36.732  35.601  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.082  34.680  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.568  34.531  37.830  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.056  36.732  35.601  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.082  34.680  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.568  34.531  37.830  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.056  36.732  35.601  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.082  34.680  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.568  34.531  37.830  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.056  36.732  35.601  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.082  34.680  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.568  34.531  37.830  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.056  36.732  35.601  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.082  34.680  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.568  34.531  37.830  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.056  36.732  35.601  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.082  34.680  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.568  34.531  37.830  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.056  36.732  35.601  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.082  34.680  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17639e+07, |g|=597.935, x_min=19.9205, x_mean=34.2995, x_max=46.4937
+lbfgs minimizer step
+  step:  37 bond rmsd: 0.013792
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.563  34.524  37.826  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.053  36.726  35.614  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.077  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.563  34.524  37.826  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.053  36.726  35.614  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.077  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.563  34.524  37.826  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.053  36.726  35.614  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.077  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.563  34.524  37.826  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.053  36.726  35.614  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.077  34.679  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.563  34.524  37.826  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.053  36.726  35.614  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.077  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.563  34.524  37.826  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.053  36.726  35.614  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.077  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.563  34.524  37.826  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.053  36.726  35.614  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.077  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.563  34.524  37.826  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.053  36.726  35.614  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.077  34.679  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17639e+07, |g|=531.536, x_min=19.9215, x_mean=34.2995, x_max=46.4949
+lbfgs minimizer step
+  step:  38 bond rmsd: 0.014036
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.557  34.519  37.823  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.722  35.626  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.069  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.557  34.519  37.823  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.722  35.626  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.069  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.557  34.519  37.823  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.722  35.626  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.069  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.557  34.519  37.823  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.722  35.626  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.069  34.679  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.557  34.519  37.823  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.722  35.626  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.069  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.557  34.519  37.823  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.722  35.626  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.069  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.557  34.519  37.823  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.722  35.626  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.069  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.557  34.519  37.823  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.050  36.722  35.626  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.069  34.679  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17639e+07, |g|=791.264, x_min=19.9222, x_mean=34.2995, x_max=46.4958
+lbfgs minimizer step
+  step:  39 bond rmsd: 0.013920
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.551  34.514  37.821  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.047  36.719  35.636  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.063  34.678  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.551  34.514  37.821  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.047  36.719  35.636  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.063  34.678  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.551  34.514  37.821  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.047  36.719  35.636  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.063  34.678  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.551  34.514  37.821  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.047  36.719  35.636  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.063  34.678  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.551  34.514  37.821  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.047  36.719  35.636  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.063  34.678  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.551  34.514  37.821  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.047  36.719  35.636  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.063  34.678  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.551  34.514  37.821  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.047  36.719  35.636  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.063  34.678  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.551  34.514  37.821  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.047  36.719  35.636  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.932  37.063  34.678  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.1764e+07, |g|=706.723, x_min=19.9226, x_mean=34.2995, x_max=46.4967
+lbfgs minimizer step
+  step:  40 bond rmsd: 0.014044
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.544  34.510  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.044  36.716  35.646  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.053  34.678  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.544  34.510  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.044  36.716  35.646  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.053  34.678  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.544  34.510  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.044  36.716  35.646  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.053  34.678  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.544  34.510  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.044  36.716  35.646  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.053  34.678  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.544  34.510  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.044  36.716  35.646  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.053  34.678  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.544  34.510  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.044  36.716  35.646  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.053  34.678  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.544  34.510  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.044  36.716  35.646  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.053  34.678  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.544  34.510  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.044  36.716  35.646  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.934  37.053  34.678  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.1764e+07, |g|=907.586, x_min=19.9224, x_mean=34.2995, x_max=46.4984
+lbfgs minimizer step
+  step:  41 bond rmsd: 0.013929
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.538  34.506  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.041  36.715  35.654  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.936  37.044  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.538  34.506  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.041  36.715  35.654  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.936  37.044  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.538  34.506  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.041  36.715  35.654  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.936  37.044  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.538  34.506  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.041  36.715  35.654  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.936  37.044  34.679  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.538  34.506  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.041  36.715  35.654  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.936  37.044  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.538  34.506  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.041  36.715  35.654  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.936  37.044  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.538  34.506  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.041  36.715  35.654  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.936  37.044  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.538  34.506  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.041  36.715  35.654  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.936  37.044  34.679  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17641e+07, |g|=780.75, x_min=19.9222, x_mean=34.2995, x_max=46.4995
+lbfgs minimizer step
+  step:  42 bond rmsd: 0.013832
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.530  34.503  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.038  36.715  35.660  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.940  37.034  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.530  34.503  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.038  36.715  35.660  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.940  37.034  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.530  34.503  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.038  36.715  35.660  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.940  37.034  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.530  34.503  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.038  36.715  35.660  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.940  37.034  34.679  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.530  34.503  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.038  36.715  35.660  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.940  37.034  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.530  34.503  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.038  36.715  35.660  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.940  37.034  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.530  34.503  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.038  36.715  35.660  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.940  37.034  34.679  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.530  34.503  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.038  36.715  35.660  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.940  37.034  34.679  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17641e+07, |g|=770.876, x_min=19.9216, x_mean=34.2995, x_max=46.5004
+lbfgs minimizer step
+  step:  43 bond rmsd: 0.013748
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.522  34.500  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.035  36.716  35.667  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.023  34.680  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.522  34.500  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.035  36.716  35.667  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.023  34.680  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.522  34.500  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.035  36.716  35.667  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.023  34.680  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.522  34.500  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.035  36.716  35.667  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.023  34.680  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.522  34.500  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.035  36.716  35.667  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.023  34.680  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.522  34.500  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.035  36.716  35.667  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.023  34.680  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.522  34.500  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.035  36.716  35.667  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.023  34.680  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.522  34.500  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.035  36.716  35.667  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.945  37.023  34.680  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17641e+07, |g|=614.18, x_min=19.9208, x_mean=34.2995, x_max=46.5017
+lbfgs minimizer step
+  step:  44 bond rmsd: 0.013599
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.515  34.498  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.718  35.670  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.951  37.013  34.681  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.515  34.498  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.718  35.670  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.951  37.013  34.681  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.515  34.498  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.718  35.670  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.951  37.013  34.681  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.515  34.498  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.718  35.670  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.951  37.013  34.681  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.515  34.498  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.718  35.670  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.951  37.013  34.681  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.515  34.498  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.718  35.670  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.951  37.013  34.681  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.515  34.498  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.718  35.670  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.951  37.013  34.681  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.515  34.498  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.033  36.718  35.670  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.951  37.013  34.681  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17642e+07, |g|=624.727, x_min=19.9196, x_mean=34.2995, x_max=46.503
+lbfgs minimizer step
+  step:  45 bond rmsd: 0.013558
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.508  34.496  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.031  36.721  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  37.002  34.682  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.508  34.496  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.031  36.721  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  37.002  34.682  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.508  34.496  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.031  36.721  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  37.002  34.682  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.508  34.496  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.031  36.721  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  37.002  34.682  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.508  34.496  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.031  36.721  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  37.002  34.682  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.508  34.496  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.031  36.721  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  37.002  34.682  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.508  34.496  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.031  36.721  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  37.002  34.682  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.508  34.496  37.814  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.031  36.721  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.958  37.002  34.682  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17642e+07, |g|=521.684, x_min=19.9182, x_mean=34.2995, x_max=46.5043
+lbfgs minimizer step
+  step:  46 bond rmsd: 0.013432
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.501  34.495  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.029  36.726  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.966  36.992  34.683  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.501  34.495  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.029  36.726  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.966  36.992  34.683  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.501  34.495  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.029  36.726  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.966  36.992  34.683  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.501  34.495  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.029  36.726  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.966  36.992  34.683  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.501  34.495  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.029  36.726  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.966  36.992  34.683  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.501  34.495  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.029  36.726  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.966  36.992  34.683  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.501  34.495  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.029  36.726  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.966  36.992  34.683  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.501  34.495  37.815  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.029  36.726  35.673  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.966  36.992  34.683  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17642e+07, |g|=565.972, x_min=19.9165, x_mean=34.2995, x_max=46.5056
+lbfgs minimizer step
+  step:  47 bond rmsd: 0.013456
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.494  34.494  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.027  36.731  35.674  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  36.982  34.685  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.494  34.494  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.027  36.731  35.674  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  36.982  34.685  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.494  34.494  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.027  36.731  35.674  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  36.982  34.685  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.494  34.494  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.027  36.731  35.674  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  36.982  34.685  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.494  34.494  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.027  36.731  35.674  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  36.982  34.685  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.494  34.494  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.027  36.731  35.674  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  36.982  34.685  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.494  34.494  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.027  36.731  35.674  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  36.982  34.685  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.494  34.494  37.816  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.027  36.731  35.674  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.975  36.982  34.685  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17642e+07, |g|=510.08, x_min=19.9146, x_mean=34.2995, x_max=46.5071
+lbfgs minimizer step
+  step:  48 bond rmsd: 0.013246
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.488  34.494  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.025  36.739  35.671  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.971  34.686  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.488  34.494  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.025  36.739  35.671  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.971  34.686  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.488  34.494  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.025  36.739  35.671  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.971  34.686  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.488  34.494  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.025  36.739  35.671  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.971  34.686  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.488  34.494  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.025  36.739  35.671  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.971  34.686  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.488  34.494  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.025  36.739  35.671  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.971  34.686  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.488  34.494  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.025  36.739  35.671  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.971  34.686  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.488  34.494  37.818  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.025  36.739  35.671  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.986  36.971  34.686  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17643e+07, |g|=774.635, x_min=19.912, x_mean=34.2995, x_max=46.5087
+lbfgs minimizer step
+  step:  49 bond rmsd: 0.013244
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.483  34.494  37.819  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.744  35.669  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.994  36.962  34.688  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.483  34.494  37.819  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.744  35.669  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.994  36.962  34.688  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.483  34.494  37.819  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.744  35.669  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.994  36.962  34.688  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.483  34.494  37.819  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.744  35.669  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.994  36.962  34.688  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.483  34.494  37.819  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.744  35.669  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.994  36.962  34.688  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.483  34.494  37.819  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.744  35.669  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.994  36.962  34.688  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.483  34.494  37.819  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.744  35.669  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.994  36.962  34.688  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.483  34.494  37.819  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.024  36.744  35.669  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      31.994  36.962  34.688  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17643e+07, |g|=715.288, x_min=19.9102, x_mean=34.2995, x_max=46.5101
+lbfgs minimizer step
+  step:  50 bond rmsd: 0.013342
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.478  34.494  37.822  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.752  35.665  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.004  36.953  34.690  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.478  34.494  37.822  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.752  35.665  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.004  36.953  34.690  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.478  34.494  37.822  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.752  35.665  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.004  36.953  34.690  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.478  34.494  37.822  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.752  35.665  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.004  36.953  34.690  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.478  34.494  37.822  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.752  35.665  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.004  36.953  34.690  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.478  34.494  37.822  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.752  35.665  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.004  36.953  34.690  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.478  34.494  37.822  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.752  35.665  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.004  36.953  34.690  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.478  34.494  37.822  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.022  36.752  35.665  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.004  36.953  34.690  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17643e+07, |g|=874.213, x_min=19.908, x_mean=34.2995, x_max=46.5121
+lbfgs minimizer step
+  step:  51 bond rmsd: 0.013348
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.473  34.494  37.824  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.759  35.661  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.014  36.945  34.691  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.473  34.494  37.824  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.759  35.661  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.014  36.945  34.691  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.473  34.494  37.824  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.759  35.661  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.014  36.945  34.691  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.473  34.494  37.824  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.759  35.661  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.014  36.945  34.691  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 1 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.473  34.494  37.824  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.759  35.661  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.014  36.945  34.691  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.473  34.494  37.824  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.759  35.661  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.014  36.945  34.691  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.473  34.494  37.824  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.759  35.661  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.014  36.945  34.691  1.00 77.49           S
+
+
+List of CYS excluded from plausible disulfide bonds:
+  (reason: may participate in coordination)
+  ATOM     35  SG  CYS A   3      30.473  34.494  37.824  1.00 63.83           S
+  ATOM     89  SG  CYS A   8      28.020  36.759  35.661  1.00 78.50           S
+  ATOM    227  SG  CYS A  33      32.014  36.945  34.691  1.00 77.49           S
+
+Running:  /home/qr/XTB/bin/xtb  xtb_tmp.xyz --chrg 0 --grad  --gfn 2 --etemp 500 --acc 0.1 --gbsa h2o --parallel 2 > xtb.out
+lbfgs minimizer.run(): f=-1.17644e+07, |g|=766.597, x_min=19.9058, x_mean=34.2995, x_max=46.5136
+lbfgs minimizer step
+lbfgs minimizer stop: max_iterations
+lbfgs minimizer done.
+micro_cycle   1 rmsd(b):  0.0133 rws:  1.000 n_fev: 51
+See ZN_CYS_refined.pdb in pdb folder.
+Time: 545.0672
