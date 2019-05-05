@@ -24,7 +24,7 @@ Documented model preparation:
 
 #Notes
 
-1.  6n1l: stpmax=0.3 and 0.5 "lost" good weights 
+1.  6n1l: stpmax=0.3 (max_iterations_refine=50 and 200) and 0.5 "lost" good weights 
 
 2.  6njg: stpmax=0.5 minimization failed
 
