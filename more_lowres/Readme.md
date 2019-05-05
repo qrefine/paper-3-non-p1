@@ -18,4 +18,10 @@ Documented model preparation:
 
 ## Notes
 
+1.   2r30 finished with error 
 
+minimization failed: 2, At end of further refinement:
+     1 Rw: 0.1923 Rf: 0.2470 Rf-Rw: 0.0547 rmsd(b):  0.1585 rws:  1.000 n_fev: 24
+  File "/usr/local/phenix-dev-3409_qrefine_update/modules/qrefine/results.py", line 80, in choose_best
+    rewescas = rewescas.select(s)
+RuntimeError: scitbx Internal Error: /home/builder/slave/phenix-nightly-intel-linux-2_6-x86_64-centos6/modules/cctbx_project/scitbx/array_family/selections.h(44): SCITBX_ASSERT(flags.size() == self.size()) failure.
