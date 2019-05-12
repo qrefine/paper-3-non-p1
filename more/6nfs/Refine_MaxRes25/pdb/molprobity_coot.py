@@ -209,10 +209,10 @@ def load_pkl(file_name):
 
 data = {}
 data['rama'] = []
-data['omega'] = [('A', '  33 ', 'PRO', None, (35.824, 7.831, 78.645))]
-data['rota'] = []
-data['cbeta'] = []
-data['probe'] = [(' A  64  LYS  NZ ', ' A 201  HOH  O  ', -0.812, (34.823, 22.032, 69.11)), (' A  38  THR  OG1', ' A 118  LYS  HE2', -0.64, (43.269, 15.682, 78.219)), (' A 118  LYS  NZ ', ' A 264  HOH  O  ', -0.543, (41.498, 16.734, 81.965))]
+data['omega'] = [('A', '  33 ', 'PRO', None, (35.83000000000001, 7.82, 78.652))]
+data['rota'] = [('A', '  69 ', 'VAL', 0.2807298042560101, (26.116000000000007, 19.39, 74.088))]
+data['cbeta'] = [('A', '  69 ', 'VAL', ' ', 0.31156665765771946, (27.498, 18.666999999999994, 74.087)), ('A', ' 110 ', 'LYS', ' ', 0.2647689194703813, (19.169, 11.782, 94.51))]
+data['probe'] = [(' A  64  LYS  CE ', ' A 201  HOH  O  ', -0.718, (34.244, 21.808, 70.047)), (' A  64  LYS  HE2', ' A 201  HOH  O  ', -0.513, (34.021, 21.766, 69.876)), (' A  38  THR  OG1', ' A 118  LYS  HE2', -0.439, (43.999, 15.643, 78.5)), (' A  64  LYS  NZ ', ' A 201  HOH  O  ', -0.407, (34.852, 21.207, 70.632))]
 handle_read_draw_probe_dots_unformatted("molprobity_probe.txt", 0, 0)
 show_probe_dots(True, True)
 gui = coot_molprobity_todo_list_gui(data=data)
