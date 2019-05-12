@@ -1,0 +1,1 @@
+nohup qr.refine 3nr7_complete.pdb  mode=gtest two_buffers=1 g_scan="1 5 10 15 25 50"  quantum.nproc=2 parallel.nproc=10  gradient_only=true clustering=true use_convergence_test=true  opt_log=1 restraints=qm  engine_name=xtb  > 3nr7_xtb_gtest.log 2>&1 &
