@@ -22,7 +22,7 @@ Documented model preparation:
 
 ## Notes
 
-1.  3hqb refinemnt failed not finding weights, clear problems around disulfide bonds. The same for the RE-refined with phenix start, also with stpmax=0.2.
+1.  3hqb refinemnt failed not finding weights, clear problems around disulfide bonds. The same for the RE-refined with phenix start, also with stpmax=0.2. RUN again with "save_clusters = True"
 
 2.  2r30 finished with error: minimization failed: 2, At end of further refinement. RE-refinement with phenix start fix problem.
 
