@@ -26,7 +26,7 @@ Documented model preparation:
 
 1.  6n1l: stpmax=0.3 (max_iterations_refine=50 and 200) and 0.5 "lost" good weights 
 
-2.  6njg: stpmax=0.5 minimization failed
+2.  6njg: stpmax=0.5 minimization failed. RUN again with "save_clusters = True"
 
 3.  6agy: stpmax=0.3 and max_iterations_refine=200, ends with strange error while all structures (in ase, ase_error and pdb folders) looks OK... RUN again with "save_clusters = True"
 
