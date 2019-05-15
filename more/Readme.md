@@ -22,7 +22,8 @@ Documented model preparation:
 
 9.      /Refine_MaxItRef200/  stpmax=0.3 max_iterations_refine=200 xxxx_xtb_refine_MaxResN_Step03_MaxItRef200.log
 
-10.     /Refine_NoPhx_/...MaxResN/..Step03/..Step05/..MaxItRef200  The same set repeated starting from xxxx_complete.pdb (NO phenix.refine)
+10.     /Refine_NoPhx_/...MaxResN/..Step03/..Step05/..MaxItRef200 . The same set repeated starting WITHOUT phenix.refine
+        qr. refine xxxx_complete.pdb xxxx.mtz
 
 #Notes
 
