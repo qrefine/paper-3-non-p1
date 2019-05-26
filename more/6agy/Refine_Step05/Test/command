@@ -1,0 +1,1 @@
+nohup qr.refine 6agy_complete_refine_001_refined.pdb mode=gtest  two_buffer=0 g_scan='25' quantum.nproc=2 parallel.nproc=10  gradient_only=true clustering=true  restraints=qm  engine_name=xtb  > 6agy_xtb_test.log   2>&1 &

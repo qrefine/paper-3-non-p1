@@ -1,0 +1,1 @@
+nohup qr.refine 6jqs_complete.pdb  6jqs.mtz mode=refine maxnum_residues_in_cluster=50 quantum.nproc=2 parallel.nproc=10 max_bond_rmsd=0.02  stpmax=0.3 gradient_only=true clustering=true use_convergence_test=true  opt_log=1 restraints=qm  engine_name=xtb max_iterations_refine=200 > 6jqs_xtb_refine_NoPhx_MaxRes50_Step03_MaxItRef200.log   2>&1 &
