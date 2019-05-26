@@ -39,7 +39,9 @@ Documented model preparation:
 RuntimeError: scitbx Internal Error: /home/builder/slave/phenix-nightly-intel-linux-2_6-x86_64-centos6/modules/cctbx_project/scitbx/array_family/selections.h(44): SCITBX_ASSERT(flags.size() == self.size()) failure.
 
 3. 5xsl refinement starting from 5xsl_complete.pdb - OK, starting from 5xsl_complete_refine_001.pdb finished with error: minimization failed: 2 At end of further refinement:
+
      1 Rw: 0.2829 Rf: 0.3331 Rf-Rw: 0.0502 rmsd(b):  0.2727 rws:  1.000 n_fev: 417
+     
   File "/usr/local/phenix-dev-3409_qrefine_update/modules/qrefine/results.py", line 80, in choose_best
     rewescas = rewescas.select(s)
 RuntimeError: scitbx Internal Error: /home/builder/slave/phenix-nightly-intel-linux-2_6-x86_64-centos6/modules/cctbx_project/scitbx/array_family/selections.h(44): SCITBX_ASSERT(flags.size() == self.size()) failure.
