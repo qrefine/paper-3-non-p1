@@ -3,7 +3,7 @@ import iotbx.pdb
 import mmtbx.model
 import math
 from libtbx import group_args
-import os
+import os, sys
 from libtbx.utils import null_out
 from scitbx.array_family import flex
 import mmtbx.utils
@@ -110,6 +110,7 @@ def run():
         rs2 = get_r(mtz_file=mtz_file, model=model_2)
         print "       r_work, r_free (start): %6.4f %6.4f"%rs1
         print "       r_work, r_free (final): %6.4f %6.4f"%rs2
+        sys.stdout.flush()
 
 if(__name__ == "__main__"):
   run()
