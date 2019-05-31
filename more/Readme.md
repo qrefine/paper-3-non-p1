@@ -31,7 +31,7 @@ Documented model preparation:
 
 2.  6njg: stpmax=0.5 minimization failed. RUN again with "save_clusters = True"
 
-3.  6agy: stpmax=0.3 and max_iterations_refine=200, ends with strange error while all structures (in ase, ase_error and pdb folders) looks OK... RUN again with "save_clusters = True"
+3.  6agy: stpmax=0.3 and max_iterations_refine=200, ends with strange error while all structures (in ase, ase_error and pdb folders) looks OK... RUN again with "save_clusters = True" -> the problem is not reproduced.
 
 step:  91 bond rmsd: 85.134110
 minimization failed: string is too long for target variable (maximum length is 4 characters, 5 given).
