@@ -9,6 +9,7 @@ from scitbx.array_family import flex
 import mmtbx.utils
 from iotbx import reflection_file_utils
 import mmtbx.f_model
+from libtbx import easy_run
 
 def get_starting_model(folder):
   pdbs = []
@@ -49,6 +50,13 @@ def get_r(mtz_file, model):
     xray_structure = model.get_xray_structure())
   fmodel.update_all_scales()
   return fmodel.r_work(), fmodel.r_free()
+  
+def get_z(fn):
+  cmd = " ".join([
+    "phenix.development.rama_z_score",
+    fn])
+  r = easy_run.fully_buffered(cmd).raise_if_errors()
+  return round(float(r.stdout_lines[-1].split()[1]), 3)
 
 def run():
   # Must run in paper-3-non-p1 folder!
@@ -65,19 +73,20 @@ def run():
       for sub_2 in os.listdir(sub_1):
         sub_2 = "/".join([sub_1, sub_2])
         if(not os.path.isdir(sub_2)): continue
-        print "    ", os.path.basename(sub_2)
+        print "    ", os.path.basename(sub_2),
         # get mtz
         mtz_file = get_mtz(sub_2)
         mtz_file = "/".join([sub_2, mtz_file])
         assert os.path.isfile(mtz_file)
         # star model
         start = "/".join([sub_2, get_starting_model(sub_2)])
+        zs_start = get_z(start)
         assert os.path.isfile(start)
         pdb_inp = iotbx.pdb.input(file_name=start)
         model_1 = mmtbx.model.manager(model_input = pdb_inp, build_grm = True,
           log = null_out())
         print "       start:", \
-          model_1.geometry_statistics(use_hydrogens=False).show_short()
+          model_1.geometry_statistics(use_hydrogens=False).show_short(),
         #
         sub_3 = "/".join([sub_2, "pdb"])
         if(not os.path.isdir(sub_3)):
@@ -94,22 +103,24 @@ def run():
         refined = "/".join([sub_3, refined[0]])
         assert os.path.isfile(refined)
         #
+        zs_refined = get_z(refined)
+        #
         pdb_inp = iotbx.pdb.input(file_name=refined)
         model_2 = mmtbx.model.manager(model_input = pdb_inp, build_grm = True,
           log = null_out())
         print "       final:", \
-          model_2.geometry_statistics(use_hydrogens=False).show_short()
+          model_2.geometry_statistics(use_hydrogens=False).show_short(),
         #
         s1 = model_1.get_sites_cart()
         s2 = model_2.get_sites_cart()
         dist = flex.sqrt((s1 - s2).dot())
         print "       min/max/mean(start, final): %5.3f %5.3f %5.3f"%\
-          dist.min_max_mean().as_tuple()
+          dist.min_max_mean().as_tuple(),
         #
         rs1 = get_r(mtz_file=mtz_file, model=model_1)
         rs2 = get_r(mtz_file=mtz_file, model=model_2)
-        print "       r_work, r_free (start): %6.4f %6.4f"%rs1
-        print "       r_work, r_free (final): %6.4f %6.4f"%rs2
+        print "       r_work, r_free (start): %6.4f %6.4f"%rs1,
+        print "       r_work, r_free (final): %6.4f %6.4f"%rs2, "z-score(start, final)", zs_start, zs_refined
         sys.stdout.flush()
 
 if(__name__ == "__main__"):
