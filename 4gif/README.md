@@ -17,3 +17,5 @@ Short results summary in 4gif_for_paper3_symmetry_OKdocumented
 Original PDB is showing several clashscores which are removed fully by both xtb and Terachem qr.refine.
 
 # In the paper we included results with max_bond_rmsd = 0.02, stpmax=0.2 Å and max_iterations_refine=50
+
+ paper-3-non-p1/4gif/4gif_xtb_refine/pdb_MaxItRef50/4gif_refine_001_complete.pdb_modified_Pavel16March_refined.pdb 
