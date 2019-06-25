@@ -19,3 +19,7 @@ Original PDB is showing several clashscores which are removed fully by both xtb 
 # In the paper we included results with max_bond_rmsd = 0.02, stpmax=0.2 Å and max_iterations_refine=50
 
  paper-3-non-p1/4gif/4gif_xtb_refine/pdb_MaxItRef50/4gif_refine_001_complete.pdb_modified_Pavel16March_refined.pdb 
+ 
+ # Modified 4H2O 
+ 
+is the folder with new refinements starting from model where water S4 has been rotated to NOT create Hydrogen Bondings with the carboxylic acid of a symmetry copy of Arg713 nor acid side-chain oxygen atom (OE2) of Glu718. It is done to have nicer highlight for Figure 3 of paper3.
