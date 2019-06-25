@@ -1,0 +1,1942 @@
+Starting Q|R
+version:   v1.0-114-g3318f9  
+Running refinement
+   input {
+     xray_data {
+       file_name = None
+       labels = None
+       high_resolution = None
+       low_resolution = None
+       outliers_rejection = True
+       french_wilson_scale = True
+       french_wilson {
+         max_bins = 60
+         min_bin_size = 40
+       }
+       sigma_fobs_rejection_criterion = None
+       sigma_iobs_rejection_criterion = None
+       ignore_all_zeros = True
+       force_anomalous_flag_to_be_equal_to = None
+       convert_to_non_anomalous_if_ratio_pairs_lone_less_than_threshold = 0.5
+       r_free_flags {
+         file_name = None
+         label = None
+         test_flag_value = None
+         ignore_r_free_flags = False
+         disable_suitability_test = False
+         ignore_pdb_hexdigest = False
+         generate = False
+         fraction = 0.1
+         max_free = 2000
+         lattice_symmetry_max_delta = 5
+         use_lattice_symmetry = True
+         use_dataman_shells = False
+         n_shells = 20
+       }
+     }
+     pdb {
+       file_name = None
+     }
+     monomers {
+       file_name = None
+     }
+     maps {
+       map_file_name = None
+       d_min = None
+       map_coefficients_file_name = None
+       map_coefficients_label = None
+     }
+     sequence = None
+     scattering_table = wk1995 it1992 *n_gaussian neutron electron
+     wavelength = None
+     energy = None
+     twin_law = Auto
+   }
+   max_atoms = 15000
+   debug = False
+   cluster {
+     charge_cutoff = 8.0
+     clustering = true
+     charge_embedding = False
+     two_buffers = False
+     maxnum_residues_in_cluster = 15
+     clustering_method = gnc *bcc
+     altloc_method = *average subtract
+     g_scan = 10 15 20
+     g_mode = None
+     save_clusters = True
+   }
+   restraints = *cctbx qm
+   quantum {
+     engine_name = *mopac ani torchani terachem turbomole pyscf orca gaussian \
+                   xtb
+     charge = None
+     basis = Auto
+     method = Auto
+     memory = None
+     nproc = None
+     qm_addon = gcp dftd3 gcp-d3
+     qm_addon_method = None
+   }
+   refine {
+     dry_run = False
+     sf_algorithm = *direct fft
+     refinement_target_name = *ml ls_wunit_k1
+     mode = opt *refine gtest
+     number_of_macro_cycles = 1
+     number_of_weight_search_cycles = 50
+     number_of_refine_cycles = 5
+     number_of_micro_cycles = 50
+     data_weight = None
+     choose_best_use_r_work = False
+     skip_weight_search = False
+     adjust_restraints_weight_scale_value = 2
+     max_iterations_weight = 50
+     max_iterations_refine = 50
+     use_ase_lbfgs = False
+     line_search = True
+     stpmax = 0.3
+     gradient_only = true
+     update_all_scales = True
+     refine_sites = True
+     refine_adp = False
+     restraints_weight_scale = 1.0
+     shake_sites = False
+     use_convergence_test = true
+     max_bond_rmsd = 0.02
+     max_r_work_r_free_gap = 5.0
+     r_tolerance = 0.001
+     rmsd_tolerance = 0.01
+     opt_log = 1
+     pre_opt = False
+     pre_opt_stpmax = 0.1
+     pre_opt_iter = 10
+     pre_opt_switch = 2
+     pre_opt_gconv = 3000
+   }
+   parallel {
+     method = *multiprocessing slurm pbs sge lsf threading
+     nproc = None
+     qsub_command = None
+   }
+   output_file_name_prefix = None
+   output_folder_name = "pdb"
+   shared_disk = True
+   rst_file = None
+   dump_gradients = None
+F-obs:
+  4gif_fresh_ready_again_refine_001.mtz:F-obs,SIGF-obs
+Miller array info: 4gif_fresh_ready_again_refine_001.mtz:F-obs,SIGF-obs
+Observation type: xray.amplitude
+Type of data: double, size=1896
+Type of sigmas: double, size=1896
+Number of Miller indices: 1896
+Anomalous flag: False
+Unit cell: (44.527, 44.527, 62.306, 90, 90, 120)
+Space group: P 3 2 1 (No. 150)
+Systematic absences: 0
+Centric reflections: 448
+Resolution range: 18.419 2.80202
+Completeness in resolution range: 0.974807
+Completeness with d_max=infinity: 0.969325
+Wavelength: 1.0000
+
+Number of F-obs in resolution range:                   1896
+Number of F-obs<0 (these reflections will be rejected): 0
+Number of F-obs=0 (these reflections will be used in refinement): 0
+Refinement resolution range: d_max =  18.4190
+                             d_min =   2.8020
+
+R-free flags:
+  4gif_fresh_ready_again_refine_001.mtz:R-free-flags
+Miller array info: 4gif_fresh_ready_again_refine_001.mtz:R-free-flags
+Observation type: None
+Type of data: int, size=1928
+Type of sigmas: None
+Number of Miller indices: 1928
+Anomalous flag: False
+Unit cell: (44.527, 44.527, 62.306, 90, 90, 120)
+Space group: P 3 2 1 (No. 150)
+Systematic absences: 0
+Centric reflections: 463
+Resolution range: 18.419 2.80202
+Completeness in resolution range: 0.99126
+Completeness with d_max=infinity: 0.985685
+Wavelength: 1.0000
+
+Test (R-free flags) flag value: 0
+
+Number of work/free reflections by resolution:
+                                      work free  %free
+  bin  1: 18.4194 -  5.9743 [209/222]  190   19   9.1%
+  bin  2:  5.9743 -  4.7691 [194/199]  178   16   8.2%
+  bin  3:  4.7691 -  4.1743 [193/194]  178   15   7.8%
+  bin  4:  4.1743 -  3.7963 [193/196]  168   25  13.0%
+  bin  5:  3.7963 -  3.5262 [192/193]  180   12   6.2%
+  bin  6:  3.5262 -  3.3196 [179/183]  162   17   9.5%
+  bin  7:  3.3196 -  3.1542 [193/195]  177   16   8.3%
+  bin  8:  3.1542 -  3.0175 [178/185]  163   15   8.4%
+  bin  9:  3.0175 -  2.9018 [184/190]  158   26  14.1%
+  bin 10:  2.9018 -  2.8020 [181/188]  165   16   8.8%
+                              overall 1719  177   9.3%
+   Resolution    Compl Nwork Nfree R_work    <Fobs>  <Fmodel> kiso   kani kmask
+ 18.419-7.486    89.47    95     7 0.2685   143.455   139.158 0.960 1.001 0.291
+  7.450-6.095   100.00    86    11 0.3386   105.099   102.173 0.960 0.992 0.276
+  6.063-4.914    97.67   154    14 0.3118   113.840   123.936 0.960 0.983 0.245
+  4.906-3.982    99.38   288    31 0.2034   146.344   142.515 0.960 0.981 0.101
+  3.977-3.223    98.49   538    48 0.2451    97.536    87.197 0.960 0.993 0.090
+  3.221-2.802    96.74   558    66 0.2266    57.056    56.840 0.960 1.014 0.020
+
+Initial r_work=0.2447 r_free=0.2962
+
+Setting QM defaults
+  Setting QM method to PM7
+
+ params.gradient_only True
+
+***********************************************************
+restart info will be stored in /home/qr/4gif_new_start_Pavel16March/Modified_4H2O/cctbx/pdb/4gif_refine_001_complete_H2Omodified2.pdb_modified.rst.pickle
+***********************************************************
+
+Start:
+     0 Rw: 0.2447 Rf: 0.2962 Rf-Rw: 0.0514 rmsd(b):  0.0081 rws:  1.000 n_fev: 0
+Optimal weight search:
+lbfgs minimizer():
+  x.size(): 2307
+  m: 5
+  maxfev: 20
+  gtol: 0.9
+  xtol: 1e-16
+  stpmin: 1e-09
+  stpmax: 0.3
+lbfgs traditional_convergence_test: True
+  step:   1 bond rmsd: 0.008052
+lbfgs minimizer.run(): f=689616, |g|=24566.7, x_min=-17.824, x_mean=17.9804, x_max=51.778
+  step:   2 bond rmsd: 0.046551
+lbfgs minimizer.run(): f=659123, |g|=19091.4, x_min=-17.8528, x_mean=17.9805, x_max=51.8018
+lbfgs minimizer step
+  step:   3 bond rmsd: 0.048591
+lbfgs minimizer.run(): f=653236, |g|=15413.7, x_min=-17.8605, x_mean=17.9806, x_max=51.8077
+lbfgs minimizer step
+  step:   4 bond rmsd: 0.051397
+lbfgs minimizer.run(): f=644442, |g|=11674.7, x_min=-17.8747, x_mean=17.9808, x_max=51.8181
+lbfgs minimizer step
+  step:   5 bond rmsd: 0.053496
+lbfgs minimizer.run(): f=636100, |g|=9791.96, x_min=-17.8928, x_mean=17.981, x_max=51.8312
+lbfgs minimizer step
+  step:   6 bond rmsd: 0.055068
+lbfgs minimizer.run(): f=630952, |g|=7000.57, x_min=-17.9084, x_mean=17.9812, x_max=51.8422
+lbfgs minimizer step
+  step:   7 bond rmsd: 0.055171
+lbfgs minimizer.run(): f=627535, |g|=6453.43, x_min=-17.9218, x_mean=17.9814, x_max=51.851
+lbfgs minimizer step
+  step:   8 bond rmsd: 0.054656
+lbfgs minimizer.run(): f=624605, |g|=8077.81, x_min=-17.9402, x_mean=17.9816, x_max=51.8626
+lbfgs minimizer step
+  step:   9 bond rmsd: 0.054233
+lbfgs minimizer.run(): f=623414, |g|=6210.74, x_min=-17.9503, x_mean=17.9818, x_max=51.8687
+lbfgs minimizer step
+  step:  10 bond rmsd: 0.053538
+lbfgs minimizer.run(): f=622435, |g|=4883.7, x_min=-17.9598, x_mean=17.9819, x_max=51.8739
+lbfgs minimizer step
+  step:  11 bond rmsd: 0.052647
+lbfgs minimizer.run(): f=621408, |g|=3849.67, x_min=-17.9711, x_mean=17.9821, x_max=51.8798
+lbfgs minimizer step
+  step:  12 bond rmsd: 0.052206
+lbfgs minimizer.run(): f=620725, |g|=3388.92, x_min=-17.985, x_mean=17.9823, x_max=51.8867
+lbfgs minimizer step
+  step:  13 bond rmsd: 0.052153
+lbfgs minimizer.run(): f=620333, |g|=2546.52, x_min=-17.9963, x_mean=17.9824, x_max=51.8921
+lbfgs minimizer step
+  step:  14 bond rmsd: 0.052197
+lbfgs minimizer.run(): f=620131, |g|=2484.07, x_min=-18.005, x_mean=17.9826, x_max=51.8963
+lbfgs minimizer step
+  step:  15 bond rmsd: 0.052702
+lbfgs minimizer.run(): f=620044, |g|=2820.77, x_min=-18.017, x_mean=17.9827, x_max=51.9021
+lbfgs minimizer step
+  step:  16 bond rmsd: 0.053347
+lbfgs minimizer.run(): f=619912, |g|=2771.52, x_min=-18.03, x_mean=17.983, x_max=51.9082
+lbfgs minimizer step
+  step:  17 bond rmsd: 0.054225
+lbfgs minimizer.run(): f=619890, |g|=2408.68, x_min=-18.0422, x_mean=17.9832, x_max=51.914
+lbfgs minimizer step
+  step:  18 bond rmsd: 0.055305
+lbfgs minimizer.run(): f=619862, |g|=2622.91, x_min=-18.0554, x_mean=17.9835, x_max=51.9202
+lbfgs minimizer step
+  step:  19 bond rmsd: 0.056526
+lbfgs minimizer.run(): f=619845, |g|=2459.61, x_min=-18.0682, x_mean=17.9839, x_max=51.9262
+lbfgs minimizer step
+  step:  20 bond rmsd: 0.057534
+lbfgs minimizer.run(): f=619891, |g|=2085.57, x_min=-18.0766, x_mean=17.9842, x_max=51.93
+lbfgs minimizer step
+  step:  21 bond rmsd: 0.058644
+lbfgs minimizer.run(): f=619990, |g|=3535.05, x_min=-18.0838, x_mean=17.9846, x_max=51.9328
+lbfgs minimizer step
+  step:  22 bond rmsd: 0.059366
+lbfgs minimizer.run(): f=620045, |g|=2635.84, x_min=-18.0871, x_mean=17.9848, x_max=51.934
+lbfgs minimizer step
+  step:  23 bond rmsd: 0.059947
+lbfgs minimizer.run(): f=620068, |g|=2408.69, x_min=-18.0882, x_mean=17.9851, x_max=51.9338
+lbfgs minimizer step
+  step:  24 bond rmsd: 0.060507
+lbfgs minimizer.run(): f=620085, |g|=2275.89, x_min=-18.0866, x_mean=17.9854, x_max=51.9317
+lbfgs minimizer step
+lbfgs minimizer stop: callback_after_step is True
+lbfgs minimizer done.
+     1 Rw: 0.2142 Rf: 0.3048 Rf-Rw: 0.0907 rmsd(b):  0.0605 rws:  1.000 n_fev: 24
+lbfgs minimizer():
+  x.size(): 2307
+  m: 5
+  maxfev: 20
+  gtol: 0.9
+  xtol: 1e-16
+  stpmin: 1e-09
+  stpmax: 0.3
+lbfgs traditional_convergence_test: True
+  step:   1 bond rmsd: 0.008052
+lbfgs minimizer.run(): f=760722, |g|=38113.7, x_min=-17.824, x_mean=17.9804, x_max=51.778
+  step:   2 bond rmsd: 0.039449
+lbfgs minimizer.run(): f=685523, |g|=22861, x_min=-17.8612, x_mean=17.9804, x_max=51.8087
+lbfgs minimizer step
+  step:   3 bond rmsd: 0.040798
+lbfgs minimizer.run(): f=672079, |g|=18962.7, x_min=-17.8717, x_mean=17.9805, x_max=51.8167
+lbfgs minimizer step
+  step:   4 bond rmsd: 0.040893
+lbfgs minimizer.run(): f=652096, |g|=15031.9, x_min=-17.8897, x_mean=17.9807, x_max=51.8303
+lbfgs minimizer step
+  step:   5 bond rmsd: 0.038710
+lbfgs minimizer.run(): f=637269, |g|=12819.3, x_min=-17.9088, x_mean=17.9809, x_max=51.8443
+lbfgs minimizer step
+  step:   6 bond rmsd: 0.037222
+lbfgs minimizer.run(): f=630798, |g|=8633.53, x_min=-17.9207, x_mean=17.981, x_max=51.8527
+lbfgs minimizer step
+  step:   7 bond rmsd: 0.035916
+lbfgs minimizer.run(): f=627411, |g|=7406.25, x_min=-17.9312, x_mean=17.9811, x_max=51.8596
+lbfgs minimizer step
+  step:   8 bond rmsd: 0.034877
+lbfgs minimizer.run(): f=625344, |g|=5531.9, x_min=-17.9424, x_mean=17.9813, x_max=51.867
+lbfgs minimizer step
+  step:   9 bond rmsd: 0.034336
+lbfgs minimizer.run(): f=624550, |g|=4225.99, x_min=-17.9496, x_mean=17.9814, x_max=51.8716
+lbfgs minimizer step
+  step:  10 bond rmsd: 0.034140
+lbfgs minimizer.run(): f=624132, |g|=3892.46, x_min=-17.9576, x_mean=17.9815, x_max=51.8769
+lbfgs minimizer step
+  step:  11 bond rmsd: 0.034031
+lbfgs minimizer.run(): f=623649, |g|=3594.71, x_min=-17.9687, x_mean=17.9816, x_max=51.8842
+lbfgs minimizer step
+  step:  12 bond rmsd: 0.034352
+lbfgs minimizer.run(): f=623523, |g|=3116.42, x_min=-17.9774, x_mean=17.9817, x_max=51.8901
+lbfgs minimizer step
+  step:  13 bond rmsd: 0.034920
+lbfgs minimizer.run(): f=623389, |g|=3966.06, x_min=-17.9894, x_mean=17.9819, x_max=51.8983
+lbfgs minimizer step
+  step:  14 bond rmsd: 0.035617
+lbfgs minimizer.run(): f=623304, |g|=3140.51, x_min=-18.0015, x_mean=17.9821, x_max=51.9068
+lbfgs minimizer step
+  step:  15 bond rmsd: 0.036419
+lbfgs minimizer.run(): f=623345, |g|=3263.11, x_min=-18.0127, x_mean=17.9823, x_max=51.9145
+lbfgs minimizer step
+  step:  16 bond rmsd: 0.037271
+lbfgs minimizer.run(): f=623327, |g|=2778.81, x_min=-18.0248, x_mean=17.9825, x_max=51.923
+lbfgs minimizer step
+  step:  17 bond rmsd: 0.037986
+lbfgs minimizer.run(): f=623299, |g|=2565.4, x_min=-18.0339, x_mean=17.9828, x_max=51.9294
+lbfgs minimizer step
+  step:  18 bond rmsd: 0.038742
+lbfgs minimizer.run(): f=623402, |g|=2668.17, x_min=-18.0428, x_mean=17.9831, x_max=51.9356
+lbfgs minimizer step
+  step:  19 bond rmsd: 0.039275
+lbfgs minimizer.run(): f=623423, |g|=2205.23, x_min=-18.0484, x_mean=17.9833, x_max=51.9395
+lbfgs minimizer step
+  step:  20 bond rmsd: 0.039668
+lbfgs minimizer.run(): f=623426, |g|=2478.62, x_min=-18.0517, x_mean=17.9836, x_max=51.9415
+lbfgs minimizer step
+  step:  21 bond rmsd: 0.040096
+lbfgs minimizer.run(): f=623433, |g|=1990.31, x_min=-18.0539, x_mean=17.9838, x_max=51.9426
+lbfgs minimizer step
+  step:  22 bond rmsd: 0.040269
+lbfgs minimizer.run(): f=623408, |g|=2018.22, x_min=-18.0535, x_mean=17.9841, x_max=51.9417
+lbfgs minimizer step
+  step:  23 bond rmsd: 0.040421
+lbfgs minimizer.run(): f=623324, |g|=1890.18, x_min=-18.0512, x_mean=17.9844, x_max=51.9392
+lbfgs minimizer step
+  step:  24 bond rmsd: 0.040449
+lbfgs minimizer.run(): f=623192, |g|=1897.75, x_min=-18.0469, x_mean=17.9847, x_max=51.9349
+lbfgs minimizer step
+lbfgs minimizer stop: callback_after_step is True
+lbfgs minimizer done.
+     2 Rw: 0.2196 Rf: 0.3010 Rf-Rw: 0.0814 rmsd(b):  0.0404 rws:  2.000 n_fev: 48
+lbfgs minimizer():
+  x.size(): 2307
+  m: 5
+  maxfev: 20
+  gtol: 0.9
+  xtol: 1e-16
+  stpmin: 1e-09
+  stpmax: 0.3
+lbfgs traditional_convergence_test: True
+  step:   1 bond rmsd: 0.008052
+lbfgs minimizer.run(): f=902935, |g|=69873.1, x_min=-17.824, x_mean=17.9804, x_max=51.778
+  step:   2 bond rmsd: 0.034852
+lbfgs minimizer.run(): f=740797, |g|=38627.6, x_min=-17.8645, x_mean=17.9804, x_max=51.8115
+lbfgs minimizer step
+  step:   3 bond rmsd: 0.035768
+lbfgs minimizer.run(): f=713425, |g|=31641.5, x_min=-17.8751, x_mean=17.9805, x_max=51.8198
+lbfgs minimizer step
+  step:   4 bond rmsd: 0.033726
+lbfgs minimizer.run(): f=678429, |g|=25381.3, x_min=-17.8899, x_mean=17.9806, x_max=51.8313
+lbfgs minimizer step
+  step:   5 bond rmsd: 0.030096
+lbfgs minimizer.run(): f=651791, |g|=22177.8, x_min=-17.9068, x_mean=17.9807, x_max=51.8441
+lbfgs minimizer step
+  step:   6 bond rmsd: 0.027458
+lbfgs minimizer.run(): f=640535, |g|=14426.4, x_min=-17.9154, x_mean=17.9807, x_max=51.8506
+lbfgs minimizer step
+  step:   7 bond rmsd: 0.025485
+lbfgs minimizer.run(): f=635202, |g|=11441.7, x_min=-17.9222, x_mean=17.9808, x_max=51.8555
+lbfgs minimizer step
+  step:   8 bond rmsd: 0.023658
+lbfgs minimizer.run(): f=631757, |g|=9467.52, x_min=-17.9304, x_mean=17.9809, x_max=51.8615
+lbfgs minimizer step
+  step:   9 bond rmsd: 0.022681
+lbfgs minimizer.run(): f=630108, |g|=6845.22, x_min=-17.9358, x_mean=17.9809, x_max=51.8656
+lbfgs minimizer step
+  step:  10 bond rmsd: 0.022097
+lbfgs minimizer.run(): f=629240, |g|=5717.63, x_min=-17.9411, x_mean=17.981, x_max=51.8696
+lbfgs minimizer step
+  step:  11 bond rmsd: 0.021937
+lbfgs minimizer.run(): f=628719, |g|=6393.62, x_min=-17.9497, x_mean=17.9811, x_max=51.8764
+lbfgs minimizer step
+  step:  12 bond rmsd: 0.021908
+lbfgs minimizer.run(): f=628363, |g|=4981.88, x_min=-17.9567, x_mean=17.9811, x_max=51.882
+lbfgs minimizer step
+  step:  13 bond rmsd: 0.022155
+lbfgs minimizer.run(): f=628265, |g|=5544.4, x_min=-17.9646, x_mean=17.9812, x_max=51.8883
+lbfgs minimizer step
+  step:  14 bond rmsd: 0.022486
+lbfgs minimizer.run(): f=628122, |g|=4550.44, x_min=-17.9729, x_mean=17.9813, x_max=51.895
+lbfgs minimizer step
+  step:  15 bond rmsd: 0.022931
+lbfgs minimizer.run(): f=628082, |g|=4010.82, x_min=-17.9811, x_mean=17.9814, x_max=51.9019
+lbfgs minimizer step
+  step:  16 bond rmsd: 0.023515
+lbfgs minimizer.run(): f=628033, |g|=5455.66, x_min=-17.9922, x_mean=17.9816, x_max=51.9112
+lbfgs minimizer step
+  step:  17 bond rmsd: 0.023912
+lbfgs minimizer.run(): f=627921, |g|=4423.99, x_min=-17.9997, x_mean=17.9817, x_max=51.9176
+lbfgs minimizer step
+  step:  18 bond rmsd: 0.024393
+lbfgs minimizer.run(): f=627918, |g|=4121.15, x_min=-18.0075, x_mean=17.9819, x_max=51.9243
+lbfgs minimizer step
+  step:  19 bond rmsd: 0.024789
+lbfgs minimizer.run(): f=627847, |g|=3355.52, x_min=-18.0138, x_mean=17.982, x_max=51.9299
+lbfgs minimizer step
+  step:  20 bond rmsd: 0.025030
+lbfgs minimizer.run(): f=627763, |g|=2851.66, x_min=-18.0171, x_mean=17.9822, x_max=51.9329
+lbfgs minimizer step
+  step:  21 bond rmsd: 0.025220
+lbfgs minimizer.run(): f=627670, |g|=2913.41, x_min=-18.02, x_mean=17.9823, x_max=51.9356
+lbfgs minimizer step
+  step:  22 bond rmsd: 0.025353
+lbfgs minimizer.run(): f=627504, |g|=2679.46, x_min=-18.0206, x_mean=17.9825, x_max=51.9366
+lbfgs minimizer step
+  step:  23 bond rmsd: 0.025433
+lbfgs minimizer.run(): f=627380, |g|=2408.91, x_min=-18.0205, x_mean=17.9827, x_max=51.9367
+lbfgs minimizer step
+  step:  24 bond rmsd: 0.025357
+lbfgs minimizer.run(): f=627186, |g|=3696.5, x_min=-18.0177, x_mean=17.9829, x_max=51.9347
+lbfgs minimizer step
+lbfgs minimizer stop: callback_after_step is True
+lbfgs minimizer done.
+     3 Rw: 0.2258 Rf: 0.2946 Rf-Rw: 0.0688 rmsd(b):  0.0254 rws:  4.000 n_fev: 72
+lbfgs minimizer():
+  x.size(): 2307
+  m: 5
+  maxfev: 20
+  gtol: 0.9
+  xtol: 1e-16
+  stpmin: 1e-09
+  stpmax: 0.3
+lbfgs traditional_convergence_test: True
+  step:   1 bond rmsd: 0.008052
+lbfgs minimizer.run(): f=1.18736e+06, |g|=136626, x_min=-17.824, x_mean=17.9804, x_max=51.778
+  step:   2 bond rmsd: 0.032932
+lbfgs minimizer.run(): f=855626, |g|=74297.6, x_min=-17.8655, x_mean=17.9804, x_max=51.8123
+lbfgs minimizer step
+  step:   3 bond rmsd: 0.033715
+lbfgs minimizer.run(): f=800499, |g|=59654.4, x_min=-17.8758, x_mean=17.9804, x_max=51.8205
+lbfgs minimizer step
+  step:   4 bond rmsd: 0.031448
+lbfgs minimizer.run(): f=736268, |g|=47674.6, x_min=-17.8887, x_mean=17.9805, x_max=51.8308
+lbfgs minimizer step
+  step:   5 bond rmsd: 0.027247
+lbfgs minimizer.run(): f=685129, |g|=39829.8, x_min=-17.9028, x_mean=17.9806, x_max=51.842
+lbfgs minimizer step
+  step:   6 bond rmsd: 0.024083
+lbfgs minimizer.run(): f=663542, |g|=25887.1, x_min=-17.91, x_mean=17.9806, x_max=51.8477
+lbfgs minimizer step
+  step:   7 bond rmsd: 0.021354
+lbfgs minimizer.run(): f=652526, |g|=20786.4, x_min=-17.9155, x_mean=17.9806, x_max=51.852
+lbfgs minimizer step
+  step:   8 bond rmsd: 0.018382
+lbfgs minimizer.run(): f=644856, |g|=16825.6, x_min=-17.9217, x_mean=17.9807, x_max=51.857
+lbfgs minimizer step
+  step:   9 bond rmsd: 0.016787
+lbfgs minimizer.run(): f=641552, |g|=12094.8, x_min=-17.9254, x_mean=17.9807, x_max=51.86
+lbfgs minimizer step
+  step:  10 bond rmsd: 0.015630
+lbfgs minimizer.run(): f=639688, |g|=9710.88, x_min=-17.9291, x_mean=17.9807, x_max=51.8631
+lbfgs minimizer step
+  step:  11 bond rmsd: 0.014779
+lbfgs minimizer.run(): f=638353, |g|=10384.2, x_min=-17.9349, x_mean=17.9808, x_max=51.8682
+lbfgs minimizer step
+  step:  12 bond rmsd: 0.014186
+lbfgs minimizer.run(): f=637403, |g|=7462.1, x_min=-17.9399, x_mean=17.9808, x_max=51.8725
+lbfgs minimizer step
+  step:  13 bond rmsd: 0.013973
+lbfgs minimizer.run(): f=636932, |g|=7387.9, x_min=-17.9451, x_mean=17.9808, x_max=51.877
+lbfgs minimizer step
+  step:  14 bond rmsd: 0.013937
+lbfgs minimizer.run(): f=636481, |g|=6535.76, x_min=-17.9521, x_mean=17.9809, x_max=51.8831
+lbfgs minimizer step
+  step:  15 bond rmsd: 0.014070
+lbfgs minimizer.run(): f=636229, |g|=5759.24, x_min=-17.9582, x_mean=17.9809, x_max=51.8885
+lbfgs minimizer step
+  step:  16 bond rmsd: 0.014456
+lbfgs minimizer.run(): f=636150, |g|=9519.42, x_min=-17.9672, x_mean=17.981, x_max=51.8965
+lbfgs minimizer step
+  step:  17 bond rmsd: 0.014697
+lbfgs minimizer.run(): f=635889, |g|=7871.99, x_min=-17.9734, x_mean=17.9811, x_max=51.9019
+lbfgs minimizer step
+  step:  18 bond rmsd: 0.014980
+lbfgs minimizer.run(): f=635671, |g|=6507.04, x_min=-17.98, x_mean=17.9811, x_max=51.9078
+lbfgs minimizer step
+  step:  19 bond rmsd: 0.015228
+lbfgs minimizer.run(): f=635367, |g|=5512.13, x_min=-17.9863, x_mean=17.9812, x_max=51.9136
+lbfgs minimizer step
+  step:  20 bond rmsd: 0.015393
+lbfgs minimizer.run(): f=635156, |g|=4472.95, x_min=-17.9904, x_mean=17.9813, x_max=51.9173
+lbfgs minimizer step
+  step:  21 bond rmsd: 0.015522
+lbfgs minimizer.run(): f=634948, |g|=4854.92, x_min=-17.9938, x_mean=17.9814, x_max=51.9205
+lbfgs minimizer step
+  step:  22 bond rmsd: 0.015599
+lbfgs minimizer.run(): f=634683, |g|=4474.02, x_min=-17.9963, x_mean=17.9815, x_max=51.9231
+lbfgs minimizer step
+  step:  23 bond rmsd: 0.015623
+lbfgs minimizer.run(): f=634571, |g|=3830.85, x_min=-17.9975, x_mean=17.9816, x_max=51.9244
+lbfgs minimizer step
+  step:  24 bond rmsd: 0.015576
+lbfgs minimizer.run(): f=634364, |g|=5398.98, x_min=-17.9968, x_mean=17.9817, x_max=51.9243
+lbfgs minimizer step
+  step:  25 bond rmsd: 0.015504
+lbfgs minimizer.run(): f=634116, |g|=4300.88, x_min=-17.9958, x_mean=17.9818, x_max=51.9239
+lbfgs minimizer step
+  step:  26 bond rmsd: 0.015417
+lbfgs minimizer.run(): f=633894, |g|=4338.48, x_min=-17.9937, x_mean=17.9819, x_max=51.9227
+lbfgs minimizer step
+  step:  27 bond rmsd: 0.015304
+lbfgs minimizer.run(): f=633573, |g|=3864.9, x_min=-17.9903, x_mean=17.982, x_max=51.9204
+lbfgs minimizer step
+  step:  28 bond rmsd: 0.015209
+lbfgs minimizer.run(): f=633326, |g|=3302.32, x_min=-17.9874, x_mean=17.9821, x_max=51.9184
+lbfgs minimizer step
+  step:  29 bond rmsd: 0.015123
+lbfgs minimizer.run(): f=633106, |g|=3578.37, x_min=-17.9838, x_mean=17.9822, x_max=51.9158
+lbfgs minimizer step
+  step:  30 bond rmsd: 0.015021
+lbfgs minimizer.run(): f=632840, |g|=3590.52, x_min=-17.9804, x_mean=17.9823, x_max=51.9133
+lbfgs minimizer step
+  step:  31 bond rmsd: 0.014947
+lbfgs minimizer.run(): f=632661, |g|=3000.76, x_min=-17.9773, x_mean=17.9824, x_max=51.9111
+lbfgs minimizer step
+  step:  32 bond rmsd: 0.014858
+lbfgs minimizer.run(): f=632457, |g|=3839.17, x_min=-17.9746, x_mean=17.9825, x_max=51.9091
+lbfgs minimizer step
+  step:  33 bond rmsd: 0.014756
+lbfgs minimizer.run(): f=632279, |g|=3267.99, x_min=-17.9727, x_mean=17.9826, x_max=51.9076
+lbfgs minimizer step
+  step:  34 bond rmsd: 0.014653
+lbfgs minimizer.run(): f=632121, |g|=3283.96, x_min=-17.9715, x_mean=17.9827, x_max=51.9066
+lbfgs minimizer step
+  step:  35 bond rmsd: 0.014545
+lbfgs minimizer.run(): f=631974, |g|=3060.95, x_min=-17.9711, x_mean=17.9828, x_max=51.9061
+lbfgs minimizer step
+  step:  36 bond rmsd: 0.014451
+lbfgs minimizer.run(): f=631843, |g|=2926.52, x_min=-17.9717, x_mean=17.9829, x_max=51.9061
+lbfgs minimizer step
+  step:  37 bond rmsd: 0.014360
+lbfgs minimizer.run(): f=631737, |g|=3266.97, x_min=-17.9734, x_mean=17.983, x_max=51.9068
+lbfgs minimizer step
+  step:  38 bond rmsd: 0.014327
+lbfgs minimizer.run(): f=631651, |g|=2813.79, x_min=-17.9756, x_mean=17.9831, x_max=51.9078
+lbfgs minimizer step
+  step:  39 bond rmsd: 0.014324
+lbfgs minimizer.run(): f=631623, |g|=3089.9, x_min=-17.9788, x_mean=17.9832, x_max=51.9093
+lbfgs minimizer step
+  step:  40 bond rmsd: 0.014365
+lbfgs minimizer.run(): f=631576, |g|=2812.07, x_min=-17.9829, x_mean=17.9833, x_max=51.9113
+lbfgs minimizer step
+  step:  41 bond rmsd: 0.014413
+lbfgs minimizer.run(): f=631542, |g|=2498.35, x_min=-17.9868, x_mean=17.9834, x_max=51.9132
+lbfgs minimizer step
+  step:  42 bond rmsd: 0.014498
+lbfgs minimizer.run(): f=631524, |g|=2968.86, x_min=-17.9917, x_mean=17.9836, x_max=51.9154
+lbfgs minimizer step
+  step:  43 bond rmsd: 0.014565
+lbfgs minimizer.run(): f=631510, |g|=2437.37, x_min=-17.9963, x_mean=17.9837, x_max=51.9174
+lbfgs minimizer step
+  step:  44 bond rmsd: 0.014623
+lbfgs minimizer.run(): f=631502, |g|=2386.2, x_min=-18.0002, x_mean=17.9838, x_max=51.919
+lbfgs minimizer step
+  step:  45 bond rmsd: 0.014669
+lbfgs minimizer.run(): f=631472, |g|=2627.22, x_min=-18.0046, x_mean=17.9839, x_max=51.9207
+lbfgs minimizer step
+  step:  46 bond rmsd: 0.014672
+lbfgs minimizer.run(): f=631419, |g|=2329.8, x_min=-18.0081, x_mean=17.984, x_max=51.9218
+lbfgs minimizer step
+  step:  47 bond rmsd: 0.014633
+lbfgs minimizer.run(): f=631352, |g|=2673.39, x_min=-18.0113, x_mean=17.9842, x_max=51.9224
+lbfgs minimizer step
+  step:  48 bond rmsd: 0.014581
+lbfgs minimizer.run(): f=631254, |g|=2283.49, x_min=-18.014, x_mean=17.9843, x_max=51.9228
+lbfgs minimizer step
+  step:  49 bond rmsd: 0.014494
+lbfgs minimizer.run(): f=631140, |g|=2391.17, x_min=-18.0159, x_mean=17.9844, x_max=51.9225
+lbfgs minimizer step
+  step:  50 bond rmsd: 0.014385
+lbfgs minimizer.run(): f=631026, |g|=2148.13, x_min=-18.0168, x_mean=17.9845, x_max=51.9217
+lbfgs minimizer step
+  step:  51 bond rmsd: 0.014297
+lbfgs minimizer.run(): f=630908, |g|=2031.1, x_min=-18.0171, x_mean=17.9846, x_max=51.9206
+lbfgs minimizer step
+lbfgs minimizer stop: max_iterations
+lbfgs minimizer done.
+     4 Rw: 0.2287 Rf: 0.2974 Rf-Rw: 0.0687 rmsd(b):  0.0143 rws:  8.000 n_fev: 123
+lbfgs minimizer():
+  x.size(): 2307
+  m: 5
+  maxfev: 20
+  gtol: 0.9
+  xtol: 1e-16
+  stpmin: 1e-09
+  stpmax: 0.3
+lbfgs traditional_convergence_test: True
+  step:   1 bond rmsd: 0.008052
+lbfgs minimizer.run(): f=1.75621e+06, |g|=271914, x_min=-17.824, x_mean=17.9804, x_max=51.778
+  step:   2 bond rmsd: 0.032211
+lbfgs minimizer.run(): f=1.08768e+06, |g|=146904, x_min=-17.8657, x_mean=17.9804, x_max=51.8125
+lbfgs minimizer step
+  step:   3 bond rmsd: 0.032992
+lbfgs minimizer.run(): f=976474, |g|=116776, x_min=-17.8759, x_mean=17.9804, x_max=51.8207
+lbfgs minimizer step
+  step:   4 bond rmsd: 0.030777
+lbfgs minimizer.run(): f=852506, |g|=93119, x_min=-17.8879, x_mean=17.9805, x_max=51.8304
+lbfgs minimizer step
+  step:   5 bond rmsd: 0.026507
+lbfgs minimizer.run(): f=752604, |g|=75824.7, x_min=-17.9006, x_mean=17.9805, x_max=51.8408
+lbfgs minimizer step
+  step:   6 bond rmsd: 0.023192
+lbfgs minimizer.run(): f=709995, |g|=49187.6, x_min=-17.9071, x_mean=17.9805, x_max=51.8461
+lbfgs minimizer step
+  step:   7 bond rmsd: 0.020142
+lbfgs minimizer.run(): f=687487, |g|=39841.4, x_min=-17.9118, x_mean=17.9806, x_max=51.85
+lbfgs minimizer step
+  step:   8 bond rmsd: 0.016532
+lbfgs minimizer.run(): f=671172, |g|=31243.4, x_min=-17.917, x_mean=17.9806, x_max=51.8543
+lbfgs minimizer step
+  step:   9 bond rmsd: 0.014536
+lbfgs minimizer.run(): f=664409, |g|=22272.3, x_min=-17.9199, x_mean=17.9806, x_max=51.8569
+lbfgs minimizer step
+  step:  10 bond rmsd: 0.012940
+lbfgs minimizer.run(): f=660459, |g|=17623.7, x_min=-17.9228, x_mean=17.9806, x_max=51.8595
+lbfgs minimizer step
+  step:  11 bond rmsd: 0.011530
+lbfgs minimizer.run(): f=657551, |g|=18483.5, x_min=-17.9273, x_mean=17.9807, x_max=51.8638
+lbfgs minimizer step
+  step:  12 bond rmsd: 0.010469
+lbfgs minimizer.run(): f=655451, |g|=12857.2, x_min=-17.931, x_mean=17.9807, x_max=51.8673
+lbfgs minimizer step
+  step:  13 bond rmsd: 0.009850
+lbfgs minimizer.run(): f=654268, |g|=12043.6, x_min=-17.9347, x_mean=17.9807, x_max=51.8708
+lbfgs minimizer step
+  step:  14 bond rmsd: 0.009355
+lbfgs minimizer.run(): f=653116, |g|=10276.4, x_min=-17.9401, x_mean=17.9807, x_max=51.8757
+lbfgs minimizer step
+  step:  15 bond rmsd: 0.009158
+lbfgs minimizer.run(): f=652400, |g|=9078.08, x_min=-17.9446, x_mean=17.9808, x_max=51.88
+lbfgs minimizer step
+  step:  16 bond rmsd: 0.009178
+lbfgs minimizer.run(): f=651741, |g|=14255.7, x_min=-17.9515, x_mean=17.9808, x_max=51.8866
+lbfgs minimizer step
+  step:  17 bond rmsd: 0.009250
+lbfgs minimizer.run(): f=651111, |g|=11995.1, x_min=-17.9567, x_mean=17.9808, x_max=51.8915
+lbfgs minimizer step
+  step:  18 bond rmsd: 0.009407
+lbfgs minimizer.run(): f=650540, |g|=10099.5, x_min=-17.9625, x_mean=17.9809, x_max=51.897
+lbfgs minimizer step
+  step:  19 bond rmsd: 0.009613
+lbfgs minimizer.run(): f=649870, |g|=9293.55, x_min=-17.9689, x_mean=17.9809, x_max=51.9029
+lbfgs minimizer step
+  step:  20 bond rmsd: 0.009747
+lbfgs minimizer.run(): f=649383, |g|=7589.31, x_min=-17.9732, x_mean=17.981, x_max=51.9069
+lbfgs minimizer step
+  step:  21 bond rmsd: 0.009864
+lbfgs minimizer.run(): f=648957, |g|=8201.45, x_min=-17.977, x_mean=17.981, x_max=51.9106
+lbfgs minimizer step
+  step:  22 bond rmsd: 0.009913
+lbfgs minimizer.run(): f=648419, |g|=7201.01, x_min=-17.9803, x_mean=17.9811, x_max=51.9137
+lbfgs minimizer step
+  step:  23 bond rmsd: 0.009918
+lbfgs minimizer.run(): f=648132, |g|=6138.07, x_min=-17.982, x_mean=17.9812, x_max=51.9154
+lbfgs minimizer step
+  step:  24 bond rmsd: 0.009825
+lbfgs minimizer.run(): f=647768, |g|=8639.81, x_min=-17.9824, x_mean=17.9812, x_max=51.9159
+lbfgs minimizer step
+  step:  25 bond rmsd: 0.009710
+lbfgs minimizer.run(): f=647383, |g|=6947.81, x_min=-17.9821, x_mean=17.9813, x_max=51.9158
+lbfgs minimizer step
+  step:  26 bond rmsd: 0.009575
+lbfgs minimizer.run(): f=647004, |g|=6887.18, x_min=-17.9809, x_mean=17.9813, x_max=51.9149
+lbfgs minimizer step
+  step:  27 bond rmsd: 0.009403
+lbfgs minimizer.run(): f=646521, |g|=6294.71, x_min=-17.9783, x_mean=17.9814, x_max=51.9129
+lbfgs minimizer step
+  step:  28 bond rmsd: 0.009282
+lbfgs minimizer.run(): f=646157, |g|=5338.67, x_min=-17.9759, x_mean=17.9815, x_max=51.9109
+lbfgs minimizer step
+  step:  29 bond rmsd: 0.009193
+lbfgs minimizer.run(): f=645789, |g|=5621.7, x_min=-17.9728, x_mean=17.9815, x_max=51.9084
+lbfgs minimizer step
+  step:  30 bond rmsd: 0.009117
+lbfgs minimizer.run(): f=645396, |g|=5642.21, x_min=-17.9696, x_mean=17.9816, x_max=51.9058
+lbfgs minimizer step
+  step:  31 bond rmsd: 0.009078
+lbfgs minimizer.run(): f=645127, |g|=4667.34, x_min=-17.9669, x_mean=17.9816, x_max=51.9036
+lbfgs minimizer step
+  step:  32 bond rmsd: 0.009046
+lbfgs minimizer.run(): f=644848, |g|=5912.27, x_min=-17.9642, x_mean=17.9817, x_max=51.9014
+lbfgs minimizer step
+  step:  33 bond rmsd: 0.009018
+lbfgs minimizer.run(): f=644584, |g|=4912.03, x_min=-17.962, x_mean=17.9817, x_max=51.8996
+lbfgs minimizer step
+  step:  34 bond rmsd: 0.008977
+lbfgs minimizer.run(): f=644350, |g|=4808.29, x_min=-17.9604, x_mean=17.9818, x_max=51.8982
+lbfgs minimizer step
+  step:  35 bond rmsd: 0.008923
+lbfgs minimizer.run(): f=644130, |g|=4661.29, x_min=-17.9593, x_mean=17.9818, x_max=51.8973
+lbfgs minimizer step
+  step:  36 bond rmsd: 0.008870
+lbfgs minimizer.run(): f=643931, |g|=4468.01, x_min=-17.959, x_mean=17.9819, x_max=51.8969
+lbfgs minimizer step
+  step:  37 bond rmsd: 0.008790
+lbfgs minimizer.run(): f=643742, |g|=5336.68, x_min=-17.9596, x_mean=17.9819, x_max=51.8972
+lbfgs minimizer step
+  step:  38 bond rmsd: 0.008739
+lbfgs minimizer.run(): f=643586, |g|=4606.83, x_min=-17.9606, x_mean=17.982, x_max=51.8978
+lbfgs minimizer step
+  step:  39 bond rmsd: 0.008698
+lbfgs minimizer.run(): f=643435, |g|=5558.05, x_min=-17.9628, x_mean=17.982, x_max=51.8992
+lbfgs minimizer step
+  step:  40 bond rmsd: 0.008681
+lbfgs minimizer.run(): f=643283, |g|=4595.78, x_min=-17.9657, x_mean=17.9821, x_max=51.901
+lbfgs minimizer step
+  step:  41 bond rmsd: 0.008697
+lbfgs minimizer.run(): f=643173, |g|=4323.86, x_min=-17.9688, x_mean=17.9821, x_max=51.903
+lbfgs minimizer step
+  step:  42 bond rmsd: 0.008757
+lbfgs minimizer.run(): f=643074, |g|=4697.19, x_min=-17.9731, x_mean=17.9822, x_max=51.9057
+lbfgs minimizer step
+  step:  43 bond rmsd: 0.008824
+lbfgs minimizer.run(): f=642994, |g|=3940.05, x_min=-17.9771, x_mean=17.9823, x_max=51.9081
+lbfgs minimizer step
+  step:  44 bond rmsd: 0.008894
+lbfgs minimizer.run(): f=642946, |g|=4066.33, x_min=-17.9811, x_mean=17.9823, x_max=51.9105
+lbfgs minimizer step
+  step:  45 bond rmsd: 0.008967
+lbfgs minimizer.run(): f=642878, |g|=4272.1, x_min=-17.9856, x_mean=17.9824, x_max=51.9131
+lbfgs minimizer step
+  step:  46 bond rmsd: 0.009015
+lbfgs minimizer.run(): f=642797, |g|=3839.59, x_min=-17.9895, x_mean=17.9824, x_max=51.9152
+lbfgs minimizer step
+  step:  47 bond rmsd: 0.009021
+lbfgs minimizer.run(): f=642674, |g|=4449.92, x_min=-17.9935, x_mean=17.9825, x_max=51.9172
+lbfgs minimizer step
+  step:  48 bond rmsd: 0.009014
+lbfgs minimizer.run(): f=642543, |g|=3843.24, x_min=-17.9973, x_mean=17.9826, x_max=51.919
+lbfgs minimizer step
+  step:  49 bond rmsd: 0.008959
+lbfgs minimizer.run(): f=642403, |g|=3927.34, x_min=-18.0002, x_mean=17.9827, x_max=51.9202
+lbfgs minimizer step
+  step:  50 bond rmsd: 0.008848
+lbfgs minimizer.run(): f=642200, |g|=4226.77, x_min=-18.0029, x_mean=17.9828, x_max=51.921
+lbfgs minimizer step
+  step:  51 bond rmsd: 0.008758
+lbfgs minimizer.run(): f=642017, |g|=3743.2, x_min=-18.0046, x_mean=17.9828, x_max=51.9212
+lbfgs minimizer step
+lbfgs minimizer stop: max_iterations
+lbfgs minimizer done.
+     5 Rw: 0.2329 Rf: 0.2943 Rf-Rw: 0.0613 rmsd(b):  0.0088 rws: 16.000 n_fev: 174
+lbfgs minimizer():
+  x.size(): 2307
+  m: 5
+  maxfev: 20
+  gtol: 0.9
+  xtol: 1e-16
+  stpmin: 1e-09
+  stpmax: 0.3
+lbfgs traditional_convergence_test: True
+  step:   1 bond rmsd: 0.008052
+lbfgs minimizer.run(): f=2.89392e+06, |g|=543400, x_min=-17.824, x_mean=17.9804, x_max=51.778
+  step:   2 bond rmsd: 0.031927
+lbfgs minimizer.run(): f=1.55291e+06, |g|=292761, x_min=-17.8657, x_mean=17.9804, x_max=51.8125
+lbfgs minimizer step
+  step:   3 bond rmsd: 0.032741
+lbfgs minimizer.run(): f=1.32906e+06, |g|=231608, x_min=-17.8759, x_mean=17.9804, x_max=51.8207
+lbfgs minimizer step
+  step:   4 bond rmsd: 0.030608
+lbfgs minimizer.run(): f=1.08494e+06, |g|=184659, x_min=-17.8874, x_mean=17.9804, x_max=51.8302
+lbfgs minimizer step
+  step:   5 bond rmsd: 0.026407
+lbfgs minimizer.run(): f=887381, |g|=148450, x_min=-17.8996, x_mean=17.9805, x_max=51.8403
+lbfgs minimizer step
+  step:   6 bond rmsd: 0.023098
+lbfgs minimizer.run(): f=802877, |g|=96276.7, x_min=-17.9057, x_mean=17.9805, x_max=51.8453
+lbfgs minimizer step
+  step:   7 bond rmsd: 0.019955
+lbfgs minimizer.run(): f=757453, |g|=78359.2, x_min=-17.91, x_mean=17.9805, x_max=51.849
+lbfgs minimizer step
+  step:   8 bond rmsd: 0.016118
+lbfgs minimizer.run(): f=723917, |g|=60349.9, x_min=-17.9146, x_mean=17.9806, x_max=51.853
+lbfgs minimizer step
+  step:   9 bond rmsd: 0.013959
+lbfgs minimizer.run(): f=710173, |g|=42853.7, x_min=-17.9171, x_mean=17.9806, x_max=51.8554
+lbfgs minimizer step
+  step:  10 bond rmsd: 0.012147
+lbfgs minimizer.run(): f=701923, |g|=33710.3, x_min=-17.9196, x_mean=17.9806, x_max=51.8578
+lbfgs minimizer step
+  step:  11 bond rmsd: 0.010447
+lbfgs minimizer.run(): f=695809, |g|=35201.9, x_min=-17.9236, x_mean=17.9806, x_max=51.8617
+lbfgs minimizer step
+  step:  12 bond rmsd: 0.009135
+lbfgs minimizer.run(): f=691512, |g|=24190.1, x_min=-17.9266, x_mean=17.9807, x_max=51.8647
+lbfgs minimizer step
+  step:  13 bond rmsd: 0.008265
+lbfgs minimizer.run(): f=688967, |g|=21943.4, x_min=-17.9296, x_mean=17.9807, x_max=51.8677
+lbfgs minimizer step
+  step:  14 bond rmsd: 0.007452
+lbfgs minimizer.run(): f=686491, |g|=17760.6, x_min=-17.9339, x_mean=17.9807, x_max=51.872
+lbfgs minimizer step
+  step:  15 bond rmsd: 0.006994
+lbfgs minimizer.run(): f=684894, |g|=15555.9, x_min=-17.9376, x_mean=17.9807, x_max=51.8757
+lbfgs minimizer step
+  step:  16 bond rmsd: 0.006684
+lbfgs minimizer.run(): f=683232, |g|=23803.4, x_min=-17.9431, x_mean=17.9808, x_max=51.8812
+lbfgs minimizer step
+  step:  17 bond rmsd: 0.006552
+lbfgs minimizer.run(): f=681801, |g|=20178.1, x_min=-17.9476, x_mean=17.9808, x_max=51.8856
+lbfgs minimizer step
+  step:  18 bond rmsd: 0.006526
+lbfgs minimizer.run(): f=680421, |g|=17139.5, x_min=-17.9526, x_mean=17.9808, x_max=51.8907
+lbfgs minimizer step
+  step:  19 bond rmsd: 0.006633
+lbfgs minimizer.run(): f=678874, |g|=16965.7, x_min=-17.9584, x_mean=17.9809, x_max=51.8965
+lbfgs minimizer step
+  step:  20 bond rmsd: 0.006728
+lbfgs minimizer.run(): f=677793, |g|=13825.4, x_min=-17.9624, x_mean=17.9809, x_max=51.9005
+lbfgs minimizer step
+  step:  21 bond rmsd: 0.006819
+lbfgs minimizer.run(): f=676834, |g|=14135.8, x_min=-17.9662, x_mean=17.981, x_max=51.9044
+lbfgs minimizer step
+  step:  22 bond rmsd: 0.006884
+lbfgs minimizer.run(): f=675705, |g|=13472.2, x_min=-17.9696, x_mean=17.981, x_max=51.9078
+lbfgs minimizer step
+  step:  23 bond rmsd: 0.006902
+lbfgs minimizer.run(): f=675093, |g|=11151.2, x_min=-17.9715, x_mean=17.9811, x_max=51.9098
+lbfgs minimizer step
+  step:  24 bond rmsd: 0.006817
+lbfgs minimizer.run(): f=674362, |g|=14843.6, x_min=-17.9723, x_mean=17.9811, x_max=51.9108
+lbfgs minimizer step
+  step:  25 bond rmsd: 0.006701
+lbfgs minimizer.run(): f=673607, |g|=11961.6, x_min=-17.9724, x_mean=17.9812, x_max=51.911
+lbfgs minimizer step
+  step:  26 bond rmsd: 0.006556
+lbfgs minimizer.run(): f=672876, |g|=11614.2, x_min=-17.9717, x_mean=17.9812, x_max=51.9106
+lbfgs minimizer step
+  step:  27 bond rmsd: 0.006356
+lbfgs minimizer.run(): f=671990, |g|=11169.9, x_min=-17.9698, x_mean=17.9813, x_max=51.909
+lbfgs minimizer step
+  step:  28 bond rmsd: 0.006213
+lbfgs minimizer.run(): f=671310, |g|=9809.67, x_min=-17.9678, x_mean=17.9813, x_max=51.9073
+lbfgs minimizer step
+  step:  29 bond rmsd: 0.006099
+lbfgs minimizer.run(): f=670614, |g|=10238.5, x_min=-17.9649, x_mean=17.9813, x_max=51.9048
+lbfgs minimizer step
+  step:  30 bond rmsd: 0.006023
+lbfgs minimizer.run(): f=669906, |g|=9426.57, x_min=-17.9621, x_mean=17.9814, x_max=51.9023
+lbfgs minimizer step
+  step:  31 bond rmsd: 0.005995
+lbfgs minimizer.run(): f=669381, |g|=7875.54, x_min=-17.9595, x_mean=17.9814, x_max=51.8999
+lbfgs minimizer step
+  step:  32 bond rmsd: 0.005987
+lbfgs minimizer.run(): f=668855, |g|=9133.68, x_min=-17.9568, x_mean=17.9815, x_max=51.8975
+lbfgs minimizer step
+  step:  33 bond rmsd: 0.005989
+lbfgs minimizer.run(): f=668397, |g|=7873.48, x_min=-17.9548, x_mean=17.9815, x_max=51.8955
+lbfgs minimizer step
+  step:  34 bond rmsd: 0.005975
+lbfgs minimizer.run(): f=667961, |g|=7992.87, x_min=-17.953, x_mean=17.9815, x_max=51.8937
+lbfgs minimizer step
+  step:  35 bond rmsd: 0.005953
+lbfgs minimizer.run(): f=667508, |g|=7472.4, x_min=-17.9516, x_mean=17.9816, x_max=51.8923
+lbfgs minimizer step
+  step:  36 bond rmsd: 0.005901
+lbfgs minimizer.run(): f=667117, |g|=7597.65, x_min=-17.951, x_mean=17.9816, x_max=51.8913
+lbfgs minimizer step
+  step:  37 bond rmsd: 0.005815
+lbfgs minimizer.run(): f=666691, |g|=8498.03, x_min=-17.9511, x_mean=17.9816, x_max=51.8908
+lbfgs minimizer step
+  step:  38 bond rmsd: 0.005742
+lbfgs minimizer.run(): f=666341, |g|=7372.19, x_min=-17.9516, x_mean=17.9816, x_max=51.8908
+lbfgs minimizer step
+  step:  39 bond rmsd: 0.005646
+lbfgs minimizer.run(): f=665971, |g|=10201.1, x_min=-17.9533, x_mean=17.9817, x_max=51.8915
+lbfgs minimizer step
+  step:  40 bond rmsd: 0.005573
+lbfgs minimizer.run(): f=665673, |g|=8281.62, x_min=-17.955, x_mean=17.9817, x_max=51.8923
+lbfgs minimizer step
+  step:  41 bond rmsd: 0.005534
+lbfgs minimizer.run(): f=665368, |g|=8676.47, x_min=-17.9576, x_mean=17.9817, x_max=51.8937
+lbfgs minimizer step
+  step:  42 bond rmsd: 0.005504
+lbfgs minimizer.run(): f=665040, |g|=6867.63, x_min=-17.9611, x_mean=17.9818, x_max=51.8956
+lbfgs minimizer step
+  step:  43 bond rmsd: 0.005515
+lbfgs minimizer.run(): f=664807, |g|=6511.5, x_min=-17.9643, x_mean=17.9818, x_max=51.8975
+lbfgs minimizer step
+  step:  44 bond rmsd: 0.005572
+lbfgs minimizer.run(): f=664585, |g|=8771.74, x_min=-17.969, x_mean=17.9818, x_max=51.9001
+lbfgs minimizer step
+  step:  45 bond rmsd: 0.005619
+lbfgs minimizer.run(): f=664414, |g|=7172.69, x_min=-17.9723, x_mean=17.9819, x_max=51.902
+lbfgs minimizer step
+  step:  46 bond rmsd: 0.005647
+lbfgs minimizer.run(): f=664238, |g|=8778.13, x_min=-17.9759, x_mean=17.9819, x_max=51.904
+lbfgs minimizer step
+  step:  47 bond rmsd: 0.005683
+lbfgs minimizer.run(): f=664038, |g|=6884.51, x_min=-17.9796, x_mean=17.9819, x_max=51.906
+lbfgs minimizer step
+  step:  48 bond rmsd: 0.005682
+lbfgs minimizer.run(): f=663830, |g|=6841.97, x_min=-17.9824, x_mean=17.982, x_max=51.9075
+lbfgs minimizer step
+  step:  49 bond rmsd: 0.005640
+lbfgs minimizer.run(): f=663529, |g|=7752.79, x_min=-17.9864, x_mean=17.982, x_max=51.9094
+lbfgs minimizer step
+  step:  50 bond rmsd: 0.005594
+lbfgs minimizer.run(): f=663244, |g|=6312.36, x_min=-17.9888, x_mean=17.982, x_max=51.9105
+lbfgs minimizer step
+  step:  51 bond rmsd: 0.005529
+lbfgs minimizer.run(): f=662974, |g|=6337.24, x_min=-17.9908, x_mean=17.9821, x_max=51.9112
+lbfgs minimizer step
+lbfgs minimizer stop: max_iterations
+lbfgs minimizer done.
+     6 Rw: 0.2357 Rf: 0.2907 Rf-Rw: 0.0550 rmsd(b):  0.0055 rws: 32.000 n_fev: 225
+lbfgs minimizer():
+  x.size(): 2307
+  m: 5
+  maxfev: 20
+  gtol: 0.9
+  xtol: 1e-16
+  stpmin: 1e-09
+  stpmax: 0.3
+lbfgs traditional_convergence_test: True
+  step:   1 bond rmsd: 0.008052
+lbfgs minimizer.run(): f=5.16932e+06, |g|=1.08683e+06, x_min=-17.824, x_mean=17.9804, x_max=51.778
+  step:   2 bond rmsd: 0.031805
+lbfgs minimizer.run(): f=2.48388e+06, |g|=584832, x_min=-17.8657, x_mean=17.9804, x_max=51.8125
+lbfgs minimizer step
+  step:   3 bond rmsd: 0.032649
+lbfgs minimizer.run(): f=2.03451e+06, |g|=461643, x_min=-17.8758, x_mean=17.9804, x_max=51.8208
+lbfgs minimizer step
+  step:   4 bond rmsd: 0.030575
+lbfgs minimizer.run(): f=1.54958e+06, |g|=368125, x_min=-17.8872, x_mean=17.9804, x_max=51.8302
+lbfgs minimizer step
+  step:   5 bond rmsd: 0.026446
+lbfgs minimizer.run(): f=1.15675e+06, |g|=294115, x_min=-17.899, x_mean=17.9805, x_max=51.84
+lbfgs minimizer step
+  step:   6 bond rmsd: 0.023169
+lbfgs minimizer.run(): f=988606, |g|=190816, x_min=-17.9049, x_mean=17.9805, x_max=51.8449
+lbfgs minimizer step
+  step:   7 bond rmsd: 0.020015
+lbfgs minimizer.run(): f=897425, |g|=155757, x_min=-17.9091, x_mean=17.9805, x_max=51.8486
+lbfgs minimizer step
+  step:   8 bond rmsd: 0.016112
+lbfgs minimizer.run(): f=829506, |g|=118965, x_min=-17.9134, x_mean=17.9806, x_max=51.8524
+lbfgs minimizer step
+  step:   9 bond rmsd: 0.013902
+lbfgs minimizer.run(): f=801724, |g|=84450.7, x_min=-17.9157, x_mean=17.9806, x_max=51.8546
+lbfgs minimizer step
+  step:  10 bond rmsd: 0.012006
+lbfgs minimizer.run(): f=784864, |g|=66372.7, x_min=-17.918, x_mean=17.9806, x_max=51.8569
+lbfgs minimizer step
+  step:  11 bond rmsd: 0.010175
+lbfgs minimizer.run(): f=772276, |g|=69723.9, x_min=-17.9217, x_mean=17.9806, x_max=51.8607
+lbfgs minimizer step
+  step:  12 bond rmsd: 0.008772
+lbfgs minimizer.run(): f=763586, |g|=47782.7, x_min=-17.9244, x_mean=17.9807, x_max=51.8634
+lbfgs minimizer step
+  step:  13 bond rmsd: 0.007800
+lbfgs minimizer.run(): f=758336, |g|=42609.9, x_min=-17.927, x_mean=17.9807, x_max=51.8662
+lbfgs minimizer step
+  step:  14 bond rmsd: 0.006845
+lbfgs minimizer.run(): f=753217, |g|=33623.5, x_min=-17.9309, x_mean=17.9807, x_max=51.8702
+lbfgs minimizer step
+  step:  15 bond rmsd: 0.006255
+lbfgs minimizer.run(): f=749919, |g|=29192.6, x_min=-17.9342, x_mean=17.9807, x_max=51.8736
+lbfgs minimizer step
+  step:  16 bond rmsd: 0.005762
+lbfgs minimizer.run(): f=746283, |g|=43531.8, x_min=-17.9391, x_mean=17.9808, x_max=51.8787
+lbfgs minimizer step
+  step:  17 bond rmsd: 0.005490
+lbfgs minimizer.run(): f=743245, |g|=36842.1, x_min=-17.9432, x_mean=17.9808, x_max=51.8829
+lbfgs minimizer step
+  step:  18 bond rmsd: 0.005320
+lbfgs minimizer.run(): f=740292, |g|=31389.1, x_min=-17.9478, x_mean=17.9809, x_max=51.8877
+lbfgs minimizer step
+  step:  19 bond rmsd: 0.005338
+lbfgs minimizer.run(): f=736996, |g|=32955, x_min=-17.9532, x_mean=17.9809, x_max=51.8933
+lbfgs minimizer step
+  step:  20 bond rmsd: 0.005383
+lbfgs minimizer.run(): f=734695, |g|=26741.1, x_min=-17.9569, x_mean=17.981, x_max=51.8972
+lbfgs minimizer step
+  step:  21 bond rmsd: 0.005426
+lbfgs minimizer.run(): f=732568, |g|=26045.6, x_min=-17.9604, x_mean=17.981, x_max=51.901
+lbfgs minimizer step
+  step:  22 bond rmsd: 0.005484
+lbfgs minimizer.run(): f=730131, |g|=26906.9, x_min=-17.9636, x_mean=17.9811, x_max=51.9045
+lbfgs minimizer step
+  step:  23 bond rmsd: 0.005500
+lbfgs minimizer.run(): f=728802, |g|=21878.1, x_min=-17.9654, x_mean=17.9811, x_max=51.9065
+lbfgs minimizer step
+  step:  24 bond rmsd: 0.005414
+lbfgs minimizer.run(): f=727321, |g|=27306.1, x_min=-17.9662, x_mean=17.9811, x_max=51.9077
+lbfgs minimizer step
+  step:  25 bond rmsd: 0.005300
+lbfgs minimizer.run(): f=725772, |g|=21867.4, x_min=-17.9664, x_mean=17.9812, x_max=51.9081
+lbfgs minimizer step
+  step:  26 bond rmsd: 0.005160
+lbfgs minimizer.run(): f=724331, |g|=20883.8, x_min=-17.9659, x_mean=17.9812, x_max=51.908
+lbfgs minimizer step
+  step:  27 bond rmsd: 0.004954
+lbfgs minimizer.run(): f=722601, |g|=21743.4, x_min=-17.9641, x_mean=17.9813, x_max=51.9067
+lbfgs minimizer step
+  step:  28 bond rmsd: 0.004818
+lbfgs minimizer.run(): f=721332, |g|=19200.2, x_min=-17.9623, x_mean=17.9813, x_max=51.9053
+lbfgs minimizer step
+  step:  29 bond rmsd: 0.004707
+lbfgs minimizer.run(): f=719950, |g|=20017.4, x_min=-17.9597, x_mean=17.9814, x_max=51.9031
+lbfgs minimizer step
+  step:  30 bond rmsd: 0.004646
+lbfgs minimizer.run(): f=718573, |g|=17614.5, x_min=-17.957, x_mean=17.9814, x_max=51.9007
+lbfgs minimizer step
+  step:  31 bond rmsd: 0.004644
+lbfgs minimizer.run(): f=717503, |g|=15081.2, x_min=-17.9544, x_mean=17.9814, x_max=51.8984
+lbfgs minimizer step
+  step:  32 bond rmsd: 0.004675
+lbfgs minimizer.run(): f=716435, |g|=16884.7, x_min=-17.9516, x_mean=17.9815, x_max=51.8958
+lbfgs minimizer step
+  step:  33 bond rmsd: 0.004714
+lbfgs minimizer.run(): f=715569, |g|=14595.8, x_min=-17.9496, x_mean=17.9815, x_max=51.8938
+lbfgs minimizer step
+  step:  34 bond rmsd: 0.004736
+lbfgs minimizer.run(): f=714693, |g|=15453.7, x_min=-17.9476, x_mean=17.9815, x_max=51.8919
+lbfgs minimizer step
+  step:  35 bond rmsd: 0.004746
+lbfgs minimizer.run(): f=713760, |g|=13968.6, x_min=-17.9461, x_mean=17.9816, x_max=51.8902
+lbfgs minimizer step
+  step:  36 bond rmsd: 0.004704
+lbfgs minimizer.run(): f=712938, |g|=14798, x_min=-17.9453, x_mean=17.9816, x_max=51.889
+lbfgs minimizer step
+  step:  37 bond rmsd: 0.004616
+lbfgs minimizer.run(): f=711994, |g|=15444.1, x_min=-17.9449, x_mean=17.9816, x_max=51.8881
+lbfgs minimizer step
+  step:  38 bond rmsd: 0.004526
+lbfgs minimizer.run(): f=711240, |g|=13797.5, x_min=-17.9451, x_mean=17.9817, x_max=51.8877
+lbfgs minimizer step
+  step:  39 bond rmsd: 0.004371
+lbfgs minimizer.run(): f=710402, |g|=17594, x_min=-17.9463, x_mean=17.9817, x_max=51.8879
+lbfgs minimizer step
+  step:  40 bond rmsd: 0.004251
+lbfgs minimizer.run(): f=709675, |g|=14526.1, x_min=-17.9477, x_mean=17.9817, x_max=51.8883
+lbfgs minimizer step
+  step:  41 bond rmsd: 0.004142
+lbfgs minimizer.run(): f=708948, |g|=15982.4, x_min=-17.9499, x_mean=17.9817, x_max=51.8893
+lbfgs minimizer step
+  step:  42 bond rmsd: 0.004030
+lbfgs minimizer.run(): f=708167, |g|=12740.7, x_min=-17.9528, x_mean=17.9818, x_max=51.8907
+lbfgs minimizer step
+  step:  43 bond rmsd: 0.003980
+lbfgs minimizer.run(): f=707588, |g|=13338.5, x_min=-17.9558, x_mean=17.9818, x_max=51.8922
+lbfgs minimizer step
+  step:  44 bond rmsd: 0.003951
+lbfgs minimizer.run(): f=706995, |g|=12236.6, x_min=-17.9594, x_mean=17.9818, x_max=51.8941
+lbfgs minimizer step
+  step:  45 bond rmsd: 0.003958
+lbfgs minimizer.run(): f=706583, |g|=11374.5, x_min=-17.9624, x_mean=17.9818, x_max=51.8957
+lbfgs minimizer step
+  step:  46 bond rmsd: 0.003952
+lbfgs minimizer.run(): f=706124, |g|=13870, x_min=-17.966, x_mean=17.9819, x_max=51.8976
+lbfgs minimizer step
+  step:  47 bond rmsd: 0.003961
+lbfgs minimizer.run(): f=705715, |g|=12041.2, x_min=-17.9689, x_mean=17.9819, x_max=51.8991
+lbfgs minimizer step
+  step:  48 bond rmsd: 0.003949
+lbfgs minimizer.run(): f=705234, |g|=14241.3, x_min=-17.9718, x_mean=17.9819, x_max=51.9005
+lbfgs minimizer step
+  step:  49 bond rmsd: 0.003920
+lbfgs minimizer.run(): f=704696, |g|=12207.5, x_min=-17.9748, x_mean=17.9819, x_max=51.9018
+lbfgs minimizer step
+  step:  50 bond rmsd: 0.003877
+lbfgs minimizer.run(): f=704182, |g|=14775.1, x_min=-17.9773, x_mean=17.9819, x_max=51.9029
+lbfgs minimizer step
+  step:  51 bond rmsd: 0.003821
+lbfgs minimizer.run(): f=703679, |g|=12908.4, x_min=-17.9792, x_mean=17.982, x_max=51.9036
+lbfgs minimizer step
+lbfgs minimizer stop: max_iterations
+lbfgs minimizer done.
+     7 Rw: 0.2392 Rf: 0.2947 Rf-Rw: 0.0555 rmsd(b):  0.0038 rws: 64.000 n_fev: 276
+lbfgs minimizer():
+  x.size(): 2307
+  m: 5
+  maxfev: 20
+  gtol: 0.9
+  xtol: 1e-16
+  stpmin: 1e-09
+  stpmax: 0.3
+lbfgs traditional_convergence_test: True
+  step:   1 bond rmsd: 0.008052
+lbfgs minimizer.run(): f=9.72014e+06, |g|=2.17392e+06, x_min=-17.824, x_mean=17.9804, x_max=51.778
+  step:   2 bond rmsd: 0.031750
+lbfgs minimizer.run(): f=4.34609e+06, |g|=1.16917e+06, x_min=-17.8657, x_mean=17.9804, x_max=51.8125
+lbfgs minimizer step
+  step:   3 bond rmsd: 0.032612
+lbfgs minimizer.run(): f=3.44549e+06, |g|=921908, x_min=-17.8758, x_mean=17.9804, x_max=51.8208
+lbfgs minimizer step
+  step:   4 bond rmsd: 0.030574
+lbfgs minimizer.run(): f=2.47878e+06, |g|=735321, x_min=-17.8871, x_mean=17.9804, x_max=51.8301
+lbfgs minimizer step
+  step:   5 bond rmsd: 0.026491
+lbfgs minimizer.run(): f=1.69537e+06, |g|=585638, x_min=-17.8988, x_mean=17.9805, x_max=51.8399
+lbfgs minimizer step
+  step:   6 bond rmsd: 0.023241
+lbfgs minimizer.run(): f=1.36006e+06, |g|=380083, x_min=-17.9046, x_mean=17.9805, x_max=51.8448
+lbfgs minimizer step
+  step:   7 bond rmsd: 0.020089
+lbfgs minimizer.run(): f=1.17732e+06, |g|=310798, x_min=-17.9086, x_mean=17.9805, x_max=51.8483
+lbfgs minimizer step
+  step:   8 bond rmsd: 0.016170
+lbfgs minimizer.run(): f=1.0407e+06, |g|=236470, x_min=-17.9128, x_mean=17.9806, x_max=51.8521
+lbfgs minimizer step
+  step:   9 bond rmsd: 0.013945
+lbfgs minimizer.run(): f=984890, |g|=167949, x_min=-17.915, x_mean=17.9806, x_max=51.8543
+lbfgs minimizer step
+  step:  10 bond rmsd: 0.012018
+lbfgs minimizer.run(): f=950763, |g|=132072, x_min=-17.9172, x_mean=17.9806, x_max=51.8565
+lbfgs minimizer step
+  step:  11 bond rmsd: 0.010133
+lbfgs minimizer.run(): f=925167, |g|=139889, x_min=-17.9208, x_mean=17.9806, x_max=51.8602
+lbfgs minimizer step
+  step:  12 bond rmsd: 0.008700
+lbfgs minimizer.run(): f=907650, |g|=96004.7, x_min=-17.9233, x_mean=17.9807, x_max=51.8629
+lbfgs minimizer step
+  step:  13 bond rmsd: 0.007689
+lbfgs minimizer.run(): f=897001, |g|=84993.4, x_min=-17.9258, x_mean=17.9807, x_max=51.8656
+lbfgs minimizer step
+  step:  14 bond rmsd: 0.006678
+lbfgs minimizer.run(): f=886584, |g|=66417.4, x_min=-17.9295, x_mean=17.9807, x_max=51.8694
+lbfgs minimizer step
+  step:  15 bond rmsd: 0.006037
+lbfgs minimizer.run(): f=879839, |g|=57409.6, x_min=-17.9326, x_mean=17.9808, x_max=51.8727
+lbfgs minimizer step
+  step:  16 bond rmsd: 0.005471
+lbfgs minimizer.run(): f=872376, |g|=84315.8, x_min=-17.9373, x_mean=17.9808, x_max=51.8776
+lbfgs minimizer step
+  step:  17 bond rmsd: 0.005132
+lbfgs minimizer.run(): f=866034, |g|=71361.8, x_min=-17.9412, x_mean=17.9808, x_max=51.8817
+lbfgs minimizer step
+  step:  18 bond rmsd: 0.004893
+lbfgs minimizer.run(): f=859950, |g|=60919.1, x_min=-17.9456, x_mean=17.9809, x_max=51.8864
+lbfgs minimizer step
+  step:  19 bond rmsd: 0.004866
+lbfgs minimizer.run(): f=853139, |g|=65570.2, x_min=-17.9508, x_mean=17.9809, x_max=51.892
+lbfgs minimizer step
+  step:  20 bond rmsd: 0.004883
+lbfgs minimizer.run(): f=848363, |g|=53088.7, x_min=-17.9543, x_mean=17.981, x_max=51.8958
+lbfgs minimizer step
+  step:  21 bond rmsd: 0.004903
+lbfgs minimizer.run(): f=843912, |g|=50433.7, x_min=-17.9577, x_mean=17.981, x_max=51.8996
+lbfgs minimizer step
+  step:  22 bond rmsd: 0.004958
+lbfgs minimizer.run(): f=838810, |g|=54411.8, x_min=-17.9608, x_mean=17.9811, x_max=51.9031
+lbfgs minimizer step
+  step:  23 bond rmsd: 0.004969
+lbfgs minimizer.run(): f=836049, |g|=43889.1, x_min=-17.9624, x_mean=17.9812, x_max=51.9051
+lbfgs minimizer step
+  step:  24 bond rmsd: 0.004880
+lbfgs minimizer.run(): f=832996, |g|=52865.5, x_min=-17.9632, x_mean=17.9812, x_max=51.9063
+lbfgs minimizer step
+  step:  25 bond rmsd: 0.004768
+lbfgs minimizer.run(): f=829909, |g|=42225.1, x_min=-17.9633, x_mean=17.9812, x_max=51.9069
+lbfgs minimizer step
+  step:  26 bond rmsd: 0.004629
+lbfgs minimizer.run(): f=827027, |g|=40067.2, x_min=-17.9628, x_mean=17.9813, x_max=51.9068
+lbfgs minimizer step
+  step:  27 bond rmsd: 0.004418
+lbfgs minimizer.run(): f=823496, |g|=44770.8, x_min=-17.961, x_mean=17.9814, x_max=51.9056
+lbfgs minimizer step
+  step:  28 bond rmsd: 0.004289
+lbfgs minimizer.run(): f=820969, |g|=38936.4, x_min=-17.9592, x_mean=17.9814, x_max=51.9042
+lbfgs minimizer step
+  step:  29 bond rmsd: 0.004186
+lbfgs minimizer.run(): f=818260, |g|=39927.1, x_min=-17.9567, x_mean=17.9814, x_max=51.9023
+lbfgs minimizer step
+  step:  30 bond rmsd: 0.004138
+lbfgs minimizer.run(): f=815407, |g|=34898.8, x_min=-17.9538, x_mean=17.9815, x_max=51.8998
+lbfgs minimizer step
+  step:  31 bond rmsd: 0.004151
+lbfgs minimizer.run(): f=813262, |g|=29580.1, x_min=-17.9513, x_mean=17.9815, x_max=51.8977
+lbfgs minimizer step
+  step:  32 bond rmsd: 0.004211
+lbfgs minimizer.run(): f=811049, |g|=35093.1, x_min=-17.9484, x_mean=17.9816, x_max=51.8951
+lbfgs minimizer step
+  step:  33 bond rmsd: 0.004273
+lbfgs minimizer.run(): f=809265, |g|=29269.1, x_min=-17.9462, x_mean=17.9816, x_max=51.8931
+lbfgs minimizer step
+  step:  34 bond rmsd: 0.004319
+lbfgs minimizer.run(): f=807589, |g|=30037.2, x_min=-17.9442, x_mean=17.9816, x_max=51.8911
+lbfgs minimizer step
+  step:  35 bond rmsd: 0.004351
+lbfgs minimizer.run(): f=805670, |g|=29511.6, x_min=-17.9425, x_mean=17.9817, x_max=51.8893
+lbfgs minimizer step
+  step:  36 bond rmsd: 0.004324
+lbfgs minimizer.run(): f=804077, |g|=27896.6, x_min=-17.9415, x_mean=17.9817, x_max=51.8881
+lbfgs minimizer step
+  step:  37 bond rmsd: 0.004245
+lbfgs minimizer.run(): f=802083, |g|=34469.6, x_min=-17.9409, x_mean=17.9817, x_max=51.887
+lbfgs minimizer step
+  step:  38 bond rmsd: 0.004144
+lbfgs minimizer.run(): f=800386, |g|=28725.5, x_min=-17.941, x_mean=17.9818, x_max=51.8865
+lbfgs minimizer step
+  step:  39 bond rmsd: 0.003967
+lbfgs minimizer.run(): f=798590, |g|=38136.2, x_min=-17.942, x_mean=17.9818, x_max=51.8865
+lbfgs minimizer step
+  step:  40 bond rmsd: 0.003810
+lbfgs minimizer.run(): f=796938, |g|=29410.7, x_min=-17.9432, x_mean=17.9818, x_max=51.8868
+lbfgs minimizer step
+  step:  41 bond rmsd: 0.003667
+lbfgs minimizer.run(): f=795426, |g|=29817.6, x_min=-17.945, x_mean=17.9819, x_max=51.8875
+lbfgs minimizer step
+  step:  42 bond rmsd: 0.003481
+lbfgs minimizer.run(): f=793651, |g|=27746.4, x_min=-17.9479, x_mean=17.9819, x_max=51.8889
+lbfgs minimizer step
+  step:  43 bond rmsd: 0.003397
+lbfgs minimizer.run(): f=792479, |g|=23881.4, x_min=-17.9503, x_mean=17.9819, x_max=51.89
+lbfgs minimizer step
+  step:  44 bond rmsd: 0.003328
+lbfgs minimizer.run(): f=791263, |g|=32293.3, x_min=-17.9537, x_mean=17.9819, x_max=51.8918
+lbfgs minimizer step
+  step:  45 bond rmsd: 0.003298
+lbfgs minimizer.run(): f=790190, |g|=25889.4, x_min=-17.9566, x_mean=17.982, x_max=51.8933
+lbfgs minimizer step
+  step:  46 bond rmsd: 0.003273
+lbfgs minimizer.run(): f=789240, |g|=25873.6, x_min=-17.9596, x_mean=17.982, x_max=51.8948
+lbfgs minimizer step
+  step:  47 bond rmsd: 0.003260
+lbfgs minimizer.run(): f=788205, |g|=22771.2, x_min=-17.9627, x_mean=17.982, x_max=51.8964
+lbfgs minimizer step
+  step:  48 bond rmsd: 0.003228
+lbfgs minimizer.run(): f=787244, |g|=21725.1, x_min=-17.9651, x_mean=17.982, x_max=51.8976
+lbfgs minimizer step
+  step:  49 bond rmsd: 0.003178
+lbfgs minimizer.run(): f=786128, |g|=23047.3, x_min=-17.968, x_mean=17.982, x_max=51.8989
+lbfgs minimizer step
+  step:  50 bond rmsd: 0.003125
+lbfgs minimizer.run(): f=785022, |g|=22994.1, x_min=-17.9703, x_mean=17.9821, x_max=51.8999
+lbfgs minimizer step
+  step:  51 bond rmsd: 0.003056
+lbfgs minimizer.run(): f=784039, |g|=21042.5, x_min=-17.972, x_mean=17.9821, x_max=51.9005
+lbfgs minimizer step
+lbfgs minimizer stop: max_iterations
+lbfgs minimizer done.
+     8 Rw: 0.2426 Rf: 0.2991 Rf-Rw: 0.0565 rmsd(b):  0.0031 rws: 128.000 n_fev: 327
+lbfgs minimizer():
+  x.size(): 2307
+  m: 5
+  maxfev: 20
+  gtol: 0.9
+  xtol: 1e-16
+  stpmin: 1e-09
+  stpmax: 0.3
+lbfgs traditional_convergence_test: True
+  step:   1 bond rmsd: 0.008052
+lbfgs minimizer.run(): f=1.88218e+07, |g|=4.34821e+06, x_min=-17.824, x_mean=17.9804, x_max=51.778
+  step:   2 bond rmsd: 0.031723
+lbfgs minimizer.run(): f=8.07061e+06, |g|=2.33795e+06, x_min=-17.8657, x_mean=17.9804, x_max=51.8125
+lbfgs minimizer step
+  step:   3 bond rmsd: 0.032596
+lbfgs minimizer.run(): f=6.26749e+06, |g|=1.84254e+06, x_min=-17.8758, x_mean=17.9804, x_max=51.8208
+lbfgs minimizer step
+  step:   4 bond rmsd: 0.030578
+lbfgs minimizer.run(): f=4.33713e+06, |g|=1.46984e+06, x_min=-17.887, x_mean=17.9804, x_max=51.8301
+lbfgs minimizer step
+  step:   5 bond rmsd: 0.026521
+lbfgs minimizer.run(): f=2.77255e+06, |g|=1.16884e+06, x_min=-17.8986, x_mean=17.9805, x_max=51.8398
+lbfgs minimizer step
+  step:   6 bond rmsd: 0.023286
+lbfgs minimizer.run(): f=2.1029e+06, |g|=758750, x_min=-17.9044, x_mean=17.9805, x_max=51.8447
+lbfgs minimizer step
+  step:   7 bond rmsd: 0.020139
+lbfgs minimizer.run(): f=1.73713e+06, |g|=621031, x_min=-17.9084, x_mean=17.9805, x_max=51.8482
+lbfgs minimizer step
+  step:   8 bond rmsd: 0.016215
+lbfgs minimizer.run(): f=1.46314e+06, |g|=471653, x_min=-17.9125, x_mean=17.9806, x_max=51.8519
+lbfgs minimizer step
+  step:   9 bond rmsd: 0.013986
+lbfgs minimizer.run(): f=1.35124e+06, |g|=335149, x_min=-17.9147, x_mean=17.9806, x_max=51.8541
+lbfgs minimizer step
+  step:  10 bond rmsd: 0.012047
+lbfgs minimizer.run(): f=1.28254e+06, |g|=263699, x_min=-17.9168, x_mean=17.9806, x_max=51.8563
+lbfgs minimizer step
+  step:  11 bond rmsd: 0.010139
+lbfgs minimizer.run(): f=1.23092e+06, |g|=280861, x_min=-17.9203, x_mean=17.9806, x_max=51.86
+lbfgs minimizer step
+  step:  12 bond rmsd: 0.008696
+lbfgs minimizer.run(): f=1.19576e+06, |g|=193070, x_min=-17.9228, x_mean=17.9807, x_max=51.8626
+lbfgs minimizer step
+  step:  13 bond rmsd: 0.007671
+lbfgs minimizer.run(): f=1.17428e+06, |g|=170448, x_min=-17.9252, x_mean=17.9807, x_max=51.8652
+lbfgs minimizer step
+  step:  14 bond rmsd: 0.006636
+lbfgs minimizer.run(): f=1.15322e+06, |g|=132820, x_min=-17.9289, x_mean=17.9807, x_max=51.869
+lbfgs minimizer step
+  step:  15 bond rmsd: 0.005974
+lbfgs minimizer.run(): f=1.13957e+06, |g|=114630, x_min=-17.9319, x_mean=17.9808, x_max=51.8723
+lbfgs minimizer step
+  step:  16 bond rmsd: 0.005382
+lbfgs minimizer.run(): f=1.12446e+06, |g|=167191, x_min=-17.9364, x_mean=17.9808, x_max=51.8771
+lbfgs minimizer step
+  step:  17 bond rmsd: 0.005016
+lbfgs minimizer.run(): f=1.11153e+06, |g|=141621, x_min=-17.9403, x_mean=17.9809, x_max=51.8813
+lbfgs minimizer step
+  step:  18 bond rmsd: 0.004749
+lbfgs minimizer.run(): f=1.09914e+06, |g|=121072, x_min=-17.9446, x_mean=17.9809, x_max=51.8859
+lbfgs minimizer step
+  step:  19 bond rmsd: 0.004707
+lbfgs minimizer.run(): f=1.08528e+06, |g|=132024, x_min=-17.9498, x_mean=17.981, x_max=51.8915
+lbfgs minimizer step
+  step:  20 bond rmsd: 0.004716
+lbfgs minimizer.run(): f=1.07555e+06, |g|=106866, x_min=-17.9532, x_mean=17.981, x_max=51.8953
+lbfgs minimizer step
+  step:  21 bond rmsd: 0.004727
+lbfgs minimizer.run(): f=1.06647e+06, |g|=100530, x_min=-17.9566, x_mean=17.9811, x_max=51.8991
+lbfgs minimizer step
+  step:  22 bond rmsd: 0.004786
+lbfgs minimizer.run(): f=1.05604e+06, |g|=109630, x_min=-17.9595, x_mean=17.9811, x_max=51.9026
+lbfgs minimizer step
+  step:  23 bond rmsd: 0.004798
+lbfgs minimizer.run(): f=1.05039e+06, |g|=88316.3, x_min=-17.9612, x_mean=17.9812, x_max=51.9046
+lbfgs minimizer step
+  step:  24 bond rmsd: 0.004709
+lbfgs minimizer.run(): f=1.04419e+06, |g|=105650, x_min=-17.9619, x_mean=17.9812, x_max=51.9059
+lbfgs minimizer step
+  step:  25 bond rmsd: 0.004601
+lbfgs minimizer.run(): f=1.038e+06, |g|=84451.5, x_min=-17.962, x_mean=17.9813, x_max=51.9064
+lbfgs minimizer step
+  step:  26 bond rmsd: 0.004464
+lbfgs minimizer.run(): f=1.03217e+06, |g|=79851.6, x_min=-17.9614, x_mean=17.9814, x_max=51.9064
+lbfgs minimizer step
+  step:  27 bond rmsd: 0.004255
+lbfgs minimizer.run(): f=1.02497e+06, |g|=91698.9, x_min=-17.9594, x_mean=17.9814, x_max=51.9052
+lbfgs minimizer step
+  step:  28 bond rmsd: 0.004131
+lbfgs minimizer.run(): f=1.01989e+06, |g|=79139.2, x_min=-17.9577, x_mean=17.9815, x_max=51.9039
+lbfgs minimizer step
+  step:  29 bond rmsd: 0.004036
+lbfgs minimizer.run(): f=1.01441e+06, |g|=80490.2, x_min=-17.9551, x_mean=17.9815, x_max=51.9019
+lbfgs minimizer step
+  step:  30 bond rmsd: 0.003998
+lbfgs minimizer.run(): f=1.00859e+06, |g|=70399, x_min=-17.9522, x_mean=17.9816, x_max=51.8995
+lbfgs minimizer step
+  step:  31 bond rmsd: 0.004021
+lbfgs minimizer.run(): f=1.00428e+06, |g|=59270.8, x_min=-17.9496, x_mean=17.9816, x_max=51.8973
+lbfgs minimizer step
+  step:  32 bond rmsd: 0.004099
+lbfgs minimizer.run(): f=999811, |g|=73436.3, x_min=-17.9465, x_mean=17.9817, x_max=51.8947
+lbfgs minimizer step
+  step:  33 bond rmsd: 0.004171
+lbfgs minimizer.run(): f=996230, |g|=60051.7, x_min=-17.9443, x_mean=17.9817, x_max=51.8927
+lbfgs minimizer step
+  step:  34 bond rmsd: 0.004228
+lbfgs minimizer.run(): f=992901, |g|=60361.3, x_min=-17.9422, x_mean=17.9817, x_max=51.8907
+lbfgs minimizer step
+  step:  35 bond rmsd: 0.004272
+lbfgs minimizer.run(): f=988962, |g|=62480.7, x_min=-17.9404, x_mean=17.9818, x_max=51.8888
+lbfgs minimizer step
+  step:  36 bond rmsd: 0.004250
+lbfgs minimizer.run(): f=985786, |g|=56588.1, x_min=-17.9393, x_mean=17.9818, x_max=51.8876
+lbfgs minimizer step
+  step:  37 bond rmsd: 0.004176
+lbfgs minimizer.run(): f=981871, |g|=72424.6, x_min=-17.9386, x_mean=17.9818, x_max=51.8865
+lbfgs minimizer step
+  step:  38 bond rmsd: 0.004066
+lbfgs minimizer.run(): f=978239, |g|=58350.5, x_min=-17.9385, x_mean=17.9819, x_max=51.8859
+lbfgs minimizer step
+  step:  39 bond rmsd: 0.003895
+lbfgs minimizer.run(): f=974664, |g|=67130.8, x_min=-17.9392, x_mean=17.9819, x_max=51.8858
+lbfgs minimizer step
+  step:  40 bond rmsd: 0.003702
+lbfgs minimizer.run(): f=970881, |g|=53336.2, x_min=-17.9405, x_mean=17.9819, x_max=51.8861
+lbfgs minimizer step
+  step:  41 bond rmsd: 0.003543
+lbfgs minimizer.run(): f=967897, |g|=51391.8, x_min=-17.9421, x_mean=17.982, x_max=51.8867
+lbfgs minimizer step
+  step:  42 bond rmsd: 0.003329
+lbfgs minimizer.run(): f=964427, |g|=66724.4, x_min=-17.9449, x_mean=17.982, x_max=51.8881
+lbfgs minimizer step
+  step:  43 bond rmsd: 0.003219
+lbfgs minimizer.run(): f=961819, |g|=54498.2, x_min=-17.9472, x_mean=17.982, x_max=51.8892
+lbfgs minimizer step
+  step:  44 bond rmsd: 0.003133
+lbfgs minimizer.run(): f=959297, |g|=61065.8, x_min=-17.9502, x_mean=17.9821, x_max=51.8907
+lbfgs minimizer step
+  step:  45 bond rmsd: 0.003072
+lbfgs minimizer.run(): f=956794, |g|=49143.7, x_min=-17.9533, x_mean=17.9821, x_max=51.8923
+lbfgs minimizer step
+  step:  46 bond rmsd: 0.003035
+lbfgs minimizer.run(): f=954856, |g|=44800.1, x_min=-17.956, x_mean=17.9821, x_max=51.8938
+lbfgs minimizer step
+  step:  47 bond rmsd: 0.003008
+lbfgs minimizer.run(): f=952686, |g|=47606.5, x_min=-17.959, x_mean=17.9821, x_max=51.8953
+lbfgs minimizer step
+  step:  48 bond rmsd: 0.002962
+lbfgs minimizer.run(): f=950497, |g|=44256.2, x_min=-17.9616, x_mean=17.9822, x_max=51.8966
+lbfgs minimizer step
+  step:  49 bond rmsd: 0.002904
+lbfgs minimizer.run(): f=948327, |g|=44439.3, x_min=-17.9642, x_mean=17.9822, x_max=51.8979
+lbfgs minimizer step
+  step:  50 bond rmsd: 0.002846
+lbfgs minimizer.run(): f=945970, |g|=50407.5, x_min=-17.9665, x_mean=17.9822, x_max=51.8989
+lbfgs minimizer step
+  step:  51 bond rmsd: 0.002771
+lbfgs minimizer.run(): f=944012, |g|=43703.2, x_min=-17.968, x_mean=17.9822, x_max=51.8995
+lbfgs minimizer step
+lbfgs minimizer stop: max_iterations
+lbfgs minimizer done.
+     9 Rw: 0.2449 Rf: 0.3015 Rf-Rw: 0.0566 rmsd(b):  0.0028 rws: 256.000 n_fev: 378
+lbfgs minimizer():
+  x.size(): 2307
+  m: 5
+  maxfev: 20
+  gtol: 0.9
+  xtol: 1e-16
+  stpmin: 1e-09
+  stpmax: 0.3
+lbfgs traditional_convergence_test: True
+  step:   1 bond rmsd: 0.008052
+lbfgs minimizer.run(): f=3.7025e+07, |g|=8.69685e+06, x_min=-17.824, x_mean=17.9804, x_max=51.778
+  step:   2 bond rmsd: 0.031710
+lbfgs minimizer.run(): f=1.55197e+07, |g|=4.67556e+06, x_min=-17.8657, x_mean=17.9804, x_max=51.8125
+lbfgs minimizer step
+  step:   3 bond rmsd: 0.032588
+lbfgs minimizer.run(): f=1.19115e+07, |g|=3.68388e+06, x_min=-17.8758, x_mean=17.9804, x_max=51.8208
+lbfgs minimizer step
+  step:   4 bond rmsd: 0.030580
+lbfgs minimizer.run(): f=8.05376e+06, |g|=2.93893e+06, x_min=-17.887, x_mean=17.9804, x_max=51.8301
+lbfgs minimizer step
+  step:   5 bond rmsd: 0.026538
+lbfgs minimizer.run(): f=4.92685e+06, |g|=2.33529e+06, x_min=-17.8986, x_mean=17.9805, x_max=51.8398
+lbfgs minimizer step
+  step:   6 bond rmsd: 0.023311
+lbfgs minimizer.run(): f=3.58852e+06, |g|=1.51614e+06, x_min=-17.9043, x_mean=17.9805, x_max=51.8446
+lbfgs minimizer step
+  step:   7 bond rmsd: 0.020167
+lbfgs minimizer.run(): f=2.85675e+06, |g|=1.24158e+06, x_min=-17.9083, x_mean=17.9805, x_max=51.8482
+lbfgs minimizer step
+  step:   8 bond rmsd: 0.016243
+lbfgs minimizer.run(): f=2.30801e+06, |g|=942105, x_min=-17.9123, x_mean=17.9806, x_max=51.8519
+lbfgs minimizer step
+  step:   9 bond rmsd: 0.014012
+lbfgs minimizer.run(): f=2.08396e+06, |g|=669661, x_min=-17.9145, x_mean=17.9806, x_max=51.854
+lbfgs minimizer step
+  step:  10 bond rmsd: 0.012067
+lbfgs minimizer.run(): f=1.94611e+06, |g|=527098, x_min=-17.9166, x_mean=17.9806, x_max=51.8562
+lbfgs minimizer step
+  step:  11 bond rmsd: 0.010149
+lbfgs minimizer.run(): f=1.84242e+06, |g|=562985, x_min=-17.9201, x_mean=17.9807, x_max=51.8599
+lbfgs minimizer step
+  step:  12 bond rmsd: 0.008702
+lbfgs minimizer.run(): f=1.77194e+06, |g|=387427, x_min=-17.9225, x_mean=17.9807, x_max=51.8624
+lbfgs minimizer step
+  step:  13 bond rmsd: 0.007670
+lbfgs minimizer.run(): f=1.72876e+06, |g|=341741, x_min=-17.9249, x_mean=17.9807, x_max=51.8651
+lbfgs minimizer step
+  step:  14 bond rmsd: 0.006626
+lbfgs minimizer.run(): f=1.68642e+06, |g|=265911, x_min=-17.9285, x_mean=17.9807, x_max=51.8689
+lbfgs minimizer step
+  step:  15 bond rmsd: 0.005956
+lbfgs minimizer.run(): f=1.65897e+06, |g|=229437, x_min=-17.9315, x_mean=17.9808, x_max=51.8721
+lbfgs minimizer step
+  step:  16 bond rmsd: 0.005352
+lbfgs minimizer.run(): f=1.62854e+06, |g|=333946, x_min=-17.936, x_mean=17.9808, x_max=51.8769
+lbfgs minimizer step
+  step:  17 bond rmsd: 0.004976
+lbfgs minimizer.run(): f=1.60243e+06, |g|=283106, x_min=-17.9398, x_mean=17.9809, x_max=51.8811
+lbfgs minimizer step
+  step:  18 bond rmsd: 0.004699
+lbfgs minimizer.run(): f=1.57743e+06, |g|=242239, x_min=-17.9442, x_mean=17.9809, x_max=51.8857
+lbfgs minimizer step
+  step:  19 bond rmsd: 0.004652
+lbfgs minimizer.run(): f=1.5495e+06, |g|=265762, x_min=-17.9493, x_mean=17.981, x_max=51.8914
+lbfgs minimizer step
+  step:  20 bond rmsd: 0.004659
+lbfgs minimizer.run(): f=1.52983e+06, |g|=215169, x_min=-17.9527, x_mean=17.981, x_max=51.8952
+lbfgs minimizer step
+  step:  21 bond rmsd: 0.004670
+lbfgs minimizer.run(): f=1.51148e+06, |g|=201541, x_min=-17.9561, x_mean=17.9811, x_max=51.8989
+lbfgs minimizer step
+  step:  22 bond rmsd: 0.004732
+lbfgs minimizer.run(): f=1.49041e+06, |g|=221023, x_min=-17.959, x_mean=17.9812, x_max=51.9025
+lbfgs minimizer step
+  step:  23 bond rmsd: 0.004746
+lbfgs minimizer.run(): f=1.47895e+06, |g|=177938, x_min=-17.9606, x_mean=17.9812, x_max=51.9045
+lbfgs minimizer step
+  step:  24 bond rmsd: 0.004660
+lbfgs minimizer.run(): f=1.46645e+06, |g|=212213, x_min=-17.9613, x_mean=17.9813, x_max=51.9058
+lbfgs minimizer step
+  step:  25 bond rmsd: 0.004556
+lbfgs minimizer.run(): f=1.45402e+06, |g|=169778, x_min=-17.9614, x_mean=17.9813, x_max=51.9063
+lbfgs minimizer step
+  step:  26 bond rmsd: 0.004421
+lbfgs minimizer.run(): f=1.44227e+06, |g|=160219, x_min=-17.9607, x_mean=17.9814, x_max=51.9063
+lbfgs minimizer step
+  step:  27 bond rmsd: 0.004216
+lbfgs minimizer.run(): f=1.42771e+06, |g|=187582, x_min=-17.9587, x_mean=17.9815, x_max=51.905
+lbfgs minimizer step
+  step:  28 bond rmsd: 0.004096
+lbfgs minimizer.run(): f=1.41746e+06, |g|=161064, x_min=-17.9569, x_mean=17.9815, x_max=51.9038
+lbfgs minimizer step
+  step:  29 bond rmsd: 0.004007
+lbfgs minimizer.run(): f=1.40647e+06, |g|=162870, x_min=-17.9544, x_mean=17.9816, x_max=51.9018
+lbfgs minimizer step
+  step:  30 bond rmsd: 0.003977
+lbfgs minimizer.run(): f=1.39463e+06, |g|=142567, x_min=-17.9513, x_mean=17.9816, x_max=51.8993
+lbfgs minimizer step
+  step:  31 bond rmsd: 0.004006
+lbfgs minimizer.run(): f=1.38598e+06, |g|=119641, x_min=-17.9487, x_mean=17.9817, x_max=51.8972
+lbfgs minimizer step
+  step:  32 bond rmsd: 0.004095
+lbfgs minimizer.run(): f=1.37696e+06, |g|=152150, x_min=-17.9456, x_mean=17.9817, x_max=51.8945
+lbfgs minimizer step
+  step:  33 bond rmsd: 0.004173
+lbfgs minimizer.run(): f=1.36971e+06, |g|=123296, x_min=-17.9433, x_mean=17.9817, x_max=51.8925
+lbfgs minimizer step
+  step:  34 bond rmsd: 0.004236
+lbfgs minimizer.run(): f=1.36306e+06, |g|=122175, x_min=-17.9412, x_mean=17.9818, x_max=51.8905
+lbfgs minimizer step
+  step:  35 bond rmsd: 0.004284
+lbfgs minimizer.run(): f=1.35505e+06, |g|=130883, x_min=-17.9392, x_mean=17.9818, x_max=51.8886
+lbfgs minimizer step
+  step:  36 bond rmsd: 0.004267
+lbfgs minimizer.run(): f=1.3487e+06, |g|=116076, x_min=-17.9381, x_mean=17.9819, x_max=51.8873
+lbfgs minimizer step
+  step:  37 bond rmsd: 0.004193
+lbfgs minimizer.run(): f=1.34097e+06, |g|=147983, x_min=-17.9373, x_mean=17.9819, x_max=51.8862
+lbfgs minimizer step
+  step:  38 bond rmsd: 0.004076
+lbfgs minimizer.run(): f=1.33336e+06, |g|=117986, x_min=-17.9372, x_mean=17.9819, x_max=51.8856
+lbfgs minimizer step
+  step:  39 bond rmsd: 0.003907
+lbfgs minimizer.run(): f=1.32626e+06, |g|=125510, x_min=-17.9377, x_mean=17.982, x_max=51.8854
+lbfgs minimizer step
+  step:  40 bond rmsd: 0.003696
+lbfgs minimizer.run(): f=1.31828e+06, |g|=111008, x_min=-17.939, x_mean=17.982, x_max=51.8857
+lbfgs minimizer step
+  step:  41 bond rmsd: 0.003529
+lbfgs minimizer.run(): f=1.31227e+06, |g|=101991, x_min=-17.9405, x_mean=17.9821, x_max=51.8863
+lbfgs minimizer step
+  step:  42 bond rmsd: 0.003309
+lbfgs minimizer.run(): f=1.30544e+06, |g|=139678, x_min=-17.9432, x_mean=17.9821, x_max=51.8876
+lbfgs minimizer step
+  step:  43 bond rmsd: 0.003179
+lbfgs minimizer.run(): f=1.29975e+06, |g|=111686, x_min=-17.9455, x_mean=17.9821, x_max=51.8888
+lbfgs minimizer step
+  step:  44 bond rmsd: 0.003083
+lbfgs minimizer.run(): f=1.29462e+06, |g|=115937, x_min=-17.9483, x_mean=17.9822, x_max=51.8902
+lbfgs minimizer step
+  step:  45 bond rmsd: 0.003006
+lbfgs minimizer.run(): f=1.28943e+06, |g|=99663.4, x_min=-17.9515, x_mean=17.9822, x_max=51.8919
+lbfgs minimizer step
+  step:  46 bond rmsd: 0.002962
+lbfgs minimizer.run(): f=1.28544e+06, |g|=88796.7, x_min=-17.954, x_mean=17.9822, x_max=51.8933
+lbfgs minimizer step
+  step:  47 bond rmsd: 0.002928
+lbfgs minimizer.run(): f=1.28092e+06, |g|=99857, x_min=-17.957, x_mean=17.9822, x_max=51.8949
+lbfgs minimizer step
+  step:  48 bond rmsd: 0.002873
+lbfgs minimizer.run(): f=1.27619e+06, |g|=89015.6, x_min=-17.9598, x_mean=17.9823, x_max=51.8963
+lbfgs minimizer step
+  step:  49 bond rmsd: 0.002811
+lbfgs minimizer.run(): f=1.27174e+06, |g|=90864, x_min=-17.9622, x_mean=17.9823, x_max=51.8975
+lbfgs minimizer step
+  step:  50 bond rmsd: 0.002746
+lbfgs minimizer.run(): f=1.26682e+06, |g|=97483.8, x_min=-17.9645, x_mean=17.9823, x_max=51.8985
+lbfgs minimizer step
+  step:  51 bond rmsd: 0.002663
+lbfgs minimizer.run(): f=1.26268e+06, |g|=85608, x_min=-17.966, x_mean=17.9824, x_max=51.8991
+lbfgs minimizer step
+lbfgs minimizer stop: max_iterations
+lbfgs minimizer done.
+    10 Rw: 0.2478 Rf: 0.3014 Rf-Rw: 0.0536 rmsd(b):  0.0027 rws: 512.000 n_fev: 429
+lbfgs minimizer():
+  x.size(): 2307
+  m: 5
+  maxfev: 20
+  gtol: 0.9
+  xtol: 1e-16
+  stpmin: 1e-09
+  stpmax: 0.3
+lbfgs traditional_convergence_test: True
+  step:   1 bond rmsd: 0.008052
+lbfgs minimizer.run(): f=7.34315e+07, |g|=1.73942e+07, x_min=-17.824, x_mean=17.9804, x_max=51.778
+  step:   2 bond rmsd: 0.031704
+lbfgs minimizer.run(): f=3.0418e+07, |g|=9.3508e+06, x_min=-17.8657, x_mean=17.9804, x_max=51.8125
+lbfgs minimizer step
+  step:   3 bond rmsd: 0.032585
+lbfgs minimizer.run(): f=2.31996e+07, |g|=7.36657e+06, x_min=-17.8758, x_mean=17.9804, x_max=51.8208
+lbfgs minimizer step
+  step:   4 bond rmsd: 0.030582
+lbfgs minimizer.run(): f=1.5487e+07, |g|=5.87714e+06, x_min=-17.887, x_mean=17.9804, x_max=51.8301
+lbfgs minimizer step
+  step:   5 bond rmsd: 0.026547
+lbfgs minimizer.run(): f=9.23544e+06, |g|=4.66823e+06, x_min=-17.8985, x_mean=17.9805, x_max=51.8397
+lbfgs minimizer step
+  step:   6 bond rmsd: 0.023324
+lbfgs minimizer.run(): f=6.55977e+06, |g|=3.03096e+06, x_min=-17.9043, x_mean=17.9805, x_max=51.8446
+lbfgs minimizer step
+  step:   7 bond rmsd: 0.020182
+lbfgs minimizer.run(): f=5.09598e+06, |g|=2.48271e+06, x_min=-17.9082, x_mean=17.9805, x_max=51.8481
+lbfgs minimizer step
+  step:   8 bond rmsd: 0.016257
+lbfgs minimizer.run(): f=3.99774e+06, |g|=1.88305e+06, x_min=-17.9122, x_mean=17.9806, x_max=51.8518
+lbfgs minimizer step
+  step:   9 bond rmsd: 0.014026
+lbfgs minimizer.run(): f=3.54941e+06, |g|=1.33874e+06, x_min=-17.9144, x_mean=17.9806, x_max=51.854
+lbfgs minimizer step
+  step:  10 bond rmsd: 0.012079
+lbfgs minimizer.run(): f=3.27326e+06, |g|=1.05396e+06, x_min=-17.9165, x_mean=17.9806, x_max=51.8561
+lbfgs minimizer step
+  step:  11 bond rmsd: 0.010156
+lbfgs minimizer.run(): f=3.06541e+06, |g|=1.1275e+06, x_min=-17.92, x_mean=17.9807, x_max=51.8598
+lbfgs minimizer step
+  step:  12 bond rmsd: 0.008707
+lbfgs minimizer.run(): f=2.9243e+06, |g|=776390, x_min=-17.9224, x_mean=17.9807, x_max=51.8624
+lbfgs minimizer step
+  step:  13 bond rmsd: 0.007672
+lbfgs minimizer.run(): f=2.83774e+06, |g|=684578, x_min=-17.9248, x_mean=17.9807, x_max=51.865
+lbfgs minimizer step
+  step:  14 bond rmsd: 0.006624
+lbfgs minimizer.run(): f=2.7528e+06, |g|=532441, x_min=-17.9284, x_mean=17.9807, x_max=51.8688
+lbfgs minimizer step
+  step:  15 bond rmsd: 0.005950
+lbfgs minimizer.run(): f=2.69773e+06, |g|=459365, x_min=-17.9313, x_mean=17.9808, x_max=51.872
+lbfgs minimizer step
+  step:  16 bond rmsd: 0.005341
+lbfgs minimizer.run(): f=2.63669e+06, |g|=667720, x_min=-17.9358, x_mean=17.9808, x_max=51.8768
+lbfgs minimizer step
+  step:  17 bond rmsd: 0.004961
+lbfgs minimizer.run(): f=2.5842e+06, |g|=566347, x_min=-17.9396, x_mean=17.9809, x_max=51.881
+lbfgs minimizer step
+  step:  18 bond rmsd: 0.004679
+lbfgs minimizer.run(): f=2.53396e+06, |g|=484841, x_min=-17.944, x_mean=17.9809, x_max=51.8856
+lbfgs minimizer step
+  step:  19 bond rmsd: 0.004632
+lbfgs minimizer.run(): f=2.47787e+06, |g|=533840, x_min=-17.9491, x_mean=17.981, x_max=51.8913
+lbfgs minimizer step
+  step:  20 bond rmsd: 0.004639
+lbfgs minimizer.run(): f=2.43834e+06, |g|=432340, x_min=-17.9525, x_mean=17.981, x_max=51.8951
+lbfgs minimizer step
+  step:  21 bond rmsd: 0.004649
+lbfgs minimizer.run(): f=2.40143e+06, |g|=404091, x_min=-17.9558, x_mean=17.9811, x_max=51.8989
+lbfgs minimizer step
+  step:  22 bond rmsd: 0.004715
+lbfgs minimizer.run(): f=2.35903e+06, |g|=444098, x_min=-17.9587, x_mean=17.9812, x_max=51.9024
+lbfgs minimizer step
+  step:  23 bond rmsd: 0.004731
+lbfgs minimizer.run(): f=2.33599e+06, |g|=357501, x_min=-17.9603, x_mean=17.9812, x_max=51.9045
+lbfgs minimizer step
+  step:  24 bond rmsd: 0.004646
+lbfgs minimizer.run(): f=2.31085e+06, |g|=426109, x_min=-17.9611, x_mean=17.9813, x_max=51.9057
+lbfgs minimizer step
+  step:  25 bond rmsd: 0.004544
+lbfgs minimizer.run(): f=2.28598e+06, |g|=341242, x_min=-17.9611, x_mean=17.9813, x_max=51.9063
+lbfgs minimizer step
+  step:  26 bond rmsd: 0.004412
+lbfgs minimizer.run(): f=2.26237e+06, |g|=321824, x_min=-17.9604, x_mean=17.9814, x_max=51.9063
+lbfgs minimizer step
+  step:  27 bond rmsd: 0.004210
+lbfgs minimizer.run(): f=2.23302e+06, |g|=379649, x_min=-17.9584, x_mean=17.9815, x_max=51.905
+lbfgs minimizer step
+  step:  28 bond rmsd: 0.004092
+lbfgs minimizer.run(): f=2.2124e+06, |g|=325238, x_min=-17.9566, x_mean=17.9815, x_max=51.9037
+lbfgs minimizer step
+  step:  29 bond rmsd: 0.004007
+lbfgs minimizer.run(): f=2.19039e+06, |g|=328174, x_min=-17.954, x_mean=17.9816, x_max=51.9018
+lbfgs minimizer step
+  step:  30 bond rmsd: 0.003982
+lbfgs minimizer.run(): f=2.16651e+06, |g|=287606, x_min=-17.9509, x_mean=17.9816, x_max=51.8993
+lbfgs minimizer step
+  step:  31 bond rmsd: 0.004016
+lbfgs minimizer.run(): f=2.14916e+06, |g|=241192, x_min=-17.9482, x_mean=17.9817, x_max=51.8971
+lbfgs minimizer step
+  step:  32 bond rmsd: 0.004111
+lbfgs minimizer.run(): f=2.13103e+06, |g|=310739, x_min=-17.9451, x_mean=17.9817, x_max=51.8944
+lbfgs minimizer step
+  step:  33 bond rmsd: 0.004192
+lbfgs minimizer.run(): f=2.11647e+06, |g|=250774, x_min=-17.9427, x_mean=17.9818, x_max=51.8924
+lbfgs minimizer step
+  step:  34 bond rmsd: 0.004259
+lbfgs minimizer.run(): f=2.10311e+06, |g|=246882, x_min=-17.9406, x_mean=17.9818, x_max=51.8904
+lbfgs minimizer step
+  step:  35 bond rmsd: 0.004310
+lbfgs minimizer.run(): f=2.08693e+06, |g|=268454, x_min=-17.9385, x_mean=17.9819, x_max=51.8884
+lbfgs minimizer step
+  step:  36 bond rmsd: 0.004293
+lbfgs minimizer.run(): f=2.07421e+06, |g|=236341, x_min=-17.9374, x_mean=17.9819, x_max=51.8872
+lbfgs minimizer step
+  step:  37 bond rmsd: 0.004221
+lbfgs minimizer.run(): f=2.05878e+06, |g|=299344, x_min=-17.9366, x_mean=17.9819, x_max=51.886
+lbfgs minimizer step
+  step:  38 bond rmsd: 0.004100
+lbfgs minimizer.run(): f=2.04316e+06, |g|=238226, x_min=-17.9364, x_mean=17.982, x_max=51.8854
+lbfgs minimizer step
+  step:  39 bond rmsd: 0.003930
+lbfgs minimizer.run(): f=2.02889e+06, |g|=246622, x_min=-17.9369, x_mean=17.982, x_max=51.8852
+lbfgs minimizer step
+  step:  40 bond rmsd: 0.003711
+lbfgs minimizer.run(): f=2.01261e+06, |g|=230475, x_min=-17.9382, x_mean=17.9821, x_max=51.8855
+lbfgs minimizer step
+  step:  41 bond rmsd: 0.003539
+lbfgs minimizer.run(): f=2.00037e+06, |g|=207751, x_min=-17.9397, x_mean=17.9821, x_max=51.8861
+lbfgs minimizer step
+  step:  42 bond rmsd: 0.003317
+lbfgs minimizer.run(): f=1.98671e+06, |g|=280695, x_min=-17.9422, x_mean=17.9821, x_max=51.8873
+lbfgs minimizer step
+  step:  43 bond rmsd: 0.003175
+lbfgs minimizer.run(): f=1.9748e+06, |g|=222865, x_min=-17.9446, x_mean=17.9822, x_max=51.8886
+lbfgs minimizer step
+  step:  44 bond rmsd: 0.003074
+lbfgs minimizer.run(): f=1.96446e+06, |g|=225684, x_min=-17.9474, x_mean=17.9822, x_max=51.89
+lbfgs minimizer step
+  step:  45 bond rmsd: 0.002989
+lbfgs minimizer.run(): f=1.95393e+06, |g|=203632, x_min=-17.9505, x_mean=17.9822, x_max=51.8917
+lbfgs minimizer step
+  step:  46 bond rmsd: 0.002942
+lbfgs minimizer.run(): f=1.94576e+06, |g|=179761, x_min=-17.9531, x_mean=17.9823, x_max=51.8931
+lbfgs minimizer step
+  step:  47 bond rmsd: 0.002903
+lbfgs minimizer.run(): f=1.93658e+06, |g|=203814, x_min=-17.9561, x_mean=17.9823, x_max=51.8947
+lbfgs minimizer step
+  step:  48 bond rmsd: 0.002846
+lbfgs minimizer.run(): f=1.9268e+06, |g|=179887, x_min=-17.9588, x_mean=17.9823, x_max=51.8961
+lbfgs minimizer step
+  step:  49 bond rmsd: 0.002782
+lbfgs minimizer.run(): f=1.91774e+06, |g|=184243, x_min=-17.9613, x_mean=17.9824, x_max=51.8973
+lbfgs minimizer step
+  step:  50 bond rmsd: 0.002713
+lbfgs minimizer.run(): f=1.90776e+06, |g|=194185, x_min=-17.9635, x_mean=17.9824, x_max=51.8984
+lbfgs minimizer step
+  step:  51 bond rmsd: 0.002627
+lbfgs minimizer.run(): f=1.89924e+06, |g|=172306, x_min=-17.9651, x_mean=17.9824, x_max=51.899
+lbfgs minimizer step
+lbfgs minimizer stop: max_iterations
+lbfgs minimizer done.
+    11 Rw: 0.2486 Rf: 0.3011 Rf-Rw: 0.0525 rmsd(b):  0.0026 rws: 1024.000 n_fev: 480
+Converged (model).
+At end of weight search:
+    11 Rw: 0.2486 Rf: 0.3011 Rf-Rw: 0.0525 rmsd(b):  0.0026 rws: 1024.000 n_fev: 480
+At start of further refinement:
+     1 Rw: 0.2486 Rf: 0.3011 Rf-Rw: 0.0525 rmsd(b):  0.0026 rws: 1024.000 n_fev: 480
+Start further refinement:
+lbfgs minimizer():
+  x.size(): 2307
+  m: 5
+  maxfev: 20
+  gtol: 0.9
+  xtol: 1e-16
+  stpmin: 1e-09
+  stpmax: 0.3
+lbfgs traditional_convergence_test: True
+  step:   1 bond rmsd: 0.002627
+lbfgs minimizer.run(): f=1.89827e+06, |g|=172413, x_min=-17.9651, x_mean=17.9824, x_max=51.899
+  step:   2 bond rmsd: 0.025626
+lbfgs minimizer.run(): f=1.43092e+07, |g|=1.45671e+07, x_min=-17.893, x_mean=17.9827, x_max=51.8431
+  step:   3 bond rmsd: 0.042341
+lbfgs minimizer.run(): f=3.51793e+07, |g|=2.33864e+07, x_min=-17.8476, x_mean=17.9828, x_max=51.8079
+lbfgs minimizer step
+  step:   4 bond rmsd: 0.029527
+lbfgs minimizer.run(): f=1.83343e+07, |g|=1.66087e+07, x_min=-17.8817, x_mean=17.9827, x_max=51.8343
+lbfgs minimizer step
+  step:   5 bond rmsd: 0.020061
+lbfgs minimizer.run(): f=9.55581e+06, |g|=1.17504e+07, x_min=-17.9067, x_mean=17.9826, x_max=51.8537
+lbfgs minimizer step
+  step:   6 bond rmsd: 0.013747
+lbfgs minimizer.run(): f=5.40803e+06, |g|=7.77794e+06, x_min=-17.9223, x_mean=17.9826, x_max=51.8658
+lbfgs minimizer step
+  step:   7 bond rmsd: 0.009684
+lbfgs minimizer.run(): f=3.54e+06, |g|=5.40668e+06, x_min=-17.9332, x_mean=17.9825, x_max=51.8744
+lbfgs minimizer step
+  step:   8 bond rmsd: 0.006999
+lbfgs minimizer.run(): f=2.67177e+06, |g|=3.69899e+06, x_min=-17.9404, x_mean=17.9825, x_max=51.8799
+lbfgs minimizer step
+  step:   9 bond rmsd: 0.005262
+lbfgs minimizer.run(): f=2.25875e+06, |g|=2.58056e+06, x_min=-17.9455, x_mean=17.9825, x_max=51.8837
+lbfgs minimizer step
+  step:  10 bond rmsd: 0.004131
+lbfgs minimizer.run(): f=2.05813e+06, |g|=1.7904e+06, x_min=-17.949, x_mean=17.9825, x_max=51.8863
+lbfgs minimizer step
+  step:  11 bond rmsd: 0.003425
+lbfgs minimizer.run(): f=1.95947e+06, |g|=1.24695e+06, x_min=-17.9515, x_mean=17.9825, x_max=51.888
+lbfgs minimizer step
+  step:  12 bond rmsd: 0.002995
+lbfgs minimizer.run(): f=1.91074e+06, |g|=868110, x_min=-17.9533, x_mean=17.9825, x_max=51.8892
+lbfgs minimizer step
+  step:  13 bond rmsd: 0.002742
+lbfgs minimizer.run(): f=1.88634e+06, |g|=605662, x_min=-17.9545, x_mean=17.9825, x_max=51.8899
+lbfgs minimizer step
+  step:  14 bond rmsd: 0.002594
+lbfgs minimizer.run(): f=1.87401e+06, |g|=422864, x_min=-17.9555, x_mean=17.9825, x_max=51.8904
+lbfgs minimizer step
+  step:  15 bond rmsd: 0.002507
+lbfgs minimizer.run(): f=1.86758e+06, |g|=295744, x_min=-17.9561, x_mean=17.9825, x_max=51.8908
+lbfgs minimizer step
+  step:  16 bond rmsd: 0.002453
+lbfgs minimizer.run(): f=1.86407e+06, |g|=206540, x_min=-17.9566, x_mean=17.9825, x_max=51.891
+lbfgs minimizer step
+  step:  17 bond rmsd: 0.002419
+lbfgs minimizer.run(): f=1.86198e+06, |g|=144100, x_min=-17.957, x_mean=17.9825, x_max=51.8911
+lbfgs minimizer step
+  step:  18 bond rmsd: 0.002393
+lbfgs minimizer.run(): f=1.86056e+06, |g|=101005, x_min=-17.9573, x_mean=17.9825, x_max=51.8913
+lbfgs minimizer step
+  step:  19 bond rmsd: 0.002374
+lbfgs minimizer.run(): f=1.8594e+06, |g|=75851.7, x_min=-17.9576, x_mean=17.9825, x_max=51.8914
+lbfgs minimizer step
+  step:  20 bond rmsd: 0.002355
+lbfgs minimizer.run(): f=1.85828e+06, |g|=71468.4, x_min=-17.9579, x_mean=17.9825, x_max=51.8915
+lbfgs minimizer step
+  step:  21 bond rmsd: 0.002339
+lbfgs minimizer.run(): f=1.85707e+06, |g|=83622.4, x_min=-17.9582, x_mean=17.9825, x_max=51.8916
+lbfgs minimizer step
+  step:  22 bond rmsd: 0.002322
+lbfgs minimizer.run(): f=1.85568e+06, |g|=101768, x_min=-17.9585, x_mean=17.9825, x_max=51.8918
+lbfgs minimizer step
+  step:  23 bond rmsd: 0.002307
+lbfgs minimizer.run(): f=1.85383e+06, |g|=119483, x_min=-17.9589, x_mean=17.9825, x_max=51.8921
+lbfgs minimizer step
+  step:  24 bond rmsd: 0.002292
+lbfgs minimizer.run(): f=1.85102e+06, |g|=135908, x_min=-17.9594, x_mean=17.9825, x_max=51.8927
+lbfgs minimizer step
+  step:  25 bond rmsd: 0.002293
+lbfgs minimizer.run(): f=1.8471e+06, |g|=207646, x_min=-17.9601, x_mean=17.9825, x_max=51.8937
+lbfgs minimizer step
+  step:  26 bond rmsd: 0.002297
+lbfgs minimizer.run(): f=1.84279e+06, |g|=175439, x_min=-17.9609, x_mean=17.9826, x_max=51.8947
+lbfgs minimizer step
+  step:  27 bond rmsd: 0.002325
+lbfgs minimizer.run(): f=1.83748e+06, |g|=200483, x_min=-17.9617, x_mean=17.9826, x_max=51.8961
+lbfgs minimizer step
+  step:  28 bond rmsd: 0.002404
+lbfgs minimizer.run(): f=1.82831e+06, |g|=177755, x_min=-17.9629, x_mean=17.9826, x_max=51.8984
+lbfgs minimizer step
+  step:  29 bond rmsd: 0.002501
+lbfgs minimizer.run(): f=1.82039e+06, |g|=170424, x_min=-17.9638, x_mean=17.9827, x_max=51.9004
+lbfgs minimizer step
+  step:  30 bond rmsd: 0.002675
+lbfgs minimizer.run(): f=1.80937e+06, |g|=232051, x_min=-17.965, x_mean=17.9828, x_max=51.9031
+lbfgs minimizer step
+  step:  31 bond rmsd: 0.002967
+lbfgs minimizer.run(): f=1.79395e+06, |g|=239304, x_min=-17.9663, x_mean=17.9829, x_max=51.9061
+lbfgs minimizer step
+  step:  32 bond rmsd: 0.003136
+lbfgs minimizer.run(): f=1.78629e+06, |g|=197823, x_min=-17.9669, x_mean=17.983, x_max=51.9075
+lbfgs minimizer step
+  step:  33 bond rmsd: 0.003285
+lbfgs minimizer.run(): f=1.77781e+06, |g|=319108, x_min=-17.9675, x_mean=17.983, x_max=51.9083
+lbfgs minimizer step
+  step:  34 bond rmsd: 0.003387
+lbfgs minimizer.run(): f=1.77052e+06, |g|=242110, x_min=-17.9677, x_mean=17.9831, x_max=51.9085
+lbfgs minimizer step
+  step:  35 bond rmsd: 0.003417
+lbfgs minimizer.run(): f=1.76344e+06, |g|=202515, x_min=-17.9678, x_mean=17.9831, x_max=51.9079
+lbfgs minimizer step
+  step:  36 bond rmsd: 0.003400
+lbfgs minimizer.run(): f=1.75406e+06, |g|=203613, x_min=-17.9678, x_mean=17.9832, x_max=51.9062
+lbfgs minimizer step
+  step:  37 bond rmsd: 0.003354
+lbfgs minimizer.run(): f=1.74555e+06, |g|=165763, x_min=-17.9678, x_mean=17.9832, x_max=51.9043
+lbfgs minimizer step
+  step:  38 bond rmsd: 0.003289
+lbfgs minimizer.run(): f=1.73734e+06, |g|=189089, x_min=-17.9679, x_mean=17.9833, x_max=51.9019
+lbfgs minimizer step
+  step:  39 bond rmsd: 0.003141
+lbfgs minimizer.run(): f=1.72667e+06, |g|=224882, x_min=-17.9678, x_mean=17.9833, x_max=51.8984
+lbfgs minimizer step
+  step:  40 bond rmsd: 0.003046
+lbfgs minimizer.run(): f=1.71754e+06, |g|=194948, x_min=-17.9679, x_mean=17.9834, x_max=51.8952
+lbfgs minimizer step
+  step:  41 bond rmsd: 0.002906
+lbfgs minimizer.run(): f=1.70643e+06, |g|=358341, x_min=-17.9682, x_mean=17.9835, x_max=51.8905
+lbfgs minimizer step
+  step:  42 bond rmsd: 0.002835
+lbfgs minimizer.run(): f=1.69739e+06, |g|=303659, x_min=-17.9684, x_mean=17.9835, x_max=51.8875
+lbfgs minimizer step
+  step:  43 bond rmsd: 0.002766
+lbfgs minimizer.run(): f=1.68653e+06, |g|=261098, x_min=-17.9687, x_mean=17.9835, x_max=51.8841
+lbfgs minimizer step
+  step:  44 bond rmsd: 0.002698
+lbfgs minimizer.run(): f=1.67473e+06, |g|=193766, x_min=-17.9693, x_mean=17.9836, x_max=51.8808
+lbfgs minimizer step
+  step:  45 bond rmsd: 0.002655
+lbfgs minimizer.run(): f=1.66797e+06, |g|=154407, x_min=-17.9697, x_mean=17.9836, x_max=51.8793
+lbfgs minimizer step
+  step:  46 bond rmsd: 0.002612
+lbfgs minimizer.run(): f=1.66169e+06, |g|=159491, x_min=-17.9701, x_mean=17.9837, x_max=51.8782
+lbfgs minimizer step
+  step:  47 bond rmsd: 0.002504
+lbfgs minimizer.run(): f=1.65512e+06, |g|=152629, x_min=-17.9707, x_mean=17.9837, x_max=51.8784
+lbfgs minimizer step
+  step:  48 bond rmsd: 0.002444
+lbfgs minimizer.run(): f=1.65116e+06, |g|=129686, x_min=-17.9711, x_mean=17.9837, x_max=51.8786
+lbfgs minimizer step
+  step:  49 bond rmsd: 0.002307
+lbfgs minimizer.run(): f=1.64619e+06, |g|=214646, x_min=-17.9714, x_mean=17.9837, x_max=51.8806
+lbfgs minimizer step
+  step:  50 bond rmsd: 0.002201
+lbfgs minimizer.run(): f=1.64216e+06, |g|=170737, x_min=-17.9717, x_mean=17.9837, x_max=51.882
+lbfgs minimizer step
+  step:  51 bond rmsd: 0.002102
+lbfgs minimizer.run(): f=1.63824e+06, |g|=142987, x_min=-17.972, x_mean=17.9837, x_max=51.8839
+lbfgs minimizer step
+  step:  52 bond rmsd: 0.001977
+lbfgs minimizer.run(): f=1.63398e+06, |g|=118961, x_min=-17.9721, x_mean=17.9838, x_max=51.8867
+lbfgs minimizer step
+lbfgs minimizer stop: max_iterations
+lbfgs minimizer done.
+     2 Rw: 0.2511 Rf: 0.3053 Rf-Rw: 0.0542 rmsd(b):  0.0020 rws: 1024.000 n_fev: 532
+Converged (model).
+At end of further refinement:
+     2 Rw: 0.2511 Rf: 0.3053 Rf-Rw: 0.0542 rmsd(b):  0.0020 rws: 1024.000 n_fev: 532
+Best r_work: 0.2486 r_free: 0.3011
+See 4gif_refine_001_complete_H2Omodified2.pdb_modified_refined.pdb in pdb folder.
+Time: 2825.1443

@@ -1,0 +1,1 @@
+nohup qr.refine 4gif_refine_001_complete_H2Omodified2.pdb_modified.pdb 4gif_fresh_ready_again_refine_001.mtz mode=refine  max_bond_rmsd=0.02  stpmax=0.3 gradient_only=true clustering=true use_convergence_test=true  opt_log=1 restraints=cctbx  > 4gif_refine_001_complete_H2Omodified2_cctbx.log 2>&1 &
