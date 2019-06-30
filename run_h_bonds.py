@@ -43,7 +43,8 @@ def get_it2(f, pair_proxies = None):
   o = mmtbx.nci.hbond.find(model=model, pair_proxies=pair_proxies)
   for p in o.result:
     if(str(p.symop)=="x,y,z"): continue # XXX Use only symmetry! XXX
-    vals.append(p.d_HA)
+    #vals.append(p.d_HA)
+    vals.append(p.a_DHA)
   return vals, o.pair_proxies
   
 def get_starting_model(folder):
@@ -120,9 +121,9 @@ def run():
   print
   #
   mi = min(flex.min(s_vals), flex.min(f_vals))
-  mi = max(1.3, mi)
+  #mi = max(1.3, mi) # XXX NOT FOR ANGLES
   ma = max(flex.max(s_vals), flex.max(f_vals))
-  ma = min(ma, 4)
+  #ma = min(ma, 4) # XXX NOT FOR ANGLES
   #
   show_histogram(data = s_vals, n_slots=10, data_min=mi, data_max=ma)
   print
