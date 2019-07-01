@@ -1,1 +1,1 @@
-Files are the same, just atom numbering adjusted
+Files 4gif_refine_001_complete_H2Omodified2.pdb and 4gif_refine_001_complete_H2Omodified2.pdb_modified.pdb are the same, just atom numbering adjusted in the 4gif_refine_001_complete_H2Omodified2.pdb_modified.pdb
